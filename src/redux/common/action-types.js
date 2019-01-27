@@ -1,0 +1,3 @@
+export const COMMON_START = "COMMON_START";
+export const COMMON_SUCCESS = "COMMON_SUCCESS";
+export const COMMON_FAIL = "COMMON_FAIL";
