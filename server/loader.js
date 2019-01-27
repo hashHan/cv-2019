@@ -14,7 +14,8 @@ import Loadable from "react-loadable";
 // Our store, entrypoint, styler and manifest
 import createStore from "../src/redux/store";
 import App from "../src/app/app";
-import { withRootUI, sheetsRegistry } from "../src/styles/withRoot";
+import { withRootUI, sheetsRegistry } from "../src/styles/withRoot"; //material ui, jss
+import { ServerStyleSheet, StyleSheetManager } from "styled-components"; //styled-component
 import manifest from "../build/asset-manifest.json";
 
 // Some optional Redux functions related to user authentication
@@ -86,16 +87,21 @@ export default (req, res) => {
         data for that page. We take all that information and compute the appropriate state to send to the user. This is
         then loaded into the correct components and sent as a Promise to be handled below.
       */
-      const StyledApp = withRootUI(App);
 
+      const styledComponentSheet = new ServerStyleSheet();
+      const JSSApp = withRootUI(App); //material ui, jss injection
+      //const StyledApp = styledComponentSheet.collectStyles(JSSApp);//styled-component injection
+      const StyledApp = (
+        <StyleSheetManager sheet={styledComponentSheet.instance}>
+          <JSSApp />
+        </StyleSheetManager>
+      );
       frontloadServerRender(() =>
         renderToString(
           <Loadable.Capture report={m => modules.push(m)}>
             <ReduxProvider store={store}>
               <StaticRouter location={req.url} context={context}>
-                <Frontload isServer={true}>
-                  <StyledApp />
-                </Frontload>
+                <Frontload isServer={true}>{StyledApp}</Frontload>
               </StaticRouter>
             </ReduxProvider>
           </Loadable.Capture>
@@ -129,6 +135,9 @@ export default (req, res) => {
           //material ui server side rendering
           const jssServerSide = `<style id="jss-server-side">${sheetsRegistry.toString()}</style>`;
 
+          //styled-component
+          const styledComponentServerSide = `${styledComponentSheet.getStyleTags()}`;
+
           // We need to tell Helmet to compute the right meta tags, title, and such
           const helmet = Helmet.renderStatic();
 
@@ -144,7 +153,7 @@ export default (req, res) => {
             body: routeMarkup,
             scripts: extraChunks,
             state: JSON.stringify(store.getState()).replace(/</g, "\\u003c"),
-            style: jssServerSide
+            style: jssServerSide + styledComponentServerSide
           });
 
           // We have all the final HTML, let's send it to the user already!

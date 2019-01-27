@@ -9,6 +9,6 @@ export default () => (
     noCrawl
   >
     <p>I can't find your requested page.</p>
-    <MyDeleteButton /> a button for rendering test
+    <MyDeleteButton> a button for rendering test</MyDeleteButton>
   </Page>
 );
