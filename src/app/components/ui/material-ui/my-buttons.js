@@ -4,15 +4,13 @@ import PropTypes from "prop-types";
 import Button from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core/styles";
 import Delete from "@material-ui/icons/Delete";
-import FileUpload from "@material-ui/icons/FileUpload";
+//import FileUpload from "@material-ui/icons/FileUpload";
 //import KeyboardVoice from '@material-ui/icons/KeyboardVoice';
 import Icon from "@material-ui/core/Icon";
 import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
 
 //import Save from '@material-ui/icons/Save';
-import googlebuttonx1 from "../../../assets/images/btn_google_signin_light_normal_web.png";
-import googlebuttonx2 from "../../../assets/images/btn_google_signin_light_normal_web@2x.png";
 
 const styles = theme => ({
   button: {
@@ -110,25 +108,25 @@ SendButton.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-/////Upload button ///
-const UploadButton = props => {
-  const { classes, children, ...other } = props;
-  return (
-    <Button
-      {...other}
-      className={classes.button}
-      variant="raised"
-      color="default"
-    >
-      <span className={classes.label}>{children}</span>
-      <FileUpload className={classes.rightIcon} />
-    </Button>
-  );
-};
+// /////Upload button ///
+// const UploadButton = props => {
+//   const { classes, children, ...other } = props;
+//   return (
+//     <Button
+//       {...other}
+//       className={classes.button}
+//       variant="raised"
+//       color="default"
+//     >
+//       <span className={classes.label}>{children}</span>
+//       <FileUpload className={classes.rightIcon} />
+//     </Button>
+//   );
+// };
 
-UploadButton.propTypes = {
-  classes: PropTypes.object.isRequired
-};
+// UploadButton.propTypes = {
+//   classes: PropTypes.object.isRequired
+// };
 
 /////Add button ///
 const AddButton = props => {
@@ -267,7 +265,7 @@ const OAuthServerButton = props => {
 
 export const MyDeleteButton = withStyles(styles)(DeleteButton);
 export const MySendButton = withStyles(styles)(SendButton);
-export const MyUploadButton = withStyles(styles)(UploadButton);
+//export const MyUploadButton = withStyles(styles)(UploadButton);
 export const MyAddButton = withStyles(styles)(AddButton);
 export const MyCancelButton = withStyles(styles)(CancelButton);
 export const MyDefaultButton = withStyles(styles)(DefaultButton);

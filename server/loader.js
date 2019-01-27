@@ -11,9 +11,10 @@ import { StaticRouter } from "react-router";
 import { Frontload, frontloadServerRender } from "react-frontload";
 import Loadable from "react-loadable";
 
-// Our store, entrypoint, and manifest
+// Our store, entrypoint, styler and manifest
 import createStore from "../src/redux/store";
 import App from "../src/app/app";
+import { withRootUI, sheetsRegistry } from "../src/styles/withRoot";
 import manifest from "../build/asset-manifest.json";
 
 // Some optional Redux functions related to user authentication
@@ -28,10 +29,14 @@ export default (req, res) => {
       - Preloaded state (for Redux) depending on the current route
       - Code-split script tags depending on the current route
   */
-  const injectHTML = (data, { html, title, meta, body, scripts, state }) => {
+  const injectHTML = (
+    data,
+    { html, title, meta, body, scripts, state, style }
+  ) => {
     data = data.replace("<html>", `<html ${html}>`);
     data = data.replace(/<title>.*?<\/title>/g, title);
     data = data.replace("</head>", `${meta}</head>`);
+    data = data.replace("</head>", `${style}</head>`);
     data = data.replace(
       '<div id="root"></div>',
       `<div id="root">${body}</div><script>window.__PRELOADED_STATE__ = ${state}</script>`
@@ -69,7 +74,7 @@ export default (req, res) => {
 
       /*
         Here's the core funtionality of this file. We do the following in specific order (inside-out):
-          1. Load the <App /> component
+          1. Load the style injected(by withRootUI) <App/> component
           2. Inside of the Frontload HOC
           3. Inside of a Redux <StaticRouter /> (since we're on the server), given a location and context to write to
           4. Inside of the store provider
@@ -81,13 +86,15 @@ export default (req, res) => {
         data for that page. We take all that information and compute the appropriate state to send to the user. This is
         then loaded into the correct components and sent as a Promise to be handled below.
       */
+      const StyledApp = withRootUI(App);
+
       frontloadServerRender(() =>
         renderToString(
           <Loadable.Capture report={m => modules.push(m)}>
             <ReduxProvider store={store}>
               <StaticRouter location={req.url} context={context}>
                 <Frontload isServer={true}>
-                  <App />
+                  <StyledApp />
                 </Frontload>
               </StaticRouter>
             </ReduxProvider>
@@ -119,6 +126,9 @@ export default (req, res) => {
               )}"></script>`
           );
 
+          //material ui server side rendering
+          const jssServerSide = `<style id="jss-server-side">${sheetsRegistry.toString()}</style>`;
+
           // We need to tell Helmet to compute the right meta tags, title, and such
           const helmet = Helmet.renderStatic();
 
@@ -133,7 +143,8 @@ export default (req, res) => {
             meta: helmet.meta.toString(),
             body: routeMarkup,
             scripts: extraChunks,
-            state: JSON.stringify(store.getState()).replace(/</g, "\\u003c")
+            state: JSON.stringify(store.getState()).replace(/</g, "\\u003c"),
+            style: jssServerSide
           });
 
           // We have all the final HTML, let's send it to the user already!

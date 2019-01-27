@@ -6,7 +6,7 @@ import { Frontload } from "react-frontload";
 import { ConnectedRouter } from "connected-react-router";
 import createStore from "./redux/store";
 
-import App from "./app/app";
+import { RestyledApp } from "./destyler";
 import "./index.css";
 
 // Create a store and get back itself and its history object
@@ -18,7 +18,7 @@ const Application = (
   <ReduxProvider store={store}>
     <ConnectedRouter history={history}>
       <Frontload noServerRender={true}>
-        <App />
+        <RestyledApp />
       </Frontload>
     </ConnectedRouter>
   </ReduxProvider>

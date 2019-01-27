@@ -11,7 +11,7 @@ import { isServer } from "../redux/store";
 import Header from "./components/header/header";
 import Routes from "./routes/routes";
 
-import withRootUI from "../styles/withRoot";
+//import withRootUI from "../styles/withRoot";
 
 class App extends Component {
   componentWillMount() {
@@ -35,12 +35,12 @@ class App extends Component {
   }
 }
 
-export default withRootUI(
-  withRouter(
-    connect(({ auth: { isAuthenticated }, common: { error, loading } }) => ({
-      isAuthenticated,
-      error,
-      loading
-    }))(App)
-  )
+export default //withRootUI(
+withRouter(
+  connect(({ auth: { isAuthenticated }, common: { error, loading } }) => ({
+    isAuthenticated,
+    error,
+    loading
+  }))(App)
 );
+//);
