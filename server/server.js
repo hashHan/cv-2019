@@ -30,7 +30,7 @@ const PORT = process.env.PORT || 3000;
 
   Resolve to: https://www.mydomain.com
 */
-// if (process.env.NODE_ENV === 'production') {
+// if (process.env.REACT_APP_CUSTOM_ENV === 'production') {
 //   app.use(
 //     forceDomain({
 //       hostname: 'www.mydomain.com',

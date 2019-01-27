@@ -32,7 +32,8 @@ export default (url = "/") => {
   // }
 
   const composeEnhancers =
-    process.env.NODE_ENV === "development" && !isServer
+    //process.env.NODE_ENV === "development" &&
+    process.env.REACT_APP_CUSTOM_ENV !== "production" && !isServer // isuue of create react app vs server rendering
       ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
       : null || compose;
 

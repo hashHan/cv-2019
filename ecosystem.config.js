@@ -4,20 +4,24 @@ module.exports = {
       name: "cv-2019",
       script: "./server/index.js",
       env: {
+        REACT_APP_CUSTOM_ENV: "production",
         COMMON_VARIABLE: "true",
         NODE_ENV: "production",
         DEPLOYMENT: "true"
       },
       env_production: {
+        REACT_APP_CUSTOM_ENV: "production",
         NODE_ENV: "production",
         DEPLOYMENT: "true"
       },
       env_staging: {
-        NODE_ENV: "staging",
+        REACT_APP_CUSTOM_ENV: "staging",
+        NODE_ENV: "production",
         DEPLOYMENT: "true"
       },
       env_development: {
-        NODE_ENV: "development",
+        REACT_APP_CUSTOM_ENV: "development",
+        NODE_ENV: "production",
         DEPLOYMENT: "true"
       }
     }
@@ -35,7 +39,8 @@ module.exports = {
       "post-deploy":
         "yarn install --check-files && yarn build:production && pm2 startOrRestart ecosystem.config.js --env production",
       env: {
-        NODE_ENV: "production"
+        NODE_ENV: "production",
+        REACT_APP_CUSTOM_ENV: "production"
       }
     },
 
@@ -50,7 +55,8 @@ module.exports = {
       "post-deploy":
         "yarn install --check-files && yarn build:staging && pm2 startOrRestart ecosystem.config.js --env staging",
       env: {
-        NODE_ENV: "staging"
+        NODE_ENV: "production",
+        REACT_APP_CUSTOM_ENV: "staging"
       }
     },
 
@@ -65,7 +71,8 @@ module.exports = {
       "post-deploy":
         "yarn install --check-files && yarn build:development && pm2 startOrRestart ecosystem.config.js --env development",
       env: {
-        NODE_ENV: "development"
+        NODE_ENV: "production",
+        REACT_APP_CUSTOM_ENV: "development"
       }
     }
   }

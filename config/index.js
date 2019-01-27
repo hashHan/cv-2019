@@ -1,7 +1,10 @@
 const merge = require("deepmerge");
 
-console.log("process.env.NODE_ENV: ", process.env.NODE_ENV);
-const env = process.env.NODE_ENV || "production";
+console.log(
+  "process.env.REACT_APP_CUSTOM_ENV: ",
+  process.env.REACT_APP_CUSTOM_ENV
+);
+const env = process.env.REACT_APP_CUSTOM_ENV || "production";
 const defaultConfig = require("./default");
 const envConfig = require(`./${env}`);
 console.log(env);

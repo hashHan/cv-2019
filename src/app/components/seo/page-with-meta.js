@@ -4,7 +4,9 @@ import Helmet from "react-helmet";
 import logo from "../../assets/logo.svg";
 
 const SITE_URL =
-  process.env.NODE_ENV === "development" ? "http://localhost:3000" : "";
+  process.env.REACT_APP_CUSTOM_ENV === "development"
+    ? "http://localhost:3000"
+    : ""; //Fix it later
 
 //const FACEBOOK_APP_ID = 'XXXXXXXXX';
 
