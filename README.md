@@ -9,5 +9,9 @@ Haeseong han's CV made in 2019
 3. This makes classname mismatch in server rendering
 4. NODE_ENV development makes dev tool working.
 5. I don't want to eject create-react-app.
-6. I'll develop in development env, then check serverside rendering in production env.
-7. Find other ways.
+
+### SOLUTION
+
+1. NODE_ENV: production (Always)
+2. REACT_CUSTOM_ENV: Used in both server and client side for manage custom configuration
+3. DEPLOYMENT: Used only in the server to distinguish deployment vs local
