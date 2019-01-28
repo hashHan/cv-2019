@@ -15,4 +15,6 @@ export {
 
 export { getCurrentProfile, removeCurrentProfile } from "./profile/actions";
 
+export { setTheme } from "./style/actions";
+
 //call axios here !!

@@ -15,6 +15,7 @@ import Loadable from "react-loadable";
 import createStore from "../src/redux/store";
 import App from "../src/app/app";
 import { withRootUI, sheetsRegistry } from "../src/styles/withRoot"; //material ui, jss
+//import { WithRootUIThemed, sheetsRegistry } from "../src/styles/with-root"; //material ui, jss
 import { ServerStyleSheet, StyleSheetManager } from "styled-components"; //styled-component
 import manifest from "../build/asset-manifest.json";
 
@@ -32,12 +33,13 @@ export default (req, res) => {
   */
   const injectHTML = (
     data,
-    { html, title, meta, body, scripts, state, style }
+    { html, title, meta, body, scripts, state, style, link }
   ) => {
     data = data.replace("<html>", `<html ${html}>`);
     data = data.replace(/<title>.*?<\/title>/g, title);
     data = data.replace("</head>", `${meta}</head>`);
     data = data.replace("</head>", `${style}</head>`);
+    data = data.replace("</head>", `${link}</head>`);
     data = data.replace(
       '<div id="root"></div>',
       `<div id="root">${body}</div><script>window.__PRELOADED_STATE__ = ${state}</script>`
@@ -90,12 +92,17 @@ export default (req, res) => {
 
       const styledComponentSheet = new ServerStyleSheet();
       const JSSApp = withRootUI(App); //material ui, jss injection
-      //const StyledApp = styledComponentSheet.collectStyles(JSSApp);//styled-component injection
-      const StyledApp = (
-        <StyleSheetManager sheet={styledComponentSheet.instance}>
-          <JSSApp />
-        </StyleSheetManager>
-      );
+      // const JSSApp = (
+      //   <WithRootUIThemed>
+      //     <App/>
+      //   </WithRootUIThemed>
+      // )
+      const StyledApp = styledComponentSheet.collectStyles(JSSApp); //styled-component injection
+      // const StyledApp = (
+      //   <StyleSheetManager sheet={styledComponentSheet.instance}>
+      //     {JSSApp}
+      //   </StyleSheetManager>
+      // );
       frontloadServerRender(() =>
         renderToString(
           <Loadable.Capture report={m => modules.push(m)}>
@@ -153,7 +160,8 @@ export default (req, res) => {
             body: routeMarkup,
             scripts: extraChunks,
             state: JSON.stringify(store.getState()).replace(/</g, "\\u003c"),
-            style: jssServerSide + styledComponentServerSide
+            style: jssServerSide + styledComponentServerSide,
+            link: `<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">`
           });
 
           // We have all the final HTML, let's send it to the user already!

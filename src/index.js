@@ -18,6 +18,7 @@ const Application = (
   <ReduxProvider store={store}>
     <ConnectedRouter history={history}>
       <Frontload noServerRender={true}>
+        {/* {RestyledApp} */}
         <RestyledApp />
       </Frontload>
     </ConnectedRouter>

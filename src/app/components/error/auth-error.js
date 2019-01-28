@@ -5,7 +5,7 @@ import { DialogShowWrapped } from "../../components/ui/material-ui/my-modal/my-m
 
 import { errorMessage } from "./error-Message";
 
-class ErrorModal extends Component {
+class ErrorModalBase extends Component {
   state = {
     open: true
   };
@@ -59,6 +59,6 @@ class ErrorModal extends Component {
   }
 }
 
-export default connect(({ common: { error } }) => ({
+export const ErrorModal = connect(({ common: { error } }) => ({
   error
-}))(ErrorModal);
+}))(ErrorModalBase);

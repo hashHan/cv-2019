@@ -1,5 +1,9 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
+
+import requireAuth from "../components/routing/require-auth";
+import { ScrollToTopWrapper } from "../components/scroll-control/scroll-control";
+
 import AuthenticatedRoute from "../components/routing/authenticated-route";
 import UnauthenticatedRoute from "../components/routing/unauthenticated-route";
 import Loadable from "react-loadable";
@@ -42,17 +46,26 @@ const Profile = Loadable({
   modules: ["profile"]
 });
 
-export default () => (
-  <Switch>
-    {/* <Route exact path="/" component={NotFound} /> */}
+const Cv = Loadable({
+  loader: () => import(/* webpackChunkName: "cv" */ "../pages/cv"),
+  loading: () => null,
+  modules: ["cv"]
+});
 
-    <Route exact path="/profile/:id" component={Profile} />
+export const Router = () => (
+  <ScrollToTopWrapper className="Routes">
+    <Switch>
+      <Route exact path="/" component={Cv} />
 
-    {/* <AuthenticatedRoute exact path="/dashboard" component={Dashboard} />
+      <Route exact path="/profile/:id" component={Profile} />
 
-    <UnauthenticatedRoute exact path="/login" component={Login} />
-    <AuthenticatedRoute exact path="/logout" component={Logout} /> */}
+      {/* <AuthenticatedRoute exact path="/dashboard" component={Dashboard} />
 
-    <Route component={NotFound} />
-  </Switch>
+      <UnauthenticatedRoute exact path="/login" component={Login} />
+      <AuthenticatedRoute exact path="/logout" component={Logout} /> */}
+
+      {/* <Route component={NotFound} /> */}
+      <Redirect to="/" />
+    </Switch>
+  </ScrollToTopWrapper>
 );

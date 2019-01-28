@@ -51,8 +51,9 @@ const muiAppbar = props => {
           color="inherit"
           noWrap
           className={classes.title}
+          style={{ textAlign: "right" }}
         >
-          Admin Dashboard
+          Haeseong Han's CV
         </Typography>
         {/* <Header className={classes.rightButtons} token={token}/> */}
       </Toolbar>

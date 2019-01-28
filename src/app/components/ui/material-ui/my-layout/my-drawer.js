@@ -15,7 +15,7 @@ import Divider from "@material-ui/core/Divider";
 //import { mailFolderListItems, otherMailFolderListItems } from './tileData';
 
 import { drawerWidth } from "./my-layout-constants";
-import { Aux } from "../../../../hoc/auxiliary";
+import { Aux } from "../../../auxiliary";
 
 import { MyNavigation } from "../../../navigation/navigation";
 

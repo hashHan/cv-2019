@@ -22,9 +22,9 @@ const styles = theme => ({
   toolbar: theme.mixins.toolbar // this is for vertical top margin
 });
 
-// const home = props => <Link to="/home" {...props} />
+const home = props => <Link to="/" {...props} />;
 const logout = props => <Link to="/logout" {...props} />;
-const oauth = props => <Link to="/" {...props} />;
+const oauth = props => <Link to="/oauth" {...props} />;
 
 const Navigation = props => {
   const { classes, token } = props;
@@ -34,9 +34,9 @@ const Navigation = props => {
       component="nav"
     >
       <div className={classes.toolbar} />
-      {/* <ListItem button component={home}>
-                        <ListItemText primary="Home" />
-            </ListItem> */}
+      <ListItem button component={home}>
+        <ListItemText primary="Home" />
+      </ListItem>
       {token ? (
         <Aux>
           <ListItem button component={logout}>

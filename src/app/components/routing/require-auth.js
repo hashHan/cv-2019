@@ -3,9 +3,6 @@ import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 
 export default ChildComponent => {
-  return @connect(({ auth: { token } }) => ({
-    token
-  }))
   class RequireAuth extends Component {
     render() {
       switch (this.props.token) {
@@ -18,5 +15,8 @@ export default ChildComponent => {
           return <ChildComponent {...this.props} />;
       }
     }
-  };
+  }
+  return connect(({ auth: { token } }) => ({
+    token
+  }))(RequireAuth);
 };

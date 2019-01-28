@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import { create, SheetsRegistry } from "jss";
 import JssProvider from "react-jss/lib/JssProvider";
 import {
@@ -7,8 +8,6 @@ import {
   createGenerateClassName,
   jssPreset
 } from "@material-ui/core/styles";
-//import purple from '@material-ui/core/colors/purple';
-//import green from '@material-ui/core/colors/green';
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 import { getMyTheme } from "./themes";
@@ -24,15 +23,15 @@ const isServer = !(
 export const sheetsRegistry = new SheetsRegistry();
 const sheetsManager = new Map();
 
-const theme = createMuiTheme(getMyTheme(1));
 // A theme with custom primary and secondary color.
 // It's optional.
 // const theme = createMuiTheme({
-// //   palette: {
-// //     primary: purple,
-// //     secondary: green,
-// //   },
+//   palette: {
+//     primary: purple,
+//     secondary: green,
+//   },
 // });
+const theme = createMuiTheme(getMyTheme(1));
 
 // Create a JSS instance with the default preset of plugins.
 // It's optional.
@@ -42,11 +41,26 @@ const jss = create(jssPreset());
 // It's optional.
 const generateClassName = createGenerateClassName();
 
-export function withRootUI(Component) {
-  console.log("withRootUI Component:", Component);
-  function WithRootUI(props) {
-    // JssProvider allows customizing the JSS styling solution.
-    //console.log('withRootUI props:',props)
+class WithRootUI extends React.Component {
+  // state = {
+  //   theme: createMuiTheme(getMyTheme(this.props.themeNumber))
+  // };
+
+  componentDidMount() {
+    // const jssStyles = document.getElementById("jss-server-side");
+    // if (jssStyles && jssStyles.parentNode) {
+    //   jssStyles.parentNode.removeChild(jssStyles);
+    // }
+  }
+
+  render() {
+    const { children } = this.props;
+    //const { theme } = this.state;
+    // console.log('children: ', children)
+    // console.log('theme number: ', this.props.themeNumber)
+    // console.log('getMyTheme(this.props.themeNumber): ', getMyTheme(this.props.themeNumber))
+    //console.log('createMuiTheme(getMyTheme(this.props.themeNumber)): ', createMuiTheme(getMyTheme(this.props.themeNumber)))
+    //const theme = createMuiTheme(getMyTheme(this.props.themeNumber))
     return !isServer ? ( //client
       <JssProvider jss={jss} generateClassName={generateClassName}>
         {/* MuiThemeProvider makes the theme available down the React tree
@@ -54,7 +68,7 @@ export function withRootUI(Component) {
         <MuiThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
-          <Component {...props} />
+          {children}
         </MuiThemeProvider>
       </JssProvider>
     ) : (
@@ -66,11 +80,17 @@ export function withRootUI(Component) {
       >
         <MuiThemeProvider theme={theme} sheetsManager={sheetsManager}>
           <CssBaseline />
-          <Component {...props} />
+          {children}
         </MuiThemeProvider>
       </JssProvider>
     );
   }
-
-  return WithRootUI;
 }
+
+export const WithRootUIThemed = connect(
+  ({ style: { themeNumber }, common: { error, loading } }) => ({
+    themeNumber,
+    error,
+    loading
+  })
+)(WithRootUI);
