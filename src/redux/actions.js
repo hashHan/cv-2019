@@ -13,6 +13,8 @@ export {
   establishCurrentUser
 } from "./auth/actions";
 
+export { getCvAll } from "./cvs/actions";
+
 export { getCurrentProfile, removeCurrentProfile } from "./profile/actions";
 
 export { setTheme } from "./style/actions";

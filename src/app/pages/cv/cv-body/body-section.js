@@ -6,14 +6,14 @@ import Page from "../../../components/seo/page-with-meta";
 import { withStyles } from "@material-ui/core/styles";
 //import MarkdownElement from '@material-ui/docs/MarkdownElement';
 import Grid from "@material-ui/core/Grid";
-import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import Radio from "@material-ui/core/Radio";
 import Paper from "@material-ui/core/Paper";
 
+import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
+
 import { SectionItem } from "./section-item";
+import { MyTextLink } from "../../../components/ui/material-ui/my-typography/my-text-link";
+
 const styles = theme => ({
   root: {
     flexGrow: 1
@@ -31,7 +31,7 @@ const styles = theme => ({
 
 class BodySectionBase extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes, sectionData } = this.props;
 
     return (
       <Paper className={classes.paper}>
@@ -46,7 +46,10 @@ class BodySectionBase extends Component {
           alignItems="center"
         >
           <Grid item xs={12}>
-            <Paper className={classes.paper}>Section Title</Paper>
+            <Paper className={classes.paper}>
+              <MyTextLink data={sectionData.sectionTitle} />
+              <MyTextLink data={sectionData.sectionTitle.sub} />
+            </Paper>
           </Grid>
           <Grid
             item
@@ -54,8 +57,8 @@ class BodySectionBase extends Component {
             container
             //direction='column'
           >
-            {[0, 1, 2].map(each => (
-              <SectionItem key={each} />
+            {sectionData.sectionDetails.map(each => (
+              <SectionItem key={each.mainTitle.text} eachitem={each} />
             ))}
           </Grid>
         </Grid>

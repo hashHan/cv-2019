@@ -1,17 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { frontloadConnect } from "react-frontload";
-import Page from "../../../components/seo/page-with-meta";
 
 import { withStyles } from "@material-ui/core/styles";
-//import MarkdownElement from '@material-ui/docs/MarkdownElement';
 import Grid from "@material-ui/core/Grid";
-import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import Radio from "@material-ui/core/Radio";
 import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
+
+import { MyTextLink } from "../../../components/ui/material-ui/my-typography/my-text-link";
 
 const styles = theme => ({
   root: {
@@ -24,13 +21,17 @@ const styles = theme => ({
     padding: theme.spacing.unit * 1,
     height: "100%",
     width: "100%",
-    color: theme.palette.text.secondary
+    color: theme.palette.text.secondary,
+    textAlign: "center"
+  },
+  link: {
+    margin: theme.spacing.unit
   }
 });
 
 class CvHeaderBase extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes, headerData } = this.props;
 
     return (
       <Paper className={classes.paper}>
@@ -55,17 +56,42 @@ class CvHeaderBase extends Component {
             //direction='column'
           >
             <Grid item xs={12}>
-              <Paper className={classes.paper}>1st</Paper>
+              <Paper className={classes.paper}>
+                <MyTextLink variant="h2" gutterBottom data={headerData.name} />
+              </Paper>
             </Grid>
             <Grid item xs={12}>
-              <Paper className={classes.paper}>2nd</Paper>
+              <Paper className={classes.paper}>
+                <Typography variant="subtitle1" gutterBottom>
+                  E-MAIL: {headerData.email}
+                </Typography>
+              </Paper>
             </Grid>
-            <Grid item xs={12}>
-              <Paper className={classes.paper}>3rd</Paper>
-            </Grid>
-            <Grid item xs={12}>
-              <Paper className={classes.paper}>4th</Paper>
-            </Grid>
+            {headerData.phone ? (
+              <Grid item xs={12}>
+                <Paper className={classes.paper}>
+                  <Typography variant="subtitle1" gutterBottom>
+                    PHONE: {headerData.phone}
+                  </Typography>
+                </Paper>
+              </Grid>
+            ) : null}
+            {headerData.links
+              ? headerData.links.map(link => {
+                  return (
+                    <Grid key={link.name} item xs={12}>
+                      <Paper className={classes.paper}>
+                        <Typography variant="subtitle1" gutterBottom>
+                          {link.name}:{" "}
+                          <Link href={link.linkUrl} className={classes.link}>
+                            {link.text}
+                          </Link>
+                        </Typography>
+                      </Paper>
+                    </Grid>
+                  );
+                })
+              : null}
           </Grid>
           <Grid item xs={12} md={2}>
             <Paper className={classes.paper}>right</Paper>

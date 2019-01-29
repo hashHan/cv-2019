@@ -8,7 +8,11 @@ import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 
+import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
+
 import { MyList } from "../../../components/ui/material-ui/my-list/my-list";
+import { MyTextLink } from "../../../components/ui/material-ui/my-typography/my-text-link";
 
 const styles = theme => ({
   root: {
@@ -44,151 +48,12 @@ class ItemDescriptionBase extends Component {
     console.log("Hi callback");
   };
 
-  mylist = [
-    {
-      callback: this.customcallback,
-      iconName: "close",
-      primary: "text1",
-      name: "one",
-      sub: null
-    },
-    {
-      callback: this.customcallback,
-      iconName: "add_circle",
-      primary: "text2",
-      name: "two",
-      sub: [
-        {
-          callback: this.customcallback,
-          iconName: "add_circle",
-          primary: "text3",
-          name: "subone",
-          sub: null
-        },
-        {
-          callback: this.customcallback,
-          iconName: "add_circle",
-          primary: "text4",
-          name: "subtwo",
-          sub: null
-        }
-      ]
-    }
-  ];
-
-  catalog = [
-    {
-      title: "first catalog title",
-      //description: 'first catalog section',
-      list: [
-        {
-          callback: this.customcallback,
-          iconName: "close",
-          primary: "text1",
-          name: "one",
-          sub: null
-        },
-        {
-          callback: this.customcallback,
-          iconName: "add_circle",
-          primary: "text2",
-          name: "two",
-          sub: [
-            {
-              callback: this.customcallback,
-              iconName: "add_circle",
-              primary: "text3",
-              name: "subone",
-              sub: null
-            },
-            {
-              callback: this.customcallback,
-              iconName: "add_circle",
-              primary: "text4",
-              name: "subtwo",
-              sub: null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      title: "second catalog title",
-      //description: 'first catalog section',
-      list: [
-        {
-          callback: this.customcallback,
-          iconName: "close",
-          primary: "text1",
-          name: "one",
-          sub: null
-        },
-        {
-          callback: this.customcallback,
-          iconName: "add_circle",
-          primary: "text2",
-          name: "two",
-          sub: [
-            {
-              callback: this.customcallback,
-              iconName: "add_circle",
-              primary: "text3",
-              name: "subone",
-              sub: null
-            },
-            {
-              callback: this.customcallback,
-              iconName: "add_circle",
-              primary: "text4",
-              name: "subtwo",
-              sub: null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      title: "third catalog title",
-      //description: 'first catalog section',
-      list: [
-        {
-          callback: this.customcallback,
-          iconName: "close",
-          primary: "text1",
-          name: "one",
-          sub: null
-        },
-        {
-          callback: this.customcallback,
-          iconName: "add_circle",
-          primary: "text2",
-          name: "two",
-          sub: [
-            {
-              callback: this.customcallback,
-              iconName: "add_circle",
-              primary: "text3",
-              name: "subone",
-              sub: null
-            },
-            {
-              callback: this.customcallback,
-              iconName: "add_circle",
-              primary: "text4",
-              name: "subtwo",
-              sub: null
-            }
-          ]
-        }
-      ]
-    }
-  ];
   render() {
-    const { classes } = this.props;
-    const columnNumbers = this.catalog.length;
-    console.log("catalog columnNumbers :", columnNumbers);
+    const { classes, details } = this.props;
+    const columnNumbers = details.length;
+    console.log("details columnNumbers :", columnNumbers);
     const gridNumber = parseInt(12 / columnNumbers);
-    console.log("catalog gridNumber :", gridNumber);
+    console.log("details gridNumber :", gridNumber);
     return (
       <Paper className={classes.paper}>
         <Grid
@@ -201,9 +66,9 @@ class ItemDescriptionBase extends Component {
           justify="center"
           alignItems="center"
         >
-          {this.catalog.map(each => {
+          {details.map(each => {
             return (
-              <Grid item xs={gridNumber}>
+              <Grid key={each.title.text} item xs={gridNumber}>
                 <MyList title={each.title} data={each.list} />
               </Grid>
             );

@@ -3,26 +3,17 @@ import { connect } from "react-redux";
 import { frontloadConnect } from "react-frontload";
 import Page from "../../components/seo/page-with-meta";
 
+import { getCvAll } from "../../../redux/actions";
+
 import { withStyles } from "@material-ui/core/styles";
-//import MarkdownElement from '@material-ui/docs/MarkdownElement';
-import Grid from "@material-ui/core/Grid";
-import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import Radio from "@material-ui/core/Radio";
-import Paper from "@material-ui/core/Paper";
+
+import { Aux } from "../../components/auxiliary";
 
 import { CvHeader } from "./cv-header";
 import { CvBody } from "./cv-body";
 import { CvFooter } from "./cv-footer";
-// import {
-//   getCurrentProfile,
-//   removeCurrentProfile
-// } from "../../../redux/actions";
 
-// const frontload = async props =>
-//   await props.dispatch(getCurrentProfile(+props.match.params.id));
+const frontload = async props => await props.dispatch(getCvAll());
 
 const styles = theme => ({
   root: {
@@ -43,7 +34,10 @@ class CV extends Component {
   state = {
     direction: "row",
     justify: "center",
-    alignItems: "center"
+    alignItems: "center",
+    renderFlag: false,
+    cvList: null,
+    cvChoosen: null
   };
 
   handleChange = key => (event, value) => {
@@ -52,22 +46,34 @@ class CV extends Component {
     });
   };
 
-  componentWillUnmount() {
-    //this.props.dispatch(removeCurrentProfile());
+  componentDidMount() {
+    this.props.dispatch(getCvAll()).then(() => {
+      this.setState({
+        renderFlag: true,
+        cvList: this.props.cvsFetched,
+        cvChoosen: this.props.cvsFetched.get(0) //first item default.
+      });
+    });
   }
 
-  shouldComponentUpdate(nextProps) {
-    if (nextProps.match.params.id !== this.props.match.params.id) {
-      //this.props.dispatch(getCurrentProfile(+nextProps.match.params.id));
-    }
+  // componentWillUnmount() {
+  //   //this.props.dispatch(removeCurrentProfile());
+  // }
 
-    return true;
-  }
+  // shouldComponentUpdate(nextProps) {
+  //   if (nextProps.match.params.id !== this.props.match.params.id) {
+  //     //this.props.dispatch(getCurrentProfile(+nextProps.match.params.id));
+  //   }
+
+  //   return true;
+  // }
 
   render() {
-    //const { name, id, image } = this.props.currentProfile;
     const { classes } = this.props;
-    const { alignItems, direction, justify } = this.state;
+    // const { cvMeta, headerData, footerData, bodyData } = this.state.cvChoosen.toJS();
+    const cvToRender = this.state.cvChoosen
+      ? this.state.cvChoosen.toJS()
+      : null;
 
     return (
       <Page
@@ -76,26 +82,33 @@ class CV extends Component {
         description={`cv page of haeseong han`}
         //image={image}
       >
-        <p>cv page</p>
-        <CvHeader />
-        <CvBody />
-        <CvFooter />
+        <p>
+          {cvToRender
+            ? `${cvToRender.cvMeta.owner}'s cv updated in ${
+                cvToRender.cvMeta.timestamp
+              }`
+            : "CV page"}
+        </p>
+        {this.state.renderFlag && cvToRender ? (
+          <Aux>
+            <CvHeader headerData={cvToRender.headerData} />
+            <CvBody bodyData={cvToRender.bodyData} />
+            <CvFooter footerData={cvToRender.footerData} />
+          </Aux>
+        ) : null}
       </Page>
     );
   }
 }
 
 export default withStyles(styles)(
-  connect(({ //profile: { currentProfile },
-    common: { error, loading } }) => ({
-    //currentProfile,
-    error,
-    loading
+  connect(({ cvs }) => ({
+    cvsFetched: cvs.get("cvs"),
+    error: cvs.get("error")
   }))(
-    CV
-    // frontloadConnect(frontload, {
-    //   onMount: true,
-    //   onUpdate: false
-    // })(Profile)
+    frontloadConnect(frontload, {
+      onMount: true,
+      onUpdate: false
+    })(CV)
   )
 );

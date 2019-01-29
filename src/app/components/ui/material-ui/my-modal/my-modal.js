@@ -295,7 +295,7 @@ export class SimpleDialogDemo extends React.Component {
   render() {
     return (
       <div>
-        <Typography variant="subheading">
+        <Typography variant="subtitle1">
           Selected: {this.state.selectedValue.contents}
         </Typography>
         <br />

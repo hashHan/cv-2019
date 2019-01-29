@@ -13,6 +13,11 @@ import Icon from "@material-ui/core/Icon";
 import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 
+import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
+
+import { MyTextLink } from "../my-typography/my-text-link";
+
 import { Aux } from "../../../auxiliary";
 
 const styles = theme => ({
@@ -58,45 +63,18 @@ class MyListBase extends Component {
     });
   };
 
-  // customcallback = () => {
-  //     console.log('Hi callback')
-  // }
-
-  // mylist = [
-  //     {
-  //         callback: this.customcallback,
-  //         iconName: 'close',
-  //         primary: 'text1',
-  //         name: 'one',
-  //         sub: null,
-  //     },
-  //     {
-  //         callback: this.customcallback,
-  //         iconName: 'add_circle',
-  //         primary: 'text2',
-  //         name: 'two',
-  //         sub: [{
-  //             callback: this.customcallback,
-  //             iconName: 'add_circle',
-  //             primary: 'text3',
-  //             name: 'subone',
-  //             sub: null,
-  //         }, {
-  //             callback: this.customcallback,
-  //             iconName: 'add_circle',
-  //             primary: 'text4',
-  //             name: 'subtwo',
-  //             sub: null,
-  //         }]
-  //     }
-  // ]
   render() {
     const { classes, title, data } = this.props;
 
     return (
       <List
         component="nav"
-        subheader={<ListSubheader component="div">{title}</ListSubheader>}
+        subheader={
+          <ListSubheader component="div">
+            <MyTextLink variant="caption" gutterBottom data={title} />
+            <MyTextLink variant="caption" gutterBottom data={title.sub} />
+          </ListSubheader>
+        }
         className={classes.list}
       >
         {data.map(
@@ -106,7 +84,12 @@ class MyListBase extends Component {
                 <ListItemIcon>
                   <Icon className={classes.rightIcon}>{iconName}</Icon>
                 </ListItemIcon>
-                <ListItemText inset primary={primary} />
+                <ListItemText
+                  inset
+                  primary={
+                    <MyTextLink variant="caption" gutterBottom data={primary} />
+                  }
+                />
               </ListItem>
             ) : (
               <Aux key={name}>
@@ -114,7 +97,16 @@ class MyListBase extends Component {
                   <ListItemIcon>
                     <Icon className={classes.rightIcon}>{iconName}</Icon>
                   </ListItemIcon>
-                  <ListItemText inset primary={primary} />
+                  <ListItemText
+                    inset
+                    primary={
+                      <MyTextLink
+                        variant="caption"
+                        gutterBottom
+                        data={primary}
+                      />
+                    }
+                  />
                   {this.state.open[name] ? <ExpandLess /> : <ExpandMore />}
                 </ListItem>
                 <Collapse
@@ -137,7 +129,16 @@ class MyListBase extends Component {
                               {iconName}
                             </Icon>
                           </ListItemIcon>
-                          <ListItemText inset primary={primary} />
+                          <ListItemText
+                            inset
+                            primary={
+                              <MyTextLink
+                                variant="caption"
+                                gutterBottom
+                                data={primary}
+                              />
+                            }
+                          />
                         </ListItem>
                       )
                     )}

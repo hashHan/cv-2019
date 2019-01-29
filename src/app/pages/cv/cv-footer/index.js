@@ -4,14 +4,13 @@ import { frontloadConnect } from "react-frontload";
 import Page from "../../../components/seo/page-with-meta";
 
 import { withStyles } from "@material-ui/core/styles";
-//import MarkdownElement from '@material-ui/docs/MarkdownElement';
 import Grid from "@material-ui/core/Grid";
-import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import Radio from "@material-ui/core/Radio";
 import Paper from "@material-ui/core/Paper";
+
+import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
+
+import { MyTextLink } from "../../../components/ui/material-ui/my-typography/my-text-link";
 
 const styles = theme => ({
   root: {
@@ -30,7 +29,12 @@ const styles = theme => ({
 
 class CvFooterBase extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes, footerData } = this.props;
+    let gridNumber = 12;
+    if (footerData.iconLinks) {
+      gridNumber = parseInt(12 / footerData.iconLinks.length);
+      console.log("details gridNumber :", gridNumber);
+    }
 
     return (
       <Paper className={classes.paper}>
@@ -54,18 +58,51 @@ class CvFooterBase extends Component {
             container
             //direction='column'
           >
+            {footerData.iconLinks
+              ? footerData.iconLinks.map(link => {
+                  return (
+                    <Grid key={link.linkUrl} item xs={gridNumber}>
+                      <Paper className={classes.paper}>
+                        <Typography variant="subtitle1" gutterBottom>
+                          {link.iconName}:{" "}
+                          <Link href={link.linkUrl} className={classes.link}>
+                            {link.tooltip}
+                          </Link>
+                        </Typography>
+                      </Paper>
+                    </Grid>
+                  );
+                })
+              : null}
             <Grid item xs={12}>
-              <Paper className={classes.paper}>1st</Paper>
+              <Paper className={classes.paper}>space</Paper>
             </Grid>
             <Grid item xs={12}>
-              <Paper className={classes.paper}>2nd</Paper>
+              <Paper className={classes.paper}>
+                <Typography variant="caption" gutterBottom>
+                  URL of this page: TO DO - get from config
+                </Typography>
+              </Paper>
             </Grid>
-            <Grid item xs={12}>
-              <Paper className={classes.paper}>3rd</Paper>
-            </Grid>
-            <Grid item xs={12}>
-              <Paper className={classes.paper}>4th</Paper>
-            </Grid>
+            {footerData.copyRight ? (
+              <Grid item xs={12}>
+                <Paper className={classes.paper}>
+                  <Typography variant="caption" gutterBottom>
+                    Copyright ©{" "}
+                    {footerData.copyRight ? (
+                      <Link
+                        href={footerData.copyRight.linkUrl}
+                        className={classes.link}
+                      >
+                        {footerData.copyRight.text}
+                      </Link>
+                    ) : (
+                      footerData.copyRight.text
+                    )}
+                  </Typography>
+                </Paper>
+              </Grid>
+            ) : null}
           </Grid>
           <Grid item xs={12} md={2}>
             <Paper className={classes.paper}>right</Paper>

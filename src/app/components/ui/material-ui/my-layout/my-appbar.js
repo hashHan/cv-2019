@@ -47,7 +47,7 @@ const muiAppbar = props => {
           <MenuIcon />
         </IconButton>
         <Typography
-          variant="title"
+          variant="h6"
           color="inherit"
           noWrap
           className={classes.title}

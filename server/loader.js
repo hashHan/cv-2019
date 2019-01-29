@@ -161,7 +161,7 @@ export default (req, res) => {
             scripts: extraChunks,
             state: JSON.stringify(store.getState()).replace(/</g, "\\u003c"),
             style: jssServerSide + styledComponentServerSide,
-            link: `<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">`
+            link: `<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Roboto:300,400,500">`
           });
 
           // We have all the final HTML, let's send it to the user already!

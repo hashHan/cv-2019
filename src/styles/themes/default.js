@@ -5,5 +5,8 @@ export const themeDefault = {
   palette: {
     primary: purple,
     secondary: green
+  },
+  typography: {
+    useNextVariants: true
   }
 };

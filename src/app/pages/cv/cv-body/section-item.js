@@ -6,14 +6,13 @@ import Page from "../../../components/seo/page-with-meta";
 import { withStyles } from "@material-ui/core/styles";
 //import MarkdownElement from '@material-ui/docs/MarkdownElement';
 import Grid from "@material-ui/core/Grid";
-import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import Radio from "@material-ui/core/Radio";
 import Paper from "@material-ui/core/Paper";
 
+import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
+
 import { ItemDescription } from "./item-description";
+import { MyTextLink } from "../../../components/ui/material-ui/my-typography/my-text-link";
 
 const styles = theme => ({
   root: {
@@ -32,7 +31,7 @@ const styles = theme => ({
 
 class SectionItemBase extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes, eachitem } = this.props;
 
     return (
       <Paper className={classes.paper}>
@@ -52,32 +51,73 @@ class SectionItemBase extends Component {
             container
             //direction= 'column'
           >
-            <Paper className={classes.paper}>Item Metas</Paper>
             <Grid item xs={9} md={9} container>
               <Paper className={classes.paper}>
-                Item Titles
                 <Grid item xs={12}>
-                  <Paper className={classes.paper}>Item Main Title</Paper>
+                  <Paper className={classes.paper}>
+                    <MyTextLink
+                      variant="caption"
+                      gutterBottom
+                      data={eachitem.mainTitle}
+                    />
+                    <MyTextLink
+                      variant="caption"
+                      gutterBottom
+                      data={eachitem.mainTitle.sub}
+                    />
+                  </Paper>
                 </Grid>
                 <Grid item xs={12}>
-                  <Paper className={classes.paper}>Item Sub Title</Paper>
+                  <Paper className={classes.paper}>
+                    <MyTextLink
+                      variant="caption"
+                      gutterBottom
+                      data={eachitem.subTitle}
+                    />
+                    <MyTextLink
+                      variant="caption"
+                      gutterBottom
+                      data={eachitem.subTitle.sub}
+                    />
+                  </Paper>
                 </Grid>
               </Paper>
             </Grid>
             <Grid item xs={3} md={3} container>
               <Paper className={classes.paper}>
-                Item Location, Period
                 <Grid item xs={12}>
-                  <Paper className={classes.paper}>Item Location</Paper>
+                  <Paper className={classes.paper}>
+                    <MyTextLink
+                      variant="caption"
+                      gutterBottom
+                      data={eachitem.period}
+                    />
+                    <MyTextLink
+                      variant="caption"
+                      gutterBottom
+                      data={eachitem.period.sub}
+                    />
+                  </Paper>
                 </Grid>
                 <Grid item xs={12}>
-                  <Paper className={classes.paper}>Item Period</Paper>
+                  <Paper className={classes.paper}>
+                    <MyTextLink
+                      variant="caption"
+                      gutterBottom
+                      data={eachitem.location}
+                    />
+                    <MyTextLink
+                      variant="caption"
+                      gutterBottom
+                      data={eachitem.location.sub}
+                    />
+                  </Paper>
                 </Grid>
               </Paper>
             </Grid>
           </Grid>
           <Grid item xs={12}>
-            <ItemDescription />
+            <ItemDescription details={eachitem.catalog} />
           </Grid>
         </Grid>
       </Paper>

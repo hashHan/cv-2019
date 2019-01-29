@@ -3,14 +3,6 @@ import * as actionTypes from "./action-types";
 import { updateObject } from "../../lib/update-object"; // my util
 //import {recordFromJS} from "../../../lib/immutable"; // fareed's util
 
-// const initialState = {
-//     token: null,
-//     userId: null,
-//     error: null,
-//     loading: false,
-//     authRedirectPath: '/'
-// };
-
 const commonStart = (state, action) => {
   return updateObject(state, {
     error: null,
