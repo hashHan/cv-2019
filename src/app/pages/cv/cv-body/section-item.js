@@ -126,16 +126,16 @@ class SectionItemBase extends Component {
 }
 
 export const SectionItem = withStyles(styles)(
-  connect(({ //profile: { currentProfile },
-    common: { error, loading } }) => ({
-    //currentProfile,
-    error,
-    loading
-  }))(
-    SectionItemBase
-    // frontloadConnect(frontload, {
-    //   onMount: true,
-    //   onUpdate: false
-    // })(Profile)
-  )
+  // connect(({ //profile: { currentProfile },
+  //   common: { error, loading } }) => ({
+  //   //currentProfile,
+  //   error,
+  //   loading
+  // }))(
+  SectionItemBase
+  // frontloadConnect(frontload, {
+  //   onMount: true,
+  //   onUpdate: false
+  // })(Profile)
+  //)
 );

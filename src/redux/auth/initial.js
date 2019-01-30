@@ -1,6 +1,9 @@
 //import {recordFromJS} from "../../shared/utility/immutable"; //copied fareed's lib
 
-export default {
+import { fromJS } from "immutable";
+
+export default fromJS({
   isAuthenticated: false,
+  token: false,
   currentUser: {}
-};
+});

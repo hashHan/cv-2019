@@ -1,6 +1,6 @@
 import { fromJS } from "immutable";
 
-export const initialState = fromJS({
+export default fromJS({
   error: null,
   loading: false,
   cvs: [] // multiple CVs

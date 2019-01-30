@@ -103,16 +103,16 @@ class CvHeaderBase extends Component {
 }
 
 export const CvHeader = withStyles(styles)(
-  connect(({ //profile: { currentProfile },
-    common: { error, loading } }) => ({
-    //currentProfile,
-    error,
-    loading
-  }))(
-    CvHeaderBase
-    // frontloadConnect(frontload, {
-    //   onMount: true,
-    //   onUpdate: false
-    // })(Profile)
-  )
+  // connect(({ //profile: { currentProfile },
+  //   common: { error, loading } }) => ({
+  //   //currentProfile,
+  //   error,
+  //   loading
+  // }))(
+  CvHeaderBase
+  // frontloadConnect(frontload, {
+  //   onMount: true,
+  //   onUpdate: false
+  // })(Profile)
+  //)
 );

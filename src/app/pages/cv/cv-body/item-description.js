@@ -80,16 +80,16 @@ class ItemDescriptionBase extends Component {
 }
 
 export const ItemDescription = withStyles(styles)(
-  connect(({ //profile: { currentProfile },
-    common: { error, loading } }) => ({
-    //currentProfile,
-    error,
-    loading
-  }))(
-    ItemDescriptionBase
-    // frontloadConnect(frontload, {
-    //   onMount: true,
-    //   onUpdate: false
-    // })(Profile)
-  )
+  // connect(({ //profile: { currentProfile },
+  //   common: { error, loading } }) => ({
+  //   //currentProfile,
+  //   error,
+  //   loading
+  // }))(
+  ItemDescriptionBase
+  // frontloadConnect(frontload, {
+  //   onMount: true,
+  //   onUpdate: false
+  // })(Profile)
+  //)
 );

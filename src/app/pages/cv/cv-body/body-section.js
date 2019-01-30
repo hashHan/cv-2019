@@ -68,16 +68,16 @@ class BodySectionBase extends Component {
 }
 
 export const BodySection = withStyles(styles)(
-  connect(({ //profile: { currentProfile },
-    common: { error, loading } }) => ({
-    //currentProfile,
-    error,
-    loading
-  }))(
-    BodySectionBase
-    // frontloadConnect(frontload, {
-    //   onMount: true,
-    //   onUpdate: false
-    // })(Profile)
-  )
+  // connect(({ //profile: { currentProfile },
+  //   common: { error, loading } }) => ({
+  //   //currentProfile,
+  //   error,
+  //   loading
+  // }))(
+  BodySectionBase
+  // frontloadConnect(frontload, {
+  //   onMount: true,
+  //   onUpdate: false
+  // })(Profile)
+  //)
 );

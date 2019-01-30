@@ -114,16 +114,16 @@ class CvFooterBase extends Component {
 }
 
 export const CvFooter = withStyles(styles)(
-  connect(({ //profile: { currentProfile },
-    common: { error, loading } }) => ({
-    //currentProfile,
-    error,
-    loading
-  }))(
-    CvFooterBase
-    // frontloadConnect(frontload, {
-    //   onMount: true,
-    //   onUpdate: false
-    // })(Profile)
-  )
+  // connect(({ //profile: { currentProfile },
+  //   common: { error, loading } }) => ({
+  //   //currentProfile,
+  //   error,
+  //   loading
+  // }))(
+  CvFooterBase
+  // frontloadConnect(frontload, {
+  //   onMount: true,
+  //   onUpdate: false
+  // })(Profile)
 );
+//);

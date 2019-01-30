@@ -1,4 +1,4 @@
-import { initialState } from "./initial";
+import initialState from "./initial";
 import * as actionTypes from "./action-types";
 
 const cvsStart = (state, action) => {

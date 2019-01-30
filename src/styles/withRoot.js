@@ -43,7 +43,7 @@ const jss = create(jssPreset());
 const generateClassName = createGenerateClassName();
 
 export function withRootUI(Component) {
-  console.log("withRootUI Component:", Component);
+  //console.log("withRootUI Component:", Component);
   function WithRootUI(props) {
     // JssProvider allows customizing the JSS styling solution.
     //console.log('withRootUI props:',props)

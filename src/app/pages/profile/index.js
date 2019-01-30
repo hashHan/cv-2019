@@ -46,13 +46,9 @@ class Profile extends Component {
   }
 }
 
-export default connect(
-  ({ profile: { currentProfile }, common: { error, loading } }) => ({
-    currentProfile,
-    error,
-    loading
-  })
-)(
+export default connect(({ profile }) => ({
+  currentProfile: profile.get("currentProfile")
+}))(
   frontloadConnect(frontload, {
     onMount: true,
     onUpdate: false
