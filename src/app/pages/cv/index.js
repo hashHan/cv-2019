@@ -3,17 +3,20 @@ import { connect } from "react-redux";
 import { frontloadConnect } from "react-frontload";
 import Page from "../../components/seo/page-with-meta";
 
-import { getCvAll } from "../../../redux/actions";
+import { getCvList, getCvLatest, getCvOne } from "../../../redux/actions";
 
 import { withStyles } from "@material-ui/core/styles";
 
 import { Aux } from "../../components/auxiliary";
 
+import { CvList } from "./cv-list";
 import { CvHeader } from "./cv-header";
 import { CvBody } from "./cv-body";
 import { CvFooter } from "./cv-footer";
+import { loggerDev } from "../../../lib/logger";
 
-const frontload = async props => await props.dispatch(getCvAll());
+const frontload = async props =>
+  await props.dispatch(getCvList()).then(() => props.dispatch(getCvLatest()));
 
 const styles = theme => ({
   root: {
@@ -36,8 +39,15 @@ class CV extends Component {
     justify: "center",
     alignItems: "center",
     renderFlag: false,
-    cvList: null,
-    cvChoosen: null
+    cvList: this.props.cvList.getIn([0, "cvId"])
+      ? this.props.cvList //.toJS()
+      : null,
+    cvLatest: this.props.cvLatest.getIn(["cvMeta", "cvId"])
+      ? this.props.cvLatest //.toJS()
+      : null,
+    cvSelected: this.props.cvSelected.getIn(["cvMeta", "cvId"])
+      ? this.props.cvSelected //.toJS()
+      : null
   };
 
   handleChange = key => (event, value) => {
@@ -46,14 +56,16 @@ class CV extends Component {
     });
   };
 
+  cvListCallback = cvId => this.props.dispatch(getCvOne(cvId));
+
   componentDidMount() {
-    this.props.dispatch(getCvAll()).then(() => {
-      this.setState({
-        renderFlag: true,
-        cvList: this.props.cvsFetched,
-        cvChoosen: this.props.cvsFetched.get(0) //first item default.
-      });
+    //this.props.dispatch(getCvLatest()).then(() => {
+    this.setState({
+      //renderFlag: true,
+      //cvList: this.props.cvList,
+      //cvSelected: this.props.cvSelected,
     });
+    //});
   }
 
   // componentWillUnmount() {
@@ -70,26 +82,41 @@ class CV extends Component {
 
   render() {
     const { classes } = this.props;
-    // const { cvMeta, headerData, footerData, bodyData } = this.state.cvChoosen.toJS();
-    const cvToRender = this.state.cvChoosen
-      ? this.state.cvChoosen.toJS()
+    const cvLatestToRender = this.props.cvLatest.getIn(["cvMeta", "cvId"])
+      ? this.props.cvLatest.toJS()
       : null;
-
+    const cvToRender = this.props.cvSelected.getIn(["cvMeta", "cvId"])
+      ? this.props.cvSelected.toJS()
+      : cvLatestToRender;
+    const cvListToRender = this.props.cvList.getIn([0, "cvId"])
+      ? this.props.cvList.toJS()
+      : null;
+    //const cvLatestToRender = this.state.cvLatest.toJS()
+    // loggerDev('this.state.cvLatest: ',this.state.cvLatest);
+    // loggerDev('this.state.cvList: ',this.state.cvList);
+    // loggerDev('this.state.cvSelected: ',this.state.cvSelected);
+    // const cvToRender = this.state.cvSelected? this.state.cvSelected.toJS() : this.state.cvLatest.toJS()
+    // const cvListToRender = this.state.cvList.toJS()
+    loggerDev("cvToRender: ", cvToRender);
+    loggerDev("cvListToRender: ", cvListToRender);
     return (
-      <Page
-        id="cv"
-        title="cv"
-        description={`cv page of haeseong han`}
-        //image={image}
-      >
-        <p>
-          {cvToRender
-            ? `${cvToRender.cvMeta.owner}'s cv updated in ${
-                cvToRender.cvMeta.timestamp
-              }`
-            : "CV page"}
-        </p>
-        {this.state.renderFlag && cvToRender ? (
+      <Page id="cv" title="cv" description={`cv page of haeseong han`}>
+        {//this.state.renderFlag &&
+        cvListToRender ? (
+          <CvList
+            cvListData={cvListToRender}
+            cvListCallback={cvId => this.cvListCallback(cvId)}
+          />
+        ) : null}
+
+        {cvToRender
+          ? `${cvToRender.cvMeta.owner}'s cv updated in ${
+              cvToRender.cvMeta.timestamp
+            }`
+          : "CV page"}
+
+        {//this.state.renderFlag &&
+        cvToRender ? (
           <Aux>
             <CvHeader headerData={cvToRender.headerData} />
             <CvBody bodyData={cvToRender.bodyData} />
@@ -103,8 +130,10 @@ class CV extends Component {
 
 export default withStyles(styles)(
   connect(({ cvs }) => ({
-    cvsFetched: cvs.get("cvs"),
-    error: cvs.get("error")
+    cvList: cvs.get("cvList"),
+    cvSelected: cvs.get("cvSelected"),
+    cvLatest: cvs.get("cvLatest")
+    //error: cvs.get("error")
   }))(
     frontloadConnect(frontload, {
       onMount: true,

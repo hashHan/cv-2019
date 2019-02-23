@@ -9785,6 +9785,13 @@ widest-line@^2.0.0:
   dependencies:
     string-width "^2.1.1"
 
+with-immutable-props-to-js@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/with-immutable-props-to-js/-/with-immutable-props-to-js-1.1.0.tgz#af6fa9c3e205040524375ab880c35e4f64fd68c9"
+  integrity sha512-LuL0x/ZpidC4uYROmyUm5oERQGsSfvhAT7+s/IKH3NVqeBEOFR+d7LB2PDsKJxou9dCCr06h5krvnnIiORRx5Q==
+  dependencies:
+    hoist-non-react-statics "^3.2.1"
+
 wordwrap@~0.0.2:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"

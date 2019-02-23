@@ -58,7 +58,9 @@ class CvFooterBase extends Component {
             container
             //direction='column'
           >
-            {footerData.iconLinks
+            {footerData.iconLinks &&
+            footerData.iconLinks[0] &&
+            footerData.iconLinks[0].linkUrl
               ? footerData.iconLinks.map(link => {
                   return (
                     <Grid key={link.linkUrl} item xs={gridNumber}>
@@ -84,7 +86,7 @@ class CvFooterBase extends Component {
                 </Typography>
               </Paper>
             </Grid>
-            {footerData.copyRight ? (
+            {footerData.copyRight && footerData.copyRight.linkUrl ? (
               <Grid item xs={12}>
                 <Paper className={classes.paper}>
                   <Typography variant="caption" gutterBottom>

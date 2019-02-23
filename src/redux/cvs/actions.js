@@ -25,9 +25,9 @@ export const cvsStart = () => {
   loggerDev("cvsStart");
   return dispatch => {
     dispatch(commonStart());
-    dispatch({
-      type: actionTypes.CVS_START
-    });
+    // dispatch({
+    //   type: actionTypes.CVS_START
+    // });
   };
 };
 
@@ -35,10 +35,10 @@ export const cvsFail = error => {
   loggerDev("cvsFail: ", error);
   return dispatch => {
     dispatch(commonFail(error));
-    dispatch({
-      type: actionTypes.CVS_FAIL,
-      error: error
-    });
+    // dispatch({
+    //   type: actionTypes.CVS_FAIL,
+    //   error: error
+    // });
   };
 };
 
@@ -46,15 +46,17 @@ export const cvsSuccess = () => dispatch =>
   new Promise(function(resolve, reject) {
     loggerDev("cvsSuccess");
     dispatch(commonSuccess());
-    dispatch({
-      type: actionTypes.CVS_SUCCESS
-    });
+    // dispatch({
+    //   type: actionTypes.CVS_SUCCESS
+    // });
     resolve();
   });
 
-export const getCvAll = () => {
-  loggerDev("getCvAll");
-  const cvList = fromJS(cvsTemp);
+export const getCvList = () => {
+  loggerDev("getCvList");
+  const cvMeta = cvsTemp.map(each => each.cvMeta);
+  loggerDev("cvMeta: ", cvMeta);
+  const cvList = fromJS(cvMeta);
   return dispatch =>
     new Promise(function(resolve, reject) {
       dispatch(cvsStart());
@@ -78,10 +80,90 @@ export const getCvAll = () => {
 
       dispatch(cvsSuccess()); //return for promise;
       dispatch({
-        type: actionTypes.GET_CV_ALL,
+        type: actionTypes.GET_CV_LIST,
         data: cvList
       });
       resolve(cvList);
+      // })
+      // .catch(error => {
+      //     const formattedError = errorFormatter(error, section, reqInfo.endpoint, reqInfo.method)
+      //     dispatch(cvsFail(formattedError));
+      // });
+    });
+};
+
+export const getCvLatest = () => {
+  loggerDev("getCvLatest");
+  const cvLatestjs = cvsTemp.filter(each => each.cvMeta.latest === true)[0];
+  loggerDev("cvLatest: ", cvLatestjs);
+  const cvLatest = fromJS(cvLatestjs);
+  return dispatch =>
+    new Promise(function(resolve, reject) {
+      dispatch(cvsStart());
+      //     const reqInfo = {
+      //         endpoint: 'cvs',
+      //         url: 'cvs',
+      //         method: 'get',
+      //     }
+      //     api.get(reqInfo.url)
+      //         .then(response => {
+      //             loggerDev(response);
+      //             const {
+      //                //cvs
+      //                //id,
+      //                //name, ...
+      //             } = response.data
+      //             const cvList = fromJS({
+      //                 // id,
+      //                 // name: name ? name:"cvs_default",
+      //             })
+
+      dispatch(cvsSuccess()); //return for promise;
+      dispatch({
+        type: actionTypes.GET_CV_LATEST,
+        data: cvLatest
+      });
+      resolve(cvLatest);
+      // })
+      // .catch(error => {
+      //     const formattedError = errorFormatter(error, section, reqInfo.endpoint, reqInfo.method)
+      //     dispatch(cvsFail(formattedError));
+      // });
+    });
+};
+
+export const getCvOne = cvId => {
+  loggerDev("getCvOne");
+  const cvOnejs = cvsTemp.filter(each => each.cvMeta.cvId === cvId)[0];
+  loggerDev("cvOne: ", cvOnejs);
+  const cvOne = fromJS(cvOnejs);
+  return dispatch =>
+    new Promise(function(resolve, reject) {
+      dispatch(cvsStart());
+      //     const reqInfo = {
+      //         endpoint: 'cvs',
+      //         url: 'cvs',
+      //         method: 'get',
+      //     }
+      //     api.get(reqInfo.url)
+      //         .then(response => {
+      //             loggerDev(response);
+      //             const {
+      //                //cvs
+      //                //id,
+      //                //name, ...
+      //             } = response.data
+      //             const cvList = fromJS({
+      //                 // id,
+      //                 // name: name ? name:"cvs_default",
+      //             })
+
+      dispatch(cvsSuccess()); //return for promise;
+      dispatch({
+        type: actionTypes.GET_CV_ONE,
+        data: cvOne
+      });
+      resolve(cvOne);
       // })
       // .catch(error => {
       //     const formattedError = errorFormatter(error, section, reqInfo.endpoint, reqInfo.method)

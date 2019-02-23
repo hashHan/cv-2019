@@ -13,8 +13,16 @@ const cvsSuccess = (state, action) => {
   return state.set("error", null).set("loading", false);
 };
 
-const getCvAll = (state, action) => {
-  return state.set("cvs", action.data);
+const getCvList = (state, action) => {
+  return state.set("cvList", action.data);
+};
+
+const getCvLatest = (state, action) => {
+  return state.set("cvLatest", action.data);
+};
+
+const getCvOne = (state, action) => {
+  return state.set("cvSelected", action.data);
 };
 
 export default (state = initialState, action) => {
@@ -25,8 +33,12 @@ export default (state = initialState, action) => {
       return cvsFail(state, action);
     case actionTypes.CVS_SUCCESS:
       return cvsSuccess(state, action);
-    case actionTypes.GET_CV_ALL:
-      return getCvAll(state, action);
+    case actionTypes.GET_CV_LIST:
+      return getCvList(state, action);
+    case actionTypes.GET_CV_LATEST:
+      return getCvLatest(state, action);
+    case actionTypes.GET_CV_ONE:
+      return getCvOne(state, action);
 
     default:
       return state;

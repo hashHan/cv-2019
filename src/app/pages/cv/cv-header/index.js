@@ -76,7 +76,9 @@ class CvHeaderBase extends Component {
                 </Paper>
               </Grid>
             ) : null}
-            {headerData.links
+            {headerData.links &&
+            headerData.links[0] &&
+            headerData.links[0].linkUrl
               ? headerData.links.map(link => {
                   return (
                     <Grid key={link.name} item xs={12}>

@@ -2,6 +2,22 @@
 
 Haeseong han's CV made in 2019
 
+## TECH
+
+1. REACT
+2. CSS IN JS(STYLED COMPONENT, JSS)
+3. REDUX, IMMUTABLE
+4. WEBPACK, BABEL
+5. SERVER SIDE RENDERING, ASYNC ROUTING
+6. express, node
+
+### TO-DO
+
+db: browser storage, redis&aws elastic cache , sql&aws RDB,
+deployment: AWS(EC2, Cloudfront), pm2, nginx,
+testing,
+service workers,
+
 ## Server side rendering and create react app and styled-component and jss(material ui)
 
 1. create react app makes NODE_ENV production when building bundles

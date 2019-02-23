@@ -1,8 +1,12 @@
 export const cvsTemp = [
   {
     cvMeta: {
+      cvId: "haeseong20190201000000",
       owner: "haeseong",
-      timestamp: 20190201000000
+      timestamp: 20190201000000,
+      latest: true,
+      version: "2.0",
+      description: "After quit Kono"
     },
     headerData: {
       meta: "header meta",
@@ -652,8 +656,12 @@ export const cvsTemp = [
   },
   {
     cvMeta: {
+      cvId: "haeseong20180401000000",
       owner: "haeseong",
-      timestamp: 20180401000000
+      timestamp: 20180401000000,
+      latest: false,
+      version: "1.0",
+      description: "Start to Study Web"
     },
     headerData: {
       meta: "header meta",
