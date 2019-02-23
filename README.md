@@ -13,10 +13,20 @@ Haeseong han's CV made in 2019
 
 ### TO-DO
 
-db: browser storage, redis&aws elastic cache , sql&aws RDB,
-deployment: AWS(EC2, Cloudfront), pm2, nginx,
-testing,
+db: browser storage, redis&aws elastic cache , sql&aws RDB, mongoDB  
+deployment: AWS(EC2, Cloudfront), pm2, nginx,  
+testing,  
 service workers,
+
+Split a server to two servers (rendering server and logic server),
+
+Oauth2.0,
+
+post patch,
+
+i18n,
+
+animation,
 
 ## Server side rendering and create react app and styled-component and jss(material ui)
 
