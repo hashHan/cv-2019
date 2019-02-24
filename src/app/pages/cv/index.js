@@ -38,16 +38,16 @@ class CV extends Component {
     direction: "row",
     justify: "center",
     alignItems: "center",
-    renderFlag: false,
-    cvList: this.props.cvList.getIn([0, "cvId"])
-      ? this.props.cvList //.toJS()
-      : null,
-    cvLatest: this.props.cvLatest.getIn(["cvMeta", "cvId"])
-      ? this.props.cvLatest //.toJS()
-      : null,
-    cvSelected: this.props.cvSelected.getIn(["cvMeta", "cvId"])
-      ? this.props.cvSelected //.toJS()
-      : null
+    renderFlag: false
+    // cvList: this.props.cvList.getIn([0, "cvId"])
+    //   ? this.props.cvList //.toJS()
+    //   : null,
+    // cvLatest: this.props.cvLatest.getIn(["cvMeta", "cvId"])
+    //   ? this.props.cvLatest //.toJS()
+    //   : null,
+    // cvSelected: this.props.cvSelected.getIn(["cvMeta", "cvId"])
+    //   ? this.props.cvSelected //.toJS()
+    //   : null
   };
 
   handleChange = key => (event, value) => {
@@ -91,12 +91,7 @@ class CV extends Component {
     const cvListToRender = this.props.cvList.getIn([0, "cvId"])
       ? this.props.cvList.toJS()
       : null;
-    //const cvLatestToRender = this.state.cvLatest.toJS()
-    // loggerDev('this.state.cvLatest: ',this.state.cvLatest);
-    // loggerDev('this.state.cvList: ',this.state.cvList);
-    // loggerDev('this.state.cvSelected: ',this.state.cvSelected);
-    // const cvToRender = this.state.cvSelected? this.state.cvSelected.toJS() : this.state.cvLatest.toJS()
-    // const cvListToRender = this.state.cvList.toJS()
+
     loggerDev("cvToRender: ", cvToRender);
     loggerDev("cvListToRender: ", cvListToRender);
     return (

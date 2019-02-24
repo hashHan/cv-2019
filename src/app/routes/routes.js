@@ -48,7 +48,7 @@ const Profile = Loadable({
 
 const Cv = Loadable({
   loader: () => import(/* webpackChunkName: "cv" */ "../pages/cv"),
-  loading: () => null,
+  loading: () => "loading...", //null
   modules: ["cv"]
 });
 
