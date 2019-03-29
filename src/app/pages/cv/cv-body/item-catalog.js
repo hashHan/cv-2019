@@ -19,7 +19,9 @@ const styles = theme => ({
     flexGrow: 1
   },
   description: {
-    //verticalAlign: "top"
+    width: "100%"
+    //verticalAlign: "top",
+    //width: "min-content",
   },
   paper: {
     padding: theme.spacing.unit * 1,
@@ -37,7 +39,7 @@ const styles = theme => ({
   }
 });
 
-class ItemDescriptionBase extends Component {
+class ItemCatalogBase extends Component {
   state = {
     // open: {
     //   //
@@ -50,10 +52,10 @@ class ItemDescriptionBase extends Component {
 
   render() {
     const { classes, details } = this.props;
-    //const columnNumbers = details.length;
-    //console.log("details columnNumbers :", columnNumbers);
-    //const gridNumber = parseInt(12 / columnNumbers);
-    //console.log("details gridNumber :", gridNumber);
+    const columnNumbers = details.length;
+    console.log("details columnNumbers :", columnNumbers);
+    const gridNumber = parseInt(12 / columnNumbers);
+    console.log("details gridNumber :", gridNumber);
     return (
       <Paper className={classes.paper}>
         <Grid
@@ -63,12 +65,12 @@ class ItemDescriptionBase extends Component {
           //spacing={8}
           className={classes.description}
           direction="row"
-          justify="center"
+          justify="space-between"
           alignItems="stretch"
         >
           {details.map(each => {
             return (
-              <Grid key={each.title.text} item xs={12}>
+              <Grid key={each.title.text} item xs={12} sm={6} lg={gridNumber}>
                 <MyList title={each.title} data={each.list} />
               </Grid>
             );
@@ -79,14 +81,14 @@ class ItemDescriptionBase extends Component {
   }
 }
 
-export const ItemDescription = withStyles(styles)(
+export const ItemCatalog = withStyles(styles)(
   // connect(({ //profile: { currentProfile },
   //   common: { error, loading } }) => ({
   //   //currentProfile,
   //   error,
   //   loading
   // }))(
-  ItemDescriptionBase
+  ItemCatalogBase
   // frontloadConnect(frontload, {
   //   onMount: true,
   //   onUpdate: false

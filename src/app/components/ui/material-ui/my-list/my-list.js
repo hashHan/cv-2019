@@ -24,6 +24,8 @@ const styles = theme => ({
   list: {
     width: "100%",
     //maxWidth: 360,
+    //width: "min-content",
+    //minWidth: "200px",
     backgroundColor: theme.palette.background.paper
   },
   nestedList: {

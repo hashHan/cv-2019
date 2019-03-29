@@ -12,6 +12,7 @@ import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 
 import { ItemDescription } from "./item-description";
+import { ItemCatalog } from "./item-catalog";
 import { MyTextLink } from "../../../components/ui/material-ui/my-typography/my-text-link";
 
 const styles = theme => ({
@@ -117,7 +118,8 @@ class SectionItemBase extends Component {
             </Grid>
           </Grid>
           <Grid item xs={12}>
-            <ItemDescription details={eachitem.catalog} />
+            <ItemDescription details={eachitem.description} />
+            <ItemCatalog details={eachitem.catalog} />
           </Grid>
         </Grid>
       </Paper>
