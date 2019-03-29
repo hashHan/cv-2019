@@ -29,11 +29,14 @@ const styles = theme => ({
     color: theme.palette.text.secondary
   },
   paperWithSub: {
-    padding: theme.spacing.unit * 1,
+    //padding: theme.spacing.unit * 1,
     height: "100%",
     width: "100%",
     color: theme.palette.text.secondary,
     display: "inline-block"
+  },
+  paperWithUnderLine: {
+    borderBottomStyle: "solid"
   },
   typography: {
     display: "inline-block"
@@ -71,7 +74,7 @@ class SectionItemBase extends Component {
                 <Grid item xs={12}>
                   <Paper className={classes.paperWithSub}>
                     <MyTextLink
-                      variant="caption"
+                      variant="body1"
                       gutterBottom
                       data={eachitem.mainTitle}
                       main="true"
@@ -91,7 +94,7 @@ class SectionItemBase extends Component {
                       variant="caption"
                       gutterBottom
                       data={eachitem.subTitle}
-                      main="true"
+                      //main="true"
                     />
 
                     <MyTextLink
@@ -113,7 +116,7 @@ class SectionItemBase extends Component {
                       variant="caption"
                       gutterBottom
                       data={eachitem.period}
-                      main="true"
+                      //main="true"
                     />
                     <MyTextLink
                       variant="caption"
@@ -130,7 +133,7 @@ class SectionItemBase extends Component {
                       variant="caption"
                       gutterBottom
                       data={eachitem.location}
-                      main="true"
+                      //main="true"
                     />
                     <MyTextLink
                       variant="caption"

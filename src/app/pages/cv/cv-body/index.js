@@ -10,6 +10,7 @@ import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 
 import { BodySection } from "./body-section";
+import { Aux } from "../../../components/auxiliary";
 
 const styles = theme => ({
   root: {
@@ -19,10 +20,18 @@ const styles = theme => ({
     //height: 240,
   },
   paper: {
-    padding: theme.spacing.unit * 1,
+    //padding: theme.spacing.unit * 1,
     height: "100%",
     width: "100%",
     color: theme.palette.text.secondary
+  },
+  strikePaper: {
+    //padding: theme.spacing.unit * 1,
+    height: "1px",
+    width: "100%",
+    color: theme.palette.text.secondary,
+    //borderTopStyle: "solid",
+    borderBottomStyle: "solid"
   }
 });
 
@@ -43,7 +52,10 @@ class CvBodyBase extends Component {
           alignItems="center"
         >
           {bodyData.sectionDatas.map(each => (
-            <BodySection key={each.sectionTitle.text} sectionData={each} />
+            <Aux>
+              <Paper className={classes.strikePaper} />
+              <BodySection key={each.sectionTitle.text} sectionData={each} />
+            </Aux>
           ))}
         </Grid>
       </Paper>

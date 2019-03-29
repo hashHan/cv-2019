@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { frontloadConnect } from "react-frontload";
+
 import Page from "../../components/seo/page-with-meta";
 
 import { getCvList, getCvLatest, getCvOne } from "../../../redux/actions";
 
 import { withStyles } from "@material-ui/core/styles";
+import Fab from "@material-ui/core/Fab";
+import UpIcon from "@material-ui/icons/KeyboardArrowUp";
 
 import { Aux } from "../../components/auxiliary";
 
@@ -27,10 +30,20 @@ const styles = theme => ({
   },
   paper: {
     padding: theme.spacing.unit * 1,
+    margin: theme.spacing.unit * 1,
     height: "100%",
     width: "100%",
     color: theme.palette.text.secondary
     //boxShadow: "0px 0px 0px 0px",
+  },
+  fab: {
+    margin: 0,
+    top: "auto",
+    left: "auto",
+    position: "fixed",
+    bottom: theme.spacing.unit * 2,
+    right: theme.spacing.unit * 2,
+    zIndex: 100
   }
 });
 
@@ -59,13 +72,15 @@ class CV extends Component {
 
   cvListCallback = cvId => this.props.dispatch(getCvOne(cvId));
 
+  //scrollToTop = () =>
+
   componentDidMount() {
     //this.props.dispatch(getCvLatest()).then(() => {
-    this.setState({
-      //renderFlag: true,
-      //cvList: this.props.cvList,
-      //cvSelected: this.props.cvSelected,
-    });
+    //this.setState({
+    //renderFlag: true,
+    //cvList: this.props.cvList,
+    //cvSelected: this.props.cvSelected,
+    //});
     //});
   }
 
@@ -119,6 +134,13 @@ class CV extends Component {
             <CvFooter footerData={cvToRender.footerData} />
           </Aux>
         ) : null}
+        <Fab
+          color="secondary"
+          className={classes.fab}
+          onClick={this.scrollToTop}
+        >
+          <UpIcon />
+        </Fab>
       </Page>
     );
   }

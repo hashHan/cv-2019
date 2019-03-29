@@ -14,6 +14,7 @@ import Link from "@material-ui/core/Link";
 import { SectionItem } from "./section-item";
 import { MyTextLink } from "../../../components/ui/material-ui/my-typography/my-text-link";
 import { grey } from "@material-ui/core/colors";
+import { Aux } from "../../../components/auxiliary";
 
 const styles = theme => ({
   root: {
@@ -23,10 +24,26 @@ const styles = theme => ({
     //height: 240,
   },
   paper: {
-    padding: theme.spacing.unit * 1,
+    //padding: 0,
     height: "100%",
     width: "100%",
     color: theme.palette.text.secondary
+  },
+  sectionTitle: {
+    padding: theme.spacing.unit * 1,
+    height: "100%",
+    width: "100%",
+    color: theme.palette.text.secondary,
+    //borderTopStyle: "solid",
+    borderBottomStyle: "solid"
+  },
+  strikePaper: {
+    //padding: theme.spacing.unit * 1,
+    height: "1px",
+    width: "100%",
+    color: theme.palette.text.secondary,
+    //borderTopStyle: "solid",
+    borderBottomStyle: "solid"
   }
 });
 
@@ -47,8 +64,12 @@ class BodySectionBase extends Component {
           alignItems="center"
         >
           <Grid item xs={12}>
-            <Paper className={classes.paper}>
-              <MyTextLink data={sectionData.sectionTitle} main="true" />
+            <Paper className={classes.sectionTitle}>
+              <MyTextLink
+                data={sectionData.sectionTitle}
+                main="true"
+                variant="subtitle1"
+              />
               <MyTextLink data={sectionData.sectionTitle.sub} sub="true" />
             </Paper>
           </Grid>
@@ -59,7 +80,10 @@ class BodySectionBase extends Component {
             //direction='column'
           >
             {sectionData.sectionDetails.map(each => (
-              <SectionItem key={each.mainTitle.text} eachitem={each} />
+              <Aux>
+                <SectionItem key={each.mainTitle.text} eachitem={each} />
+                <Paper className={classes.strikePaper} />
+              </Aux>
             ))}
           </Grid>
         </Grid>

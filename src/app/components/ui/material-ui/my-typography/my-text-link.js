@@ -6,26 +6,30 @@ import Link from "@material-ui/core/Link";
 
 const styles = theme => ({
   link: {
-    margin: theme.spacing.unit
+    //margin: theme.spacing.unit
+    margin: 0
   },
   subLink: {
-    margin: theme.spacing.unit,
+    //margin: theme.spacing.unit,
     fontStyle: "oblique"
   },
   mainLink: {
-    margin: theme.spacing.unit,
+    //margin: theme.spacing.unit,
     fontWeight: "bolder"
   },
   typography: {
-    display: "inline-block"
+    display: "inline-block",
+    margin: 0,
+    padding: "0 16px",
+    lineHeight: 1.2
   },
   sub: {
-    margin: theme.spacing.unit,
+    //margin: theme.spacing.unit,
     //color: "red",
     fontStyle: "oblique"
   },
   main: {
-    margin: theme.spacing.unit,
+    //margin: theme.spacing.unit,
     fontWeight: "bolder"
   }
 });

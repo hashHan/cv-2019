@@ -24,10 +24,17 @@ const styles = theme => ({
     //width: "min-content",
   },
   paper: {
-    padding: theme.spacing.unit * 1,
+    //padding: theme.spacing.unit * 1,
     height: "100%",
     width: "100%",
     color: theme.palette.text.secondary
+  },
+  paperTopLine: {
+    //padding: theme.spacing.unit * 1,
+    height: "100%",
+    width: "100%",
+    color: theme.palette.text.secondary,
+    borderTopStyle: "solid"
   },
   list: {
     width: "100%",

@@ -24,6 +24,13 @@ const styles = theme => ({
     color: theme.palette.text.secondary,
     textAlign: "center"
   },
+  paperBottomLine: {
+    padding: theme.spacing.unit * 1,
+    height: "100%",
+    width: "100%",
+    color: theme.palette.text.secondary,
+    borderBottomStyle: "solid"
+  },
   link: {
     margin: theme.spacing.unit
   }
@@ -34,7 +41,7 @@ class CvHeaderBase extends Component {
     const { classes, headerData } = this.props;
 
     return (
-      <Paper className={classes.paper}>
+      <Paper className={classes.paperBottomLine}>
         <Grid
           item
           xs={12}

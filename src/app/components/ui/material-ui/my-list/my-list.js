@@ -19,6 +19,7 @@ import Link from "@material-ui/core/Link";
 import { MyTextLink } from "../my-typography/my-text-link";
 
 import { Aux } from "../../../auxiliary";
+import { setAutoFreeze } from "immer";
 
 const styles = theme => ({
   list: {
@@ -26,10 +27,37 @@ const styles = theme => ({
     //maxWidth: 360,
     //width: "min-content",
     //minWidth: "200px",
-    backgroundColor: theme.palette.background.paper
+    backgroundColor: theme.palette.background.paper,
+    paddingTop: theme.spacing.unit * 0.3,
+    paddingBottom: theme.spacing.unit * 0.3
   },
   nestedList: {
-    paddingLeft: theme.spacing.unit * 4
+    paddingLeft: theme.spacing.unit * 4,
+    pointerEvents: "none",
+    fontStyle: "normal",
+    paddingTop: theme.spacing.unit * 0.2,
+    paddingBottom: theme.spacing.unit * 0.2
+  },
+  naiveListItem: {
+    // "&:hover": {
+    //   backgroundColor: "transparent"
+    // },
+    pointerEvents: "none",
+    fontStyle: "normal",
+    paddingTop: theme.spacing.unit * 0.2,
+    paddingBottom: theme.spacing.unit * 0.2
+  },
+  dynamicListItem: {
+    // "&:hover": {
+    //   backgroundColor: "transparent"
+    // },
+    paddingTop: theme.spacing.unit * 0.5,
+    paddingBottom: theme.spacing.unit * 0.5
+  },
+  listSubHeader: {
+    paddingTop: theme.spacing.unit * 0.3,
+    paddingBottom: theme.spacing.unit * 0.3,
+    lineHeight: "20px"
   }
 });
 
@@ -72,12 +100,15 @@ class MyListBase extends Component {
       <List
         component="nav"
         subheader={
-          <ListSubheader component="div">
+          <ListSubheader
+            component="div"
+            className={{ root: classes.listSubHeader }}
+          >
             <MyTextLink
-              variant="caption"
+              variant="body2"
               gutterBottom
               data={title}
-              main="true"
+              main={data.length ? "true" : null}
             />
             <MyTextLink
               variant="caption"
@@ -92,7 +123,13 @@ class MyListBase extends Component {
         {data.map(
           ({ callback, iconName, primary, sub, name, ...props }) =>
             !sub ? (
-              <ListItem key={name} button onClick={callback} {...props}>
+              <ListItem
+                key={name}
+                button
+                onClick={callback}
+                {...props}
+                className={classes.naiveListItem}
+              >
                 <ListItemIcon>
                   <Icon className={classes.rightIcon}>{iconName}</Icon>
                 </ListItemIcon>
@@ -105,7 +142,11 @@ class MyListBase extends Component {
               </ListItem>
             ) : (
               <Aux key={name}>
-                <ListItem button onClick={() => this.handleClick(name)}>
+                <ListItem
+                  button
+                  onClick={() => this.handleClick(name)}
+                  className={classes.dynamicListItem}
+                >
                   <ListItemIcon>
                     <Icon className={classes.rightIcon}>{iconName}</Icon>
                   </ListItemIcon>

@@ -33,9 +33,9 @@ class App extends Component {
           isAuthenticated={this.props.isAuthenticated}
           current={this.props.location.pathname}
         /> */}
-        <MyLayout token={token}>
-          <Router />
-        </MyLayout>
+        {/* <MyLayout token={token}> */}
+        <Router />
+        {/* </MyLayout> */}
         {this.props.error ? <ErrorModal /> : null}
         {this.props.loading ? <LoaderModal /> : null}
       </div>

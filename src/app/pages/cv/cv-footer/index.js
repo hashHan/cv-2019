@@ -24,6 +24,13 @@ const styles = theme => ({
     height: "100%",
     width: "100%",
     color: theme.palette.text.secondary
+  },
+  paperTopLine: {
+    padding: theme.spacing.unit * 1,
+    height: "100%",
+    width: "100%",
+    color: theme.palette.text.secondary,
+    borderTopStyle: "solid"
   }
 });
 
@@ -37,7 +44,7 @@ class CvFooterBase extends Component {
     }
 
     return (
-      <Paper className={classes.paper}>
+      <Paper className={classes.paperTopLine}>
         <Grid
           item
           xs={12}
