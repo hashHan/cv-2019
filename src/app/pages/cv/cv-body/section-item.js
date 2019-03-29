@@ -27,7 +27,21 @@ const styles = theme => ({
     height: "100%",
     width: "100%",
     color: theme.palette.text.secondary
+  },
+  paperWithSub: {
+    padding: theme.spacing.unit * 1,
+    height: "100%",
+    width: "100%",
+    color: theme.palette.text.secondary,
+    display: "inline-block"
+  },
+  typography: {
+    display: "inline-block"
   }
+  // sub:{
+  //   marginLeft: "10px",
+  //   color: "red",
+  // }
 });
 
 class SectionItemBase extends Component {
@@ -55,30 +69,37 @@ class SectionItemBase extends Component {
             <Grid item xs={9} md={9} container>
               <Paper className={classes.paper}>
                 <Grid item xs={12}>
-                  <Paper className={classes.paper}>
+                  <Paper className={classes.paperWithSub}>
                     <MyTextLink
                       variant="caption"
                       gutterBottom
                       data={eachitem.mainTitle}
+                      main="true"
                     />
                     <MyTextLink
                       variant="caption"
                       gutterBottom
                       data={eachitem.mainTitle.sub}
+                      //className={classes.sub}
+                      sub="true"
                     />
                   </Paper>
                 </Grid>
                 <Grid item xs={12}>
-                  <Paper className={classes.paper}>
+                  <Paper className={classes.paperWithSub}>
                     <MyTextLink
                       variant="caption"
                       gutterBottom
                       data={eachitem.subTitle}
+                      main="true"
                     />
+
                     <MyTextLink
                       variant="caption"
                       gutterBottom
                       data={eachitem.subTitle.sub}
+                      //className={classes.sub}
+                      sub="true"
                     />
                   </Paper>
                 </Grid>
@@ -87,30 +108,36 @@ class SectionItemBase extends Component {
             <Grid item xs={3} md={3} container>
               <Paper className={classes.paper}>
                 <Grid item xs={12}>
-                  <Paper className={classes.paper}>
+                  <Paper className={classes.paperWithSub}>
                     <MyTextLink
                       variant="caption"
                       gutterBottom
                       data={eachitem.period}
+                      main="true"
                     />
                     <MyTextLink
                       variant="caption"
                       gutterBottom
                       data={eachitem.period.sub}
+                      //className={classes.sub}
+                      sub="true"
                     />
                   </Paper>
                 </Grid>
                 <Grid item xs={12}>
-                  <Paper className={classes.paper}>
+                  <Paper className={classes.paperWithSub}>
                     <MyTextLink
                       variant="caption"
                       gutterBottom
                       data={eachitem.location}
+                      main="true"
                     />
                     <MyTextLink
                       variant="caption"
                       gutterBottom
                       data={eachitem.location.sub}
+                      //className={classes.sub}
+                      sub="true"
                     />
                   </Paper>
                 </Grid>

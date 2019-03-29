@@ -13,6 +13,7 @@ import Link from "@material-ui/core/Link";
 
 import { SectionItem } from "./section-item";
 import { MyTextLink } from "../../../components/ui/material-ui/my-typography/my-text-link";
+import { grey } from "@material-ui/core/colors";
 
 const styles = theme => ({
   root: {
@@ -47,8 +48,8 @@ class BodySectionBase extends Component {
         >
           <Grid item xs={12}>
             <Paper className={classes.paper}>
-              <MyTextLink data={sectionData.sectionTitle} />
-              <MyTextLink data={sectionData.sectionTitle.sub} />
+              <MyTextLink data={sectionData.sectionTitle} main="true" />
+              <MyTextLink data={sectionData.sectionTitle.sub} sub="true" />
             </Paper>
           </Grid>
           <Grid

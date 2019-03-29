@@ -8,5 +8,6 @@ export const themeDefault = {
   },
   typography: {
     useNextVariants: true
-  }
+  },
+  shadows: ["none"]
 };

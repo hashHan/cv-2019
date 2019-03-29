@@ -57,7 +57,12 @@ class CvHeaderBase extends Component {
           >
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                <MyTextLink variant="h2" gutterBottom data={headerData.name} />
+                <MyTextLink
+                  variant="h2"
+                  gutterBottom
+                  data={headerData.name}
+                  main="true"
+                />
               </Paper>
             </Grid>
             <Grid item xs={12}>

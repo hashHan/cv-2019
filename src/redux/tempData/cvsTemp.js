@@ -104,7 +104,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "Javascript",
                         linkUrl: null
@@ -113,7 +113,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "REACT",
                             linkUrl: null
@@ -123,7 +123,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "REDUX",
                             linkUrl: null
@@ -135,7 +135,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "CSS",
                         linkUrl: null
@@ -144,7 +144,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "JSS",
                             linkUrl: null
@@ -154,7 +154,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "STYLED COMPONENT",
                             linkUrl: null
@@ -166,7 +166,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "OPTIMIZATION",
                         linkUrl: null
@@ -175,7 +175,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "Service Worker",
                             linkUrl: null
@@ -185,7 +185,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "WEBPACK",
                             linkUrl: null
@@ -195,7 +195,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "BABEL",
                             linkUrl: null
@@ -220,7 +220,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "SERVER",
                         linkUrl: null
@@ -229,7 +229,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "NODE.JS",
                             linkUrl: null
@@ -239,7 +239,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "SERVER SIDE RENDERING",
                             linkUrl: null
@@ -251,7 +251,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "DATABASE",
                         linkUrl: null
@@ -260,7 +260,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "MONGO DB",
                             linkUrl: null
@@ -270,7 +270,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "SQL",
                             linkUrl: null
@@ -282,7 +282,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "SECURITY",
                         linkUrl: null
@@ -291,7 +291,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "OAUTH2.0",
                             linkUrl: null
@@ -301,7 +301,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "JWT",
                             linkUrl: null
@@ -311,7 +311,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "HASHING",
                             linkUrl: null
@@ -336,7 +336,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "EC2",
                         linkUrl: null
@@ -345,7 +345,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "Elastic Load Balancer",
                             linkUrl: null
@@ -355,7 +355,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "Auto Scaling",
                             linkUrl: null
@@ -365,7 +365,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "nginx",
                             linkUrl: null
@@ -375,7 +375,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "pm2",
                             linkUrl: null
@@ -387,7 +387,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "S3",
                         linkUrl: null
@@ -396,7 +396,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "SINGLE PAGE APP",
                             linkUrl: null
@@ -408,7 +408,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "etc",
                         linkUrl: null
@@ -417,7 +417,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "ROUTE53",
                             linkUrl: null
@@ -427,7 +427,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "VPC",
                             linkUrl: null
@@ -437,7 +437,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "IAM",
                             linkUrl: null
@@ -447,7 +447,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "LAMBDA",
                             linkUrl: null
@@ -457,7 +457,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "GATEWAY",
                             linkUrl: null
@@ -467,7 +467,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "ElastiCache",
                             linkUrl: null
@@ -477,7 +477,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "RDB",
                             linkUrl: null
@@ -502,7 +502,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "GOOGLE",
                         linkUrl: null
@@ -511,7 +511,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "OAUTH2.0",
                             linkUrl: null
@@ -521,7 +521,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "CALENDAR",
                             linkUrl: null
@@ -531,7 +531,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "GSUITE",
                             linkUrl: null
@@ -543,7 +543,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "MS",
                         linkUrl: null
@@ -552,7 +552,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "OAUTH2.0",
                             linkUrl: null
@@ -562,7 +562,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "GRAPH",
                             linkUrl: null
@@ -572,7 +572,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "CALENDAR",
                             linkUrl: null
@@ -584,7 +584,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "SLACK",
                         linkUrl: null
@@ -593,7 +593,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "OAUTH2.0",
                             linkUrl: null
@@ -618,7 +618,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "MIXPANEL",
                         linkUrl: null
@@ -690,7 +690,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "Javascript",
                         linkUrl: null
@@ -699,7 +699,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "REACT",
                             linkUrl: null
@@ -709,7 +709,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "REDUX",
                             linkUrl: null
@@ -721,7 +721,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "CSS",
                         linkUrl: null
@@ -730,7 +730,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "JSS",
                             linkUrl: null
@@ -740,7 +740,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "STYLED COMPONENT",
                             linkUrl: null
@@ -752,7 +752,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "OPTIMIZATION",
                         linkUrl: null
@@ -761,7 +761,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "Service Worker",
                             linkUrl: null
@@ -771,7 +771,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "WEBPACK",
                             linkUrl: null
@@ -781,7 +781,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "BABEL",
                             linkUrl: null
@@ -806,7 +806,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "SERVER",
                         linkUrl: null
@@ -815,7 +815,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "NODE.JS",
                             linkUrl: null
@@ -825,7 +825,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "SERVER SIDE RENDERING",
                             linkUrl: null
@@ -837,7 +837,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "DATABASE",
                         linkUrl: null
@@ -846,7 +846,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "MONGO DB",
                             linkUrl: null
@@ -856,7 +856,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "SQL",
                             linkUrl: null
@@ -868,7 +868,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "SECURITY",
                         linkUrl: null
@@ -877,7 +877,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "OAUTH2.0",
                             linkUrl: null
@@ -887,7 +887,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "JWT",
                             linkUrl: null
@@ -897,7 +897,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "HASHING",
                             linkUrl: null
@@ -922,7 +922,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "EC2",
                         linkUrl: null
@@ -931,7 +931,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "Elastic Load Balancer",
                             linkUrl: null
@@ -941,7 +941,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "Auto Scaling",
                             linkUrl: null
@@ -951,7 +951,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "nginx",
                             linkUrl: null
@@ -961,7 +961,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "pm2",
                             linkUrl: null
@@ -973,7 +973,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "S3",
                         linkUrl: null
@@ -982,7 +982,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "SINGLE PAGE APP",
                             linkUrl: null
@@ -994,7 +994,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "etc",
                         linkUrl: null
@@ -1003,7 +1003,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "ROUTE53",
                             linkUrl: null
@@ -1013,7 +1013,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "VPC",
                             linkUrl: null
@@ -1023,7 +1023,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "IAM",
                             linkUrl: null
@@ -1033,7 +1033,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "LAMBDA",
                             linkUrl: null
@@ -1043,7 +1043,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "GATEWAY",
                             linkUrl: null
@@ -1053,7 +1053,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "ElastiCache",
                             linkUrl: null
@@ -1063,7 +1063,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "RDB",
                             linkUrl: null
@@ -1088,7 +1088,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "GOOGLE",
                         linkUrl: null
@@ -1097,7 +1097,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "OAUTH2.0",
                             linkUrl: null
@@ -1107,7 +1107,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "CALENDAR",
                             linkUrl: null
@@ -1117,7 +1117,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "GSUITE",
                             linkUrl: null
@@ -1129,7 +1129,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "MS",
                         linkUrl: null
@@ -1138,7 +1138,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "OAUTH2.0",
                             linkUrl: null
@@ -1148,7 +1148,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "GRAPH",
                             linkUrl: null
@@ -1158,7 +1158,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "CALENDAR",
                             linkUrl: null
@@ -1170,7 +1170,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "SLACK",
                         linkUrl: null
@@ -1179,7 +1179,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "OAUTH2.0",
                             linkUrl: null
@@ -1204,7 +1204,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "MIXPANEL",
                         linkUrl: null
@@ -1264,7 +1264,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "CD(Certificate of Deposit)",
                         linkUrl: null
@@ -1274,7 +1274,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "CP(Commercial Paper)",
                         linkUrl: null
@@ -1284,7 +1284,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "ESTB(Electronic Short-Term Bond)",
                         linkUrl: null
@@ -1294,7 +1294,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "ABCP(Asset-Backed CP)",
                         linkUrl: null
@@ -1304,7 +1304,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "ABSTB(Asset-Backed ESTB)",
                         linkUrl: null
@@ -1328,7 +1328,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "CREDIT PREMIUM",
                         linkUrl: null
@@ -1338,7 +1338,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "REQUIDITY PREMIUM",
                         linkUrl: null
@@ -1362,7 +1362,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "BOOTSTRAPING",
                         linkUrl: null
@@ -1372,7 +1372,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "YTM",
                         linkUrl: null
@@ -1382,7 +1382,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "SPOT CURVE",
                         linkUrl: null
@@ -1392,7 +1392,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "DURATION",
                         linkUrl: null
@@ -1661,7 +1661,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "Data Structures",
                         linkUrl: null
@@ -1671,7 +1671,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "Computer System",
                         linkUrl: null
@@ -1681,7 +1681,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "Network(1)",
                         linkUrl: null
@@ -1691,7 +1691,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "System Programming",
                         linkUrl: null
@@ -1701,7 +1701,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "Algorithms",
                         linkUrl: null
@@ -1711,7 +1711,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "Digital Engineering",
                         linkUrl: null
@@ -1721,7 +1721,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "Microprocessor(1)",
                         linkUrl: null
@@ -1731,7 +1731,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "Computer Architecture and Organization",
                         linkUrl: null
@@ -1741,7 +1741,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "Databases",
                         linkUrl: null
@@ -1751,7 +1751,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "Discrete Mathematics",
                         linkUrl: null
@@ -1761,7 +1761,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "Software Engineering",
                         linkUrl: null
@@ -1771,7 +1771,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "Operation System",
                         linkUrl: null
@@ -1844,7 +1844,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "Statistics (partial GPA: 4.30/4.5)",
                         linkUrl: null
@@ -1854,7 +1854,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "Finance (partial GPA: 4.35/4.5)",
                         linkUrl: null
@@ -1864,7 +1864,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "Economics (partial GPA: 4.17/4.5)",
                         linkUrl: null
@@ -1874,7 +1874,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "Overall (GPA: 4.07/4.5)",
                         linkUrl: null
@@ -1897,7 +1897,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "The Highest Honors (Aug 2008)",
                         linkUrl: null
@@ -1907,7 +1907,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "Honors (Aug 2013)",
                         linkUrl: null
@@ -2033,7 +2033,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2043,7 +2043,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2052,7 +2052,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2062,7 +2062,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2087,7 +2087,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2097,7 +2097,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2106,7 +2106,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2116,7 +2116,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2143,7 +2143,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2153,7 +2153,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2162,7 +2162,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2172,7 +2172,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2197,7 +2197,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2207,7 +2207,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2216,7 +2216,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2226,7 +2226,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2287,7 +2287,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2297,7 +2297,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2306,7 +2306,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2316,7 +2316,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2341,7 +2341,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2351,7 +2351,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2360,7 +2360,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2370,7 +2370,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2397,7 +2397,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2407,7 +2407,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2416,7 +2416,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2426,7 +2426,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2451,7 +2451,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2461,7 +2461,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2470,7 +2470,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2480,7 +2480,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2553,7 +2553,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2563,7 +2563,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2572,7 +2572,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2582,7 +2582,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2607,7 +2607,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2617,7 +2617,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2626,7 +2626,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2636,7 +2636,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2663,7 +2663,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2673,7 +2673,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2682,7 +2682,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2692,7 +2692,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2717,7 +2717,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2727,7 +2727,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2736,7 +2736,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2746,7 +2746,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2807,7 +2807,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2817,7 +2817,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2826,7 +2826,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2836,7 +2836,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2861,7 +2861,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2871,7 +2871,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2880,7 +2880,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2890,7 +2890,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2917,7 +2917,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2927,7 +2927,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2936,7 +2936,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2946,7 +2946,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -2971,7 +2971,7 @@ export const cvsTemp = [
                   list: [
                     {
                       callback: null,
-                      iconName: "close",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2981,7 +2981,7 @@ export const cvsTemp = [
                     },
                     {
                       callback: null,
-                      iconName: "add_circle",
+                      iconName: null,
                       primary: {
                         text: "text",
                         linkUrl: null
@@ -2990,7 +2990,7 @@ export const cvsTemp = [
                       sub: [
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null
@@ -3000,7 +3000,7 @@ export const cvsTemp = [
                         },
                         {
                           callback: null,
-                          iconName: "add_circle",
+                          iconName: null,
                           primary: {
                             text: "text",
                             linkUrl: null

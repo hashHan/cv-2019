@@ -3,5 +3,6 @@
 import { fromJS } from "immutable";
 
 export default fromJS({
-  themeNumber: 1
+  themeNumber: 1,
+  paperBorder: true
 });

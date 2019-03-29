@@ -17,6 +17,6 @@ export { getCvList, getCvLatest, getCvOne } from "./cvs/actions";
 
 export { getCurrentProfile, removeCurrentProfile } from "./profile/actions";
 
-export { setTheme } from "./style/actions";
+export { setTheme, setProperty } from "./style/actions";
 
 //call axios here !!

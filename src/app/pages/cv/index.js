@@ -30,6 +30,7 @@ const styles = theme => ({
     height: "100%",
     width: "100%",
     color: theme.palette.text.secondary
+    //boxShadow: "0px 0px 0px 0px",
   }
 });
 

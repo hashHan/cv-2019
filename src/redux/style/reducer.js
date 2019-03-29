@@ -9,10 +9,18 @@ const setTheme = (state, action) => {
   });
 };
 
+const setProperty = (state, action) => {
+  return updateObject(state, {
+    [action.propertyName]: action.value
+  });
+};
+
 export default (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.SET_THEME:
       return setTheme(state, action);
+    case actionTypes.SET_PROPERTY:
+      return setProperty(state, action);
 
     default:
       return state;

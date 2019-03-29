@@ -7,23 +7,53 @@ import Link from "@material-ui/core/Link";
 const styles = theme => ({
   link: {
     margin: theme.spacing.unit
+  },
+  subLink: {
+    margin: theme.spacing.unit,
+    fontStyle: "oblique"
+  },
+  mainLink: {
+    margin: theme.spacing.unit,
+    fontWeight: "bolder"
+  },
+  typography: {
+    display: "inline-block"
+  },
+  sub: {
+    margin: theme.spacing.unit,
+    //color: "red",
+    fontStyle: "oblique"
+  },
+  main: {
+    margin: theme.spacing.unit,
+    fontWeight: "bolder"
   }
 });
 
 const MyTextLinkBase = props => {
-  const { classes, variant, gutterBottom } = props;
+  const { classes, variant, gutterBottom, sub, main } = props;
   return (
-    <Typography variant={variant} gutterBottom={gutterBottom}>
+    <Typography
+      variant={variant}
+      gutterBottom={gutterBottom}
+      className={classes.typography}
+    >
       {props.data.linkUrl ? (
         <Link
           target="_blank"
           href={props.data.linkUrl}
-          className={classes.link}
+          className={
+            sub ? classes.subLink : main ? classes.mainLink : classes.link
+          }
         >
           {props.data.text}
         </Link>
       ) : (
-        props.data.text
+        <span
+          className={sub ? classes.sub : main ? classes.main : classes.link}
+        >
+          {props.data.text}
+        </span>
       )}
     </Typography>
   );

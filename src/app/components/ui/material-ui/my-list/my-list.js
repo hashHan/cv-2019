@@ -73,8 +73,18 @@ class MyListBase extends Component {
         component="nav"
         subheader={
           <ListSubheader component="div">
-            <MyTextLink variant="caption" gutterBottom data={title} />
-            <MyTextLink variant="caption" gutterBottom data={title.sub} />
+            <MyTextLink
+              variant="caption"
+              gutterBottom
+              data={title}
+              main="true"
+            />
+            <MyTextLink
+              variant="caption"
+              gutterBottom
+              data={title.sub}
+              sub="true"
+            />
           </ListSubheader>
         }
         className={classes.list}
@@ -126,11 +136,13 @@ class MyListBase extends Component {
                           onClick={callback}
                           {...props}
                         >
-                          <ListItemIcon>
-                            <Icon className={classes.rightIcon}>
-                              {iconName}
-                            </Icon>
-                          </ListItemIcon>
+                          {iconName ? (
+                            <ListItemIcon>
+                              <Icon className={classes.rightIcon}>
+                                {iconName}
+                              </Icon>
+                            </ListItemIcon>
+                          ) : null}
                           <ListItemText
                             inset
                             primary={
