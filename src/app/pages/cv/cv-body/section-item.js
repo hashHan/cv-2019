@@ -74,7 +74,7 @@ class SectionItemBase extends Component {
                 <Grid item xs={12}>
                   <Paper className={classes.paperWithSub}>
                     <MyTextLink
-                      variant="body1"
+                      variant="subtitle1"
                       gutterBottom
                       data={eachitem.mainTitle}
                       main="true"

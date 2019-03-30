@@ -68,7 +68,7 @@ class BodySectionBase extends Component {
               <MyTextLink
                 data={sectionData.sectionTitle}
                 main="true"
-                variant="subtitle1"
+                variant="h6"
               />
               <MyTextLink data={sectionData.sectionTitle.sub} sub="true" />
             </Paper>
@@ -80,7 +80,7 @@ class BodySectionBase extends Component {
             //direction='column'
           >
             {sectionData.sectionDetails.map(each => (
-              <Aux>
+              <Aux key={each.mainTitle.text}>
                 <SectionItem key={each.mainTitle.text} eachitem={each} />
                 <Paper className={classes.strikePaper} />
               </Aux>

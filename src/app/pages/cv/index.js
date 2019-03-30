@@ -10,6 +10,8 @@ import { withStyles } from "@material-ui/core/styles";
 import Fab from "@material-ui/core/Fab";
 import UpIcon from "@material-ui/icons/KeyboardArrowUp";
 
+import Paper from "@material-ui/core/Paper";
+
 import { Aux } from "../../components/auxiliary";
 
 import { CvList } from "./cv-list";
@@ -33,8 +35,23 @@ const styles = theme => ({
     margin: theme.spacing.unit * 1,
     height: "100%",
     width: "100%",
-    color: theme.palette.text.secondary
+    color: theme.palette.text.secondary,
     //boxShadow: "0px 0px 0px 0px",
+    maxWidth: "1300px",
+    margin: "auto"
+  },
+  cvList: {
+    margin: 0,
+    bottom: "auto",
+    right: "auto",
+    position: "fixed",
+    top: theme.spacing.unit * 2,
+    left: theme.spacing.unit * 2,
+    zIndex: 100,
+    opacity: 0.5,
+    "&:hover": {
+      opacity: 1
+    }
   },
   fab: {
     margin: 0,
@@ -43,7 +60,11 @@ const styles = theme => ({
     position: "fixed",
     bottom: theme.spacing.unit * 2,
     right: theme.spacing.unit * 2,
-    zIndex: 100
+    zIndex: 100,
+    opacity: 0.2,
+    "&:hover": {
+      opacity: 1
+    }
   }
 });
 
@@ -72,7 +93,7 @@ class CV extends Component {
 
   cvListCallback = cvId => this.props.dispatch(getCvOne(cvId));
 
-  //scrollToTop = () =>
+  scrollToTop = () => window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
   componentDidMount() {
     //this.props.dispatch(getCvLatest()).then(() => {
@@ -111,36 +132,52 @@ class CV extends Component {
     loggerDev("cvToRender: ", cvToRender);
     loggerDev("cvListToRender: ", cvListToRender);
     return (
-      <Page id="cv" title="cv" description={`cv page of haeseong han`}>
-        {//this.state.renderFlag &&
-        cvListToRender ? (
-          <CvList
-            cvListData={cvListToRender}
-            cvListCallback={cvId => this.cvListCallback(cvId)}
-          />
-        ) : null}
+      <Page
+        style={{ maxWidth: "1400px" }}
+        id="cv"
+        title="cv"
+        description={`cv page of haeseong han`}
+      >
+        <Paper className={classes.paper}>
+          <Paper className={classes.cvList}>
+            {//this.state.renderFlag &&
+            cvListToRender ? (
+              <CvList
+                //className={classes.cvList}
+                cvListData={cvListToRender}
+                cvListCallback={cvId => this.cvListCallback(cvId)}
+              />
+            ) : null}
 
-        {cvToRender
-          ? `${cvToRender.cvMeta.owner}'s cv updated in ${
-              cvToRender.cvMeta.timestamp
-            }`
-          : "CV page"}
-
-        {//this.state.renderFlag &&
-        cvToRender ? (
-          <Aux>
-            <CvHeader headerData={cvToRender.headerData} />
-            <CvBody bodyData={cvToRender.bodyData} />
-            <CvFooter footerData={cvToRender.footerData} />
-          </Aux>
-        ) : null}
-        <Fab
-          color="secondary"
-          className={classes.fab}
-          onClick={this.scrollToTop}
-        >
-          <UpIcon />
-        </Fab>
+            {/* {cvToRender
+              ? `Version: ${cvToRender.cvMeta.owner}'s cv updated in ${
+                  cvToRender.cvMeta.timestamp
+                }`
+              : "CV page"} */}
+          </Paper>
+          {//this.state.renderFlag &&
+          cvToRender ? (
+            <Aux>
+              <CvHeader
+                headerData={cvToRender.headerData}
+                metaData={cvToRender.cvMeta}
+              />
+              <CvBody bodyData={cvToRender.bodyData} />
+              <CvFooter
+                footerData={cvToRender.footerData}
+                metaData={cvToRender.cvMeta}
+              />
+            </Aux>
+          ) : null}
+          <Fab
+            color="default"
+            size="small"
+            className={classes.fab}
+            onClick={this.scrollToTop}
+          >
+            <UpIcon />
+          </Fab>
+        </Paper>
       </Page>
     );
   }

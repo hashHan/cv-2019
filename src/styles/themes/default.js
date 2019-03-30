@@ -9,5 +9,5 @@ export const themeDefault = {
   typography: {
     useNextVariants: true
   },
-  shadows: ["none"]
+  shadows: Array(25).fill("none")
 };

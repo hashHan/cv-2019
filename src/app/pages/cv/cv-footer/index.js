@@ -9,6 +9,7 @@ import Paper from "@material-ui/core/Paper";
 
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
+import Icon from "@material-ui/core/Icon";
 
 import { MyTextLink } from "../../../components/ui/material-ui/my-typography/my-text-link";
 
@@ -31,12 +32,30 @@ const styles = theme => ({
     width: "100%",
     color: theme.palette.text.secondary,
     borderTopStyle: "solid"
+  },
+  centeredPaper: {
+    textAlign: "center",
+    padding: theme.spacing.unit * 1,
+    height: "100%",
+    width: "100%",
+    color: theme.palette.text.secondary,
+    margin: "auto"
+  },
+  leftColumn: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none"
+    }
+  },
+  rightColumn: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none"
+    }
   }
 });
 
 class CvFooterBase extends Component {
   render() {
-    const { classes, footerData } = this.props;
+    const { classes, footerData, metaData } = this.props;
     let gridNumber = 12;
     if (footerData.iconLinks) {
       gridNumber = parseInt(12 / footerData.iconLinks.length);
@@ -55,8 +74,8 @@ class CvFooterBase extends Component {
           justify="center"
           alignItems="center"
         >
-          <Grid item xs={12} md={2}>
-            <Paper className={classes.paper}>left</Paper>
+          <Grid className={classes.leftColumn} item xs={12} md={2}>
+            <Paper className={classes.paper} />
           </Grid>
           <Grid
             item
@@ -71,11 +90,15 @@ class CvFooterBase extends Component {
               ? footerData.iconLinks.map(link => {
                   return (
                     <Grid key={link.linkUrl} item xs={gridNumber}>
-                      <Paper className={classes.paper}>
+                      <Paper className={classes.centeredPaper}>
                         <Typography variant="subtitle1" gutterBottom>
-                          {link.iconName}:{" "}
-                          <Link href={link.linkUrl} className={classes.link}>
-                            {link.tooltip}
+                          <Link
+                            target="_blank"
+                            href={link.linkUrl}
+                            className={classes.link}
+                          >
+                            {link.iconName}
+                            {/* <Icon>{link.iconName}</Icon> */}
                           </Link>
                         </Typography>
                       </Paper>
@@ -83,23 +106,40 @@ class CvFooterBase extends Component {
                   );
                 })
               : null}
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
               <Paper className={classes.paper}>space</Paper>
-            </Grid>
+            </Grid> */}
             <Grid item xs={12}>
-              <Paper className={classes.paper}>
+              <Paper className={classes.centeredPaper}>
                 <Typography variant="caption" gutterBottom>
                   URL of this page: TO DO - get from config
                 </Typography>
               </Paper>
             </Grid>
+            <Grid item xs={12}>
+              <Paper className={classes.centeredPaper}>
+                <Typography variant="caption" gutterBottom>
+                  CV Onwer: {metaData.owner} <br />
+                  Version: {metaData.timestamp} <br />
+                </Typography>
+                <Typography
+                  style={{ color: "red" }}
+                  variant="caption"
+                  gutterBottom
+                >
+                  Latest:{" "}
+                  {metaData.latest ? "YES" : "No, Choose other version on menu"}
+                </Typography>
+              </Paper>
+            </Grid>
             {footerData.copyRight && footerData.copyRight.linkUrl ? (
               <Grid item xs={12}>
-                <Paper className={classes.paper}>
+                <Paper className={classes.centeredPaper}>
                   <Typography variant="caption" gutterBottom>
                     Copyright ©{" "}
                     {footerData.copyRight ? (
                       <Link
+                        target="_blank"
                         href={footerData.copyRight.linkUrl}
                         className={classes.link}
                       >
@@ -113,8 +153,8 @@ class CvFooterBase extends Component {
               </Grid>
             ) : null}
           </Grid>
-          <Grid item xs={12} md={2}>
-            <Paper className={classes.paper}>right</Paper>
+          <Grid className={classes.rightColumn} item xs={12} md={2}>
+            <Paper className={classes.paper} />
           </Grid>
         </Grid>
       </Paper>

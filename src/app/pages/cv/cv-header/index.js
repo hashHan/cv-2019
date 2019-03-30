@@ -33,12 +33,22 @@ const styles = theme => ({
   },
   link: {
     margin: theme.spacing.unit
+  },
+  leftColumn: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none"
+    }
+  },
+  rightColumn: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none"
+    }
   }
 });
 
 class CvHeaderBase extends Component {
   render() {
-    const { classes, headerData } = this.props;
+    const { classes, headerData, metaData } = this.props;
 
     return (
       <Paper className={classes.paperBottomLine}>
@@ -52,8 +62,8 @@ class CvHeaderBase extends Component {
           justify="center"
           alignItems="center"
         >
-          <Grid item xs={12} md={2}>
-            <Paper className={classes.paper}>left</Paper>
+          <Grid className={classes.leftColumn} item xs={12} sm={2}>
+            <Paper className={classes.paper} />
           </Grid>
           <Grid
             item
@@ -64,6 +74,15 @@ class CvHeaderBase extends Component {
           >
             <Grid item xs={12}>
               <Paper className={classes.paper}>
+                <Typography
+                  style={{ color: "red" }}
+                  variant="caption"
+                  gutterBottom
+                >
+                  {metaData.latest
+                    ? ""
+                    : "CAUTION: This is not latest version. Choose another version on the menu right top corner"}
+                </Typography>
                 <MyTextLink
                   variant="h2"
                   gutterBottom
@@ -97,7 +116,11 @@ class CvHeaderBase extends Component {
                       <Paper className={classes.paper}>
                         <Typography variant="subtitle1" gutterBottom>
                           {link.name}:{" "}
-                          <Link href={link.linkUrl} className={classes.link}>
+                          <Link
+                            target="_blank"
+                            href={link.linkUrl}
+                            className={classes.link}
+                          >
                             {link.text}
                           </Link>
                         </Typography>
@@ -107,8 +130,8 @@ class CvHeaderBase extends Component {
                 })
               : null}
           </Grid>
-          <Grid item xs={12} md={2}>
-            <Paper className={classes.paper}>right</Paper>
+          <Grid className={classes.rightColumn} item xs={12} sm={2}>
+            <Paper className={classes.paper} />
           </Grid>
         </Grid>
       </Paper>

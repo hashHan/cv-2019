@@ -102,7 +102,7 @@ class MyListBase extends Component {
         subheader={
           <ListSubheader
             component="div"
-            className={{ root: classes.listSubHeader }}
+            className={classes.listSubHeader} //{{ root: classes.listSubHeader }}
           >
             <MyTextLink
               variant="body2"

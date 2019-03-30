@@ -52,7 +52,7 @@ class CvBodyBase extends Component {
           alignItems="center"
         >
           {bodyData.sectionDatas.map(each => (
-            <Aux>
+            <Aux key={each.sectionTitle.text}>
               <Paper className={classes.strikePaper} />
               <BodySection key={each.sectionTitle.text} sectionData={each} />
             </Aux>

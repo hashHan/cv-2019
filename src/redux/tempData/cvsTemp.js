@@ -1561,7 +1561,7 @@ export const cvsTemp = [
             text: "EDUCATION",
             linkUrl: null,
             sub: {
-              text: " section sub title 1",
+              text: "",
               linkUrl: null
             }
           },
@@ -1635,166 +1635,152 @@ export const cvsTemp = [
                   linkUrl: null
                 }
               },
-              description: [
+              description: [],
+              catalog: [
                 {
                   title: {
                     text: "36 credits on undergraduate level courses",
                     linkUrl: null,
                     sub: {
-                      text: "",
+                      text: "GPA: 4.17/4.5 ( 95.8/100 )",
                       linkUrl: null
                     }
                   },
-
-                  list: []
-                },
-                {
-                  title: {
-                    text: "Coursework",
-                    linkUrl: null,
-                    sub: {
-                      text: "",
-                      linkUrl: null
-                    }
-                  },
-
                   list: [
                     {
                       callback: null,
                       iconName: null,
                       primary: {
-                        text: "Data Structures",
+                        text: "Courses",
                         linkUrl: null
                       },
-                      name: "Data Structures",
-                      sub: null
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        text: "Computer System",
-                        linkUrl: null
-                      },
-                      name: "Computer System",
-                      sub: null
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        text: "Network(1)",
-                        linkUrl: null
-                      },
-                      name: "Network(1)",
-                      sub: null
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        text: "System Programming",
-                        linkUrl: null
-                      },
-                      name: "System Programming",
-                      sub: null
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        text: "Algorithms",
-                        linkUrl: null
-                      },
-                      name: "Algorithms",
-                      sub: null
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        text: "Digital Engineering",
-                        linkUrl: null
-                      },
-                      name: "Digital Engineering",
-                      sub: null
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        text: "Microprocessor(1)",
-                        linkUrl: null
-                      },
-                      name: "Microprocessor(1)",
-                      sub: null
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        text: "Computer Architecture and Organization",
-                        linkUrl: null
-                      },
-                      name: "Computer Architecture and Organization",
-                      sub: null
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        text: "Databases",
-                        linkUrl: null
-                      },
-                      name: "Databases",
-                      sub: null
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        text: "Discrete Mathematics",
-                        linkUrl: null
-                      },
-                      name: "Discrete Mathematics",
-                      sub: null
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        text: "Software Engineering",
-                        linkUrl: null
-                      },
-                      name: "Software Engineering",
-                      sub: null
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        text: "Operation System",
-                        linkUrl: null
-                      },
-                      name: "Operation System",
-                      sub: null
+                      name: "Courses",
+                      sub: [
+                        {
+                          callback: null,
+                          iconName: null,
+                          primary: {
+                            text: "Data Structures",
+                            linkUrl: null
+                          },
+                          name: "Data Structures",
+                          sub: null
+                        },
+                        {
+                          callback: null,
+                          iconName: null,
+                          primary: {
+                            text: "Computer System",
+                            linkUrl: null
+                          },
+                          name: "Computer System",
+                          sub: null
+                        },
+                        {
+                          callback: null,
+                          iconName: null,
+                          primary: {
+                            text: "Network(1)",
+                            linkUrl: null
+                          },
+                          name: "Network(1)",
+                          sub: null
+                        },
+                        {
+                          callback: null,
+                          iconName: null,
+                          primary: {
+                            text: "System Programming",
+                            linkUrl: null
+                          },
+                          name: "System Programming",
+                          sub: null
+                        },
+                        {
+                          callback: null,
+                          iconName: null,
+                          primary: {
+                            text: "Algorithms",
+                            linkUrl: null
+                          },
+                          name: "Algorithms",
+                          sub: null
+                        },
+                        {
+                          callback: null,
+                          iconName: null,
+                          primary: {
+                            text: "Digital Engineering",
+                            linkUrl: null
+                          },
+                          name: "Digital Engineering",
+                          sub: null
+                        },
+                        {
+                          callback: null,
+                          iconName: null,
+                          primary: {
+                            text: "Microprocessor(1)",
+                            linkUrl: null
+                          },
+                          name: "Microprocessor(1)",
+                          sub: null
+                        },
+                        {
+                          callback: null,
+                          iconName: null,
+                          primary: {
+                            text: "Computer Architecture and Organization",
+                            linkUrl: null
+                          },
+                          name: "Computer Architecture and Organization",
+                          sub: null
+                        },
+                        {
+                          callback: null,
+                          iconName: null,
+                          primary: {
+                            text: "Databases",
+                            linkUrl: null
+                          },
+                          name: "Databases",
+                          sub: null
+                        },
+                        {
+                          callback: null,
+                          iconName: null,
+                          primary: {
+                            text: "Discrete Mathematics",
+                            linkUrl: null
+                          },
+                          name: "Discrete Mathematics",
+                          sub: null
+                        },
+                        {
+                          callback: null,
+                          iconName: null,
+                          primary: {
+                            text: "Software Engineering",
+                            linkUrl: null
+                          },
+                          name: "Software Engineering",
+                          sub: null
+                        },
+                        {
+                          callback: null,
+                          iconName: null,
+                          primary: {
+                            text: "Operation System",
+                            linkUrl: null
+                          },
+                          name: "Operation System",
+                          sub: null
+                        }
+                      ]
                     }
                   ]
-                },
-                {
-                  title: {
-                    text: "GPA: 4.17/4.5 ( 95.8/100 )",
-                    linkUrl: null,
-                    sub: {
-                      text: "",
-                      linkUrl: null
-                    }
-                  },
-
-                  list: []
                 }
-              ],
-              catalog: []
+              ]
             },
             {
               mainTitle: {
