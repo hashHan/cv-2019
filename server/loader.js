@@ -20,7 +20,7 @@ import { ServerStyleSheet, StyleSheetManager } from "styled-components"; //style
 import manifest from "../build/asset-manifest.json";
 
 // Some optional Redux functions related to user authentication
-import { setCurrentUser, logoutUser } from "../src/redux/actions";
+//import { setCurrentUser, logoutUser } from "../src/redux/actions";
 
 // LOADER
 export default (req, res) => {
@@ -66,11 +66,11 @@ export default (req, res) => {
 
       // If the user has a cookie (i.e. they're signed in) - set them as the current user
       // Otherwise, we want to set the current state to be logged out, just in case this isn't the default
-      if ("mywebsite" in req.cookies) {
-        store.dispatch(setCurrentUser(req.cookies.mywebsite));
-      } else {
-        store.dispatch(logoutUser());
-      }
+      // if ("mywebsite" in req.cookies) {
+      //   store.dispatch(setCurrentUser(req.cookies.mywebsite));
+      // } else {
+      //   store.dispatch(logoutUser());
+      // }
 
       const context = {};
       const modules = [];
@@ -109,6 +109,7 @@ export default (req, res) => {
             <ReduxProvider store={store}>
               <StaticRouter location={req.url} context={context}>
                 <Frontload isServer={true}>{StyledApp}</Frontload>
+                {/* <Frontload isServer={true}>{JSSApp}</Frontload> */}
               </StaticRouter>
             </ReduxProvider>
           </Loadable.Capture>
