@@ -42,6 +42,8 @@ animation,
 2. REACT_CUSTOM_ENV: Used in both server and client side for manage custom configuration
 3. DEPLOYMENT: Used only in the server to distinguish deployment vs local
 
-### HEROKU
+## DEPLOY TO HEROKU
 
 1. "start": "yarn local:production" FOR HEROKU
+2. "build": "yarn build:production",
+3. "build:react": "react-scripts build",

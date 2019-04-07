@@ -160,7 +160,7 @@
                 )
           );
         }),
-        _ = a(19),
+        _ = a(16),
         G = (function(e) {
           function t() {
             var e, a;
@@ -197,7 +197,7 @@
                       };
                     }));
                   return (
-                    console.log("cvlist datas: ", a),
+                    Object(_.a)("cvlist datas: ", a),
                     d.a.createElement(P, {
                       datas: a,
                       receivedCallback: function(t) {
@@ -380,7 +380,7 @@
           };
         })(z),
         V = a(12),
-        F = a(16),
+        F = a(17),
         Y = a(385),
         Q = a.n(Y),
         X = a(47),
@@ -412,20 +412,20 @@
                 (e = Object(i.a)(t)).call.apply(e, [this].concat(o))
               )).state = { open: {} }),
               (a.handleClick = function(e) {
-                console.log("name: ", e),
-                  console.log("this.state.open[name]", a.state.open[e]),
-                  console.log("!this.state.open[name]", !a.state.open[e]);
+                Object(_.a)("name: ", e),
+                  Object(_.a)("this.state.open[name]", a.state.open[e]),
+                  Object(_.a)("!this.state.open[name]", !a.state.open[e]);
                 var t = Object(V.d)(a.state.open)
                   .update(e, !1, function(e) {
                     return (
-                      console.log("boolval: ", e),
-                      console.log("!boolval: ", !e),
+                      Object(_.a)("boolval: ", e),
+                      Object(_.a)("!boolval: ", !e),
                       !e
                     );
                   })
                   .toJS();
                 a.setState({ open: t }, function() {
-                  console.log("this.state.open after setState: ", a.state.open);
+                  Object(_.a)("this.state.open after setState: ", a.state.open);
                 });
               }),
               a
@@ -725,7 +725,7 @@
                 (e = Object(i.a)(t)).call.apply(e, [this].concat(o))
               )).state = {}),
               (a.customcallback = function() {
-                console.log("Hi callback");
+                Object(_.a)("Hi callback");
               }),
               a
             );
@@ -740,10 +740,10 @@
                     t = e.classes,
                     a = e.details,
                     n = a.length;
-                  console.log("details columnNumbers :", n);
+                  Object(_.a)("details columnNumbers :", n);
                   var r = parseInt(12 / n);
                   return (
-                    console.log("details gridNumber :", r),
+                    Object(_.a)("details gridNumber :", r),
                     d.a.createElement(
                       x.a,
                       { className: t.paper },
@@ -1148,7 +1148,7 @@
                   return (
                     a.iconLinks &&
                       ((r = parseInt(12 / a.iconLinks.length)),
-                      console.log("details gridNumber :", r)),
+                      Object(_.a)("details gridNumber :", r)),
                     d.a.createElement(
                       x.a,
                       { className: t.paperTopLine },
@@ -1508,4 +1508,4 @@
     }
   }
 ]);
-//# sourceMappingURL=cv.90af9141.chunk.js.map
+//# sourceMappingURL=cv.1d3afd24.chunk.js.map

@@ -14,6 +14,8 @@ import Link from "@material-ui/core/Link";
 import { MyList } from "../../../components/ui/material-ui/my-list/my-list";
 import { MyTextLink } from "../../../components/ui/material-ui/my-typography/my-text-link";
 
+import { loggerDev } from "../../../../lib/logger";
+
 const styles = theme => ({
   root: {
     flexGrow: 1
@@ -54,15 +56,15 @@ class ItemCatalogBase extends Component {
   };
 
   customcallback = () => {
-    console.log("Hi callback");
+    loggerDev("Hi callback");
   };
 
   render() {
     const { classes, details } = this.props;
     const columnNumbers = details.length;
-    console.log("details columnNumbers :", columnNumbers);
+    loggerDev("details columnNumbers :", columnNumbers);
     const gridNumber = parseInt(12 / columnNumbers);
-    console.log("details gridNumber :", gridNumber);
+    loggerDev("details gridNumber :", gridNumber);
     return (
       <Paper className={classes.paper}>
         <Grid

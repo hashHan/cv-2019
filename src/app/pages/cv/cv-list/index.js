@@ -40,7 +40,7 @@ class CvListBase extends Component {
       callbackParam: each._id,
       text: `version ${each.cvMeta.version}, ${each.cvMeta.description}`
     }));
-    console.log("cvlist datas: ", datas);
+    loggerDev("cvlist datas: ", datas);
     return (
       <MyMenu
         datas={datas}

@@ -3,7 +3,7 @@
   {
     108: function(e, t, n) {
       "use strict";
-      var a = n(16),
+      var a = n(17),
         r = n(7),
         l = n(8),
         o = n(10),
@@ -16,10 +16,9 @@
         p = n.n(m),
         h = n(69),
         b = n.n(h),
-        g = "http://localhost:3000",
-        f = "CV of Haeseong Han",
-        v = "".concat(g).concat(b.a),
-        O = (function(e) {
+        g = "CV of Haeseong Han",
+        f = "".concat("").concat(b.a),
+        v = (function(e) {
           function t() {
             return (
               Object(r.a)(this, t),
@@ -41,11 +40,11 @@
                     c = e.updated,
                     s = e.category,
                     u = e.tags,
-                    d = n ? (n + " | " + f).substring(0, 60) : f,
+                    d = n ? (n + " | " + g).substring(0, 60) : g,
                     m = a
                       ? a.substring(0, 155)
                       : "CV app of Haeseong Han made in 2019",
-                    p = r ? "".concat(g).concat(r) : v,
+                    p = r ? "".concat("").concat(r) : f,
                     h = [
                       { itemprop: "name", content: d },
                       { itemprop: "description", content: m },
@@ -53,10 +52,10 @@
                       { name: "description", content: m },
                       { property: "og:title", content: d },
                       { property: "og:type", content: l || "website" },
-                      { property: "og:url", content: g + t },
+                      { property: "og:url", content: "" + t },
                       { property: "og:image", content: p },
                       { property: "og:description", content: m },
-                      { property: "og:site_name", content: f }
+                      { property: "og:site_name", content: g }
                     ];
                   return (
                     o &&
@@ -88,11 +87,11 @@
                           l.schema || "WebPage"
                         )
                       },
-                      title: l.title ? l.title + " | " + f : f,
+                      title: l.title ? l.title + " | " + g : g,
                       link: [
                         {
                           rel: "canonical",
-                          href: g + this.props.location.pathname
+                          href: "" + this.props.location.pathname
                         }
                       ],
                       meta: this.getMetaTags(l, this.props.location.pathname)
@@ -105,16 +104,25 @@
             t
           );
         })(s.Component);
-      t.a = Object(d.a)(O);
+      t.a = Object(d.a)(v);
     },
     117: function(e, t) {
       e.exports = {};
     },
     118: function(e, t) {
-      e.exports = {};
+      e.exports = { app: { baseURL: "https://han-cv-2019.herokuapp.com" } };
     },
     119: function(e, t) {
       e.exports = {};
+    },
+    16: function(e, t, n) {
+      "use strict";
+      n.d(t, "a", function() {
+        return a;
+      });
+      var a = function() {
+        return null;
+      };
     },
     168: function(e, t, n) {
       "use strict";
@@ -123,7 +131,7 @@
         r = (n(41), n(157)),
         l = n.n(r),
         o = n(65),
-        i = n(19),
+        i = n(16),
         c = l.a.create(o.myconfig.app);
       c.interceptors.request.use(
         function(e) {
@@ -273,16 +281,6 @@
       e.exports = n(360);
     },
     186: function(e, t) {},
-    19: function(e, t, n) {
-      "use strict";
-      n.d(t, "a", function() {
-        return a;
-      });
-      var a = function() {
-        var e;
-        return (e = console).log.apply(e, arguments);
-      };
-    },
     214: function(e, t, n) {
       var a = {
         "./": 65,
@@ -673,8 +671,8 @@
         _ = n(7),
         M = n(8),
         L = n(10),
-        D = n(9),
-        R = n(11),
+        R = n(9),
+        D = n(11),
         I = n(102),
         V = (n(168), n(4)),
         G = n(158),
@@ -685,9 +683,9 @@
         z = n.n(q),
         J = n(82),
         W = n.n(J),
-        X = n(160),
-        Y = n.n(X),
-        K = Object(V.withStyles)(
+        Y = n(160),
+        K = n.n(Y),
+        Q = Object(V.withStyles)(
           function(e) {
             return {
               root: {},
@@ -718,7 +716,7 @@
                   onClick: n,
                   className: t.navIconHide
                 },
-                l.a.createElement(Y.a, null)
+                l.a.createElement(K.a, null)
               ),
               l.a.createElement(
                 z.a,
@@ -734,8 +732,8 @@
             )
           );
         }),
-        Q = n(105),
-        Z = n.n(Q),
+        X = n(105),
+        Z = n.n(X),
         $ = n(104),
         ee = n.n($),
         te = n(161),
@@ -850,7 +848,7 @@
             return (
               ((n = Object(L.a)(
                 this,
-                (e = Object(D.a)(t)).call.apply(e, [this].concat(r))
+                (e = Object(R.a)(t)).call.apply(e, [this].concat(r))
               )).state = { mobileOpen: !1 }),
               (n.handleDrawerToggle = function() {
                 var e = !n.state.mobileOpen;
@@ -860,7 +858,7 @@
             );
           }
           return (
-            Object(R.a)(t, e),
+            Object(D.a)(t, e),
             Object(M.a)(t, [
               {
                 key: "render",
@@ -869,7 +867,7 @@
                   return l.a.createElement(
                     "div",
                     { className: e.root },
-                    l.a.createElement(K, {
+                    l.a.createElement(Q, {
                       className: e.MyAppbar,
                       handleDrawerToggle: this.handleDrawerToggle,
                       token: this.props.token
@@ -924,7 +922,7 @@
           },
           { withTheme: !0 }
         )(ge),
-        n(16)),
+        n(17)),
         ve = n(25),
         Oe = n.n(ve),
         je = n(50),
@@ -945,7 +943,7 @@
             return (
               ((n = Object(L.a)(
                 this,
-                (e = Object(D.a)(t)).call.apply(e, [this].concat(r))
+                (e = Object(R.a)(t)).call.apply(e, [this].concat(r))
               )).handleClose = function() {
                 n.props.onClose(n.props.selectedValue);
               }),
@@ -956,7 +954,7 @@
             );
           }
           return (
-            Object(R.a)(t, e),
+            Object(D.a)(t, e),
             Object(M.a)(t, [
               {
                 key: "render",
@@ -1020,7 +1018,7 @@
             return (
               ((n = Object(L.a)(
                 this,
-                (e = Object(D.a)(t)).call.apply(e, [this].concat(r))
+                (e = Object(R.a)(t)).call.apply(e, [this].concat(r))
               )).handleClose = function() {
                 n.props.onClose();
               }),
@@ -1028,7 +1026,7 @@
             );
           }
           return (
-            Object(R.a)(t, e),
+            Object(D.a)(t, e),
             Object(M.a)(t, [
               {
                 key: "render",
@@ -1098,7 +1096,7 @@
             return (
               ((n = Object(L.a)(
                 this,
-                (e = Object(D.a)(t)).call.apply(e, [this].concat(r))
+                (e = Object(R.a)(t)).call.apply(e, [this].concat(r))
               )).handleCloseNegative = function() {
                 n.props.onCloseNegative();
               }),
@@ -1109,7 +1107,7 @@
             );
           }
           return (
-            Object(R.a)(t, e),
+            Object(D.a)(t, e),
             Object(M.a)(t, [
               {
                 key: "render",
@@ -1194,7 +1192,7 @@
             return (
               ((n = Object(L.a)(
                 this,
-                (e = Object(D.a)(t)).call.apply(e, [this].concat(r))
+                (e = Object(R.a)(t)).call.apply(e, [this].concat(r))
               )).handleCloseNegative = function() {
                 n.props.onCloseNegative();
               }),
@@ -1205,7 +1203,7 @@
             );
           }
           return (
-            Object(R.a)(t, e),
+            Object(D.a)(t, e),
             Object(M.a)(t, [
               {
                 key: "render",
@@ -1375,6 +1373,7 @@
             }
           }
         }),
+        Re = n(16),
         De = (function(e) {
           function t() {
             var e, n;
@@ -1384,7 +1383,7 @@
             return (
               ((n = Object(L.a)(
                 this,
-                (e = Object(D.a)(t)).call.apply(e, [this].concat(r))
+                (e = Object(R.a)(t)).call.apply(e, [this].concat(r))
               )).state = { open: !0 }),
               (n.handleClose = function(e) {
                 n.setState({ open: !1 }, function() {});
@@ -1394,7 +1393,7 @@
             );
           }
           return (
-            Object(R.a)(t, e),
+            Object(D.a)(t, e),
             Object(M.a)(t, [
               {
                 key: "render",
@@ -1418,7 +1417,7 @@
                               : "Undefined error, please contact haeseong.han@gmail.com"
                         };
                       })),
-                    console.log("error:", e),
+                    Object(Re.a)("error:", e),
                     l.a.createElement(Pe, {
                       onClose: this.handleClose,
                       open: this.state.open,
@@ -1432,10 +1431,10 @@
             t
           );
         })(r.Component),
-        Re = Object(i.connect)(function(e) {
+        Ie = Object(i.connect)(function(e) {
           return { error: e.common.error };
         })(De),
-        Ie = (function(e) {
+        Ve = (function(e) {
           function t() {
             var e, n;
             Object(_.a)(this, t);
@@ -1444,7 +1443,7 @@
             return (
               ((n = Object(L.a)(
                 this,
-                (e = Object(D.a)(t)).call.apply(e, [this].concat(r))
+                (e = Object(R.a)(t)).call.apply(e, [this].concat(r))
               )).handleClose = function() {
                 n.props.onClose();
               }),
@@ -1452,7 +1451,7 @@
             );
           }
           return (
-            Object(R.a)(t, e),
+            Object(D.a)(t, e),
             Object(M.a)(t, [
               {
                 key: "render",
@@ -1488,20 +1487,20 @@
             t
           );
         })(l.a.Component),
-        Ve = Object(V.withStyles)({})(Ie),
-        Ge = n(162),
-        He = n.n(Ge);
-      var Fe = Object(V.withStyles)(function(e) {
+        Ge = Object(V.withStyles)({})(Ve),
+        He = n(162),
+        Fe = n.n(He);
+      var Be = Object(V.withStyles)(function(e) {
           return { progress: { margin: 2 * e.spacing.unit } };
         })(function(e) {
           var t = e.classes;
           return l.a.createElement(
             "div",
             null,
-            l.a.createElement(He.a, { className: t.progress, size: 100 })
+            l.a.createElement(Fe.a, { className: t.progress, size: 100 })
           );
         }),
-        Be = (function(e) {
+        qe = (function(e) {
           function t() {
             var e, n;
             Object(_.a)(this, t);
@@ -1510,7 +1509,7 @@
             return (
               ((n = Object(L.a)(
                 this,
-                (e = Object(D.a)(t)).call.apply(e, [this].concat(r))
+                (e = Object(R.a)(t)).call.apply(e, [this].concat(r))
               )).state = { open: !0 }),
               (n.handleClose = function(e) {
                 n.setState({ open: !1 }, function() {});
@@ -1520,7 +1519,7 @@
             );
           }
           return (
-            Object(R.a)(t, e),
+            Object(D.a)(t, e),
             Object(M.a)(t, [
               {
                 key: "render",
@@ -1529,13 +1528,13 @@
                     "div",
                     null,
                     l.a.createElement(
-                      Ve,
+                      Ge,
                       {
                         onClose: this.handleClose,
                         open: this.state.open,
                         title: this.title
                       },
-                      l.a.createElement(Fe, null)
+                      l.a.createElement(Be, null)
                     )
                   );
                 }
@@ -1544,18 +1543,18 @@
             t
           );
         })(r.Component),
-        qe = n(365),
-        ze = n(364),
-        Je = n(363),
-        We = (function(e) {
+        ze = n(365),
+        Je = n(364),
+        We = n(363),
+        Ye = (function(e) {
           function t() {
             return (
               Object(_.a)(this, t),
-              Object(L.a)(this, Object(D.a)(t).apply(this, arguments))
+              Object(L.a)(this, Object(R.a)(t).apply(this, arguments))
             );
           }
           return (
-            Object(R.a)(t, e),
+            Object(D.a)(t, e),
             Object(M.a)(t, [
               {
                 key: "componentDidUpdate",
@@ -1573,19 +1572,19 @@
             t
           );
         })(r.Component),
-        Xe = Object(I.a)(We),
-        Ye = (Object(i.connect)(function(e) {
+        Ke = Object(I.a)(Ye),
+        Qe = (Object(i.connect)(function(e) {
           return { isAuthenticated: e.auth.isAuthenticated };
         }, null)(function(e) {
           var t = e.component,
             n = Object(fe.a)(e, ["component"]);
           return l.a.createElement(
-            ze.a,
+            Je.a,
             Object.assign({}, n, {
               render: function(e) {
                 return n.isAuthenticated
                   ? l.a.createElement(t, e)
-                  : l.a.createElement(Je.a, {
+                  : l.a.createElement(We.a, {
                       to: "/login?redirect=".concat(e.location.pathname)
                     });
               }
@@ -1593,19 +1592,19 @@
           );
         }),
         n(163)),
-        Ke = n.n(Ye),
-        Qe = (Object(i.connect)(function(e) {
+        Xe = n.n(Qe),
+        Ze = (Object(i.connect)(function(e) {
           return { isAuthenticated: e.auth.isAuthenticated };
         }, null)(function(e) {
           var t = e.component,
             n = Object(fe.a)(e, ["component"]),
-            a = Ke.a.parse(n.location.search);
+            a = Xe.a.parse(n.location.search);
           return l.a.createElement(
-            ze.a,
+            Je.a,
             Object.assign({}, n, {
               render: function(e) {
                 return n.isAuthenticated
-                  ? l.a.createElement(Je.a, { to: a.redirect || "/dashboard" })
+                  ? l.a.createElement(We.a, { to: a.redirect || "/dashboard" })
                   : l.a.createElement(t, e);
               }
             })
@@ -1613,12 +1612,12 @@
         }),
         n(108),
         n(165)),
-        Ze = n.n(Qe),
-        $e = n(48),
-        et = n.n($e),
-        tt = n(166),
-        nt = n.n(tt),
-        at = function(e) {
+        $e = n.n(Ze),
+        et = n(48),
+        tt = n.n(et),
+        nt = n(166),
+        at = n.n(nt),
+        rt = function(e) {
           return {
             button: { margin: e.spacing.unit, "text-decoration": "none" },
             iconButton: {},
@@ -1644,7 +1643,7 @@
             slackMSText: { marginLeft: e.spacing.unit }
           };
         },
-        rt = (Object(V.withStyles)(at)(function(e) {
+        lt = (Object(V.withStyles)(rt)(function(e) {
           var t = e.classes,
             n = e.children,
             a = Object(fe.a)(e, ["classes", "children"]);
@@ -1656,10 +1655,10 @@
               color: "secondary"
             }),
             l.a.createElement("span", { className: t.label }, n),
-            l.a.createElement(Ze.a, { className: t.rightIcon })
+            l.a.createElement($e.a, { className: t.rightIcon })
           );
         }),
-        Object(V.withStyles)(at)(function(e) {
+        Object(V.withStyles)(rt)(function(e) {
           var t = e.classes,
             n = e.children,
             a = Object(fe.a)(e, ["classes", "children"]);
@@ -1671,10 +1670,10 @@
               color: "primary"
             }),
             l.a.createElement("span", { className: t.label }, n),
-            l.a.createElement(et.a, { className: t.rightIcon }, "send")
+            l.a.createElement(tt.a, { className: t.rightIcon }, "send")
           );
         }),
-        Object(V.withStyles)(at)(function(e) {
+        Object(V.withStyles)(rt)(function(e) {
           var t = e.classes,
             n = e.children,
             a = Object(fe.a)(e, ["classes", "children"]);
@@ -1687,13 +1686,13 @@
             }),
             l.a.createElement("span", { className: t.label }, n),
             l.a.createElement(
-              et.a,
+              tt.a,
               { className: t.rightIcon },
               "arrow_drop_down"
             )
           );
         }),
-        Object(V.withStyles)(at)(function(e) {
+        Object(V.withStyles)(rt)(function(e) {
           var t = e.classes,
             n = e.children,
             a = Object(fe.a)(e, ["classes", "children"]);
@@ -1705,10 +1704,10 @@
               color: "secondary"
             }),
             l.a.createElement("span", { className: t.label }, n),
-            l.a.createElement(et.a, { className: t.rightIcon }, "close")
+            l.a.createElement(tt.a, { className: t.rightIcon }, "close")
           );
         }),
-        Object(V.withStyles)(at)(function(e) {
+        Object(V.withStyles)(rt)(function(e) {
           var t = e.classes,
             n = e.children,
             a = Object(fe.a)(e, ["classes", "children"]);
@@ -1722,7 +1721,7 @@
             n
           );
         }),
-        Object(V.withStyles)(at)(function(e) {
+        Object(V.withStyles)(rt)(function(e) {
           var t = e.classes,
             n = e.variant,
             a = e.color,
@@ -1740,12 +1739,12 @@
           return l.a.createElement(
             Oe.a,
             Object.assign({}, c, { className: t.button, variant: n, color: a }),
-            r ? null : l.a.createElement(et.a, { className: t.leftIcon }, o),
+            r ? null : l.a.createElement(tt.a, { className: t.leftIcon }, o),
             l.a.createElement("span", { className: t.label }, i),
-            r ? l.a.createElement(et.a, { className: t.rightIcon }, o) : null
+            r ? l.a.createElement(tt.a, { className: t.rightIcon }, o) : null
           );
         }),
-        Object(V.withStyles)(at)(function(e) {
+        Object(V.withStyles)(rt)(function(e) {
           var t = e.classes,
             n = e.iconName,
             a = (e.children, e.title),
@@ -1758,7 +1757,7 @@
               "callback"
             ]));
           return l.a.createElement(
-            nt.a,
+            at.a,
             { title: a },
             l.a.createElement(
               W.a,
@@ -1766,11 +1765,11 @@
                 "aria-label": a,
                 className: t.iconButton
               }),
-              n ? l.a.createElement(et.a, null, n) : null
+              n ? l.a.createElement(tt.a, null, n) : null
             )
           );
         }),
-        Object(V.withStyles)(at)(function(e) {
+        Object(V.withStyles)(rt)(function(e) {
           var t = e.classes,
             n = (e.children, e.ms),
             a = Object(fe.a)(e, ["classes", "children", "ms"]);
@@ -1795,7 +1794,7 @@
             )
           );
         }),
-        Object(V.withStyles)(at)(function(e) {
+        Object(V.withStyles)(rt)(function(e) {
           var t = e.classes,
             n = e.children,
             a = Object(fe.a)(e, ["classes", "children"]);
@@ -1830,7 +1829,7 @@
           },
           modules: ["profile"]
         })),
-        lt = s()({
+        ot = s()({
           loader: function() {
             return Promise.all([n.e(5), n.e(0)]).then(n.bind(null, 398));
           },
@@ -1839,32 +1838,32 @@
           },
           modules: ["cv"]
         }),
-        ot = function() {
+        it = function() {
           return l.a.createElement(
-            Xe,
+            Ke,
             { className: "Routes" },
             l.a.createElement(
-              qe.a,
+              ze.a,
               null,
-              l.a.createElement(ze.a, { exact: !0, path: "/", component: lt }),
-              l.a.createElement(ze.a, {
+              l.a.createElement(Je.a, { exact: !0, path: "/", component: ot }),
+              l.a.createElement(Je.a, {
                 exact: !0,
                 path: "/profile/:id",
-                component: rt
+                component: lt
               }),
-              l.a.createElement(Je.a, { to: "/" })
+              l.a.createElement(We.a, { to: "/" })
             )
           );
         },
-        it = (function(e) {
+        ct = (function(e) {
           function t() {
             return (
               Object(_.a)(this, t),
-              Object(L.a)(this, Object(D.a)(t).apply(this, arguments))
+              Object(L.a)(this, Object(R.a)(t).apply(this, arguments))
             );
           }
           return (
-            Object(R.a)(t, e),
+            Object(D.a)(t, e),
             Object(M.a)(t, [
               { key: "componentWillMount", value: function() {} },
               {
@@ -1874,9 +1873,9 @@
                   return l.a.createElement(
                     "div",
                     { id: "app" },
-                    l.a.createElement(ot, null),
-                    this.props.error ? l.a.createElement(Re, null) : null,
-                    this.props.loading ? l.a.createElement(Be, null) : null
+                    l.a.createElement(it, null),
+                    this.props.error ? l.a.createElement(Ie, null) : null,
+                    this.props.loading ? l.a.createElement(qe, null) : null
                   );
                 }
               }
@@ -1884,7 +1883,7 @@
             t
           );
         })(r.Component),
-        ct = Object(I.a)(
+        st = Object(I.a)(
           Object(i.connect)(function(e) {
             var t = e.auth,
               n = t.isAuthenticated,
@@ -1896,85 +1895,85 @@
               error: r.error,
               loading: r.loading
             };
-          })(it)
+          })(ct)
         ),
-        st = n(38),
-        ut = n(56),
-        dt = n.n(ut),
-        mt = n(57),
-        pt = n.n(mt),
-        ht = n(37),
-        bt = n.n(ht),
-        gt = n(103),
-        ft = n.n(gt),
-        vt = n(167),
-        Ot = n.n(vt),
-        jt = {
-          palette: { primary: ft.a, secondary: Ot.a },
+        ut = n(38),
+        dt = n(56),
+        mt = n.n(dt),
+        pt = n(57),
+        ht = n.n(pt),
+        bt = n(37),
+        gt = n.n(bt),
+        ft = n(103),
+        vt = n.n(ft),
+        Ot = n(167),
+        jt = n.n(Ot),
+        Et = {
+          palette: { primary: vt.a, secondary: jt.a },
           typography: { useNextVariants: !0 },
           shadows: Array(25).fill("none")
         },
-        Et = {
-          1: Object.assign({}, bt()(jt, {})),
-          2: Object.assign({}, bt()(jt, {}))
+        yt = {
+          1: Object.assign({}, gt()(Et, {})),
+          2: Object.assign({}, gt()(Et, {}))
         },
-        yt = function(e) {
-          return Et[e];
+        kt = function(e) {
+          return yt[e];
         },
-        kt = !(
+        Ct = !(
           "undefined" !== typeof window &&
           window.document &&
           window.document.createElement
         ),
-        Ct = new st.SheetsRegistry(),
-        wt = new Map(),
-        Nt = Object(V.createMuiTheme)(yt(1)),
-        St = Object(st.create)(Object(V.jssPreset)()),
-        Tt = Object(V.createGenerateClassName)();
-      var xt,
-        Ut = !(
+        wt = new ut.SheetsRegistry(),
+        Nt = new Map(),
+        St = Object(V.createMuiTheme)(kt(1)),
+        Tt = Object(ut.create)(Object(V.jssPreset)()),
+        xt = Object(V.createGenerateClassName)();
+      var Ut,
+        At = !(
           "undefined" !== typeof window &&
           window.document &&
           window.document.createElement
         ),
-        At = new st.SheetsRegistry(),
-        Pt = new Map(),
-        _t = Object(V.createMuiTheme)(yt(1)),
-        Mt = Object(st.create)(Object(V.jssPreset)()),
-        Lt = Object(V.createGenerateClassName)(),
+        Pt = new ut.SheetsRegistry(),
+        _t = new Map(),
+        Mt = Object(V.createMuiTheme)(kt(1)),
+        Lt = Object(ut.create)(Object(V.jssPreset)()),
+        Rt = Object(V.createGenerateClassName)(),
         Dt = (function(e) {
           function t() {
             return (
               Object(_.a)(this, t),
-              Object(L.a)(this, Object(D.a)(t).apply(this, arguments))
+              Object(L.a)(this, Object(R.a)(t).apply(this, arguments))
             );
           }
           return (
-            Object(R.a)(t, e),
+            Object(D.a)(t, e),
             Object(M.a)(t, [
               { key: "componentDidMount", value: function() {} },
               {
                 key: "render",
                 value: function() {
                   var e = this.props.children;
-                  return Ut
+                  return At
                     ? l.a.createElement(
-                        dt.a,
-                        { jss: Mt, registry: At, generateClassName: Lt },
+                        mt.a,
+                        { jss: Lt, registry: Pt, generateClassName: Rt },
                         l.a.createElement(
                           V.MuiThemeProvider,
-                          { theme: _t, sheetsManager: Pt },
-                          l.a.createElement(pt.a, null),
+                          { theme: Mt, sheetsManager: _t },
+                          l.a.createElement(ht.a, null),
                           e
                         )
                       )
                     : l.a.createElement(
-                        dt.a,
-                        { jss: Mt, generateClassName: Lt },
+                        mt.a,
+                        { jss: Lt, generateClassName: Rt },
                         l.a.createElement(
                           V.MuiThemeProvider,
-                          { theme: _t },
-                          l.a.createElement(pt.a, null),
+                          { theme: Mt },
+                          l.a.createElement(ht.a, null),
                           e
                         )
                       );
@@ -1984,7 +1983,7 @@
             t
           );
         })(l.a.Component),
-        Rt = (Object(i.connect)(function(e) {
+        It = (Object(i.connect)(function(e) {
           var t = e.style.themeNumber,
             n = e.common;
           return { themeNumber: t, error: n.error, loading: n.loading };
@@ -1993,11 +1992,11 @@
           function t() {
             return (
               Object(_.a)(this, t),
-              Object(L.a)(this, Object(D.a)(t).apply(this, arguments))
+              Object(L.a)(this, Object(R.a)(t).apply(this, arguments))
             );
           }
           return (
-            Object(R.a)(t, e),
+            Object(D.a)(t, e),
             Object(M.a)(t, [
               {
                 key: "componentDidMount",
@@ -2009,45 +2008,45 @@
               {
                 key: "render",
                 value: function() {
-                  return l.a.createElement(ct, null);
+                  return l.a.createElement(st, null);
                 }
               }
             ]),
             t
           );
         })(l.a.Component)),
-        It = ((xt = Rt),
+        Vt = ((Ut = It),
         function(e) {
-          return kt
+          return Ct
             ? l.a.createElement(
-                dt.a,
-                { jss: St, registry: Ct, generateClassName: Tt },
+                mt.a,
+                { jss: Tt, registry: wt, generateClassName: xt },
                 l.a.createElement(
                   V.MuiThemeProvider,
-                  { theme: Nt, sheetsManager: wt },
-                  l.a.createElement(pt.a, null),
-                  l.a.createElement(xt, e)
+                  { theme: St, sheetsManager: Nt },
+                  l.a.createElement(ht.a, null),
+                  l.a.createElement(Ut, e)
                 )
               )
             : l.a.createElement(
-                dt.a,
-                { jss: St, generateClassName: Tt },
+                mt.a,
+                { jss: Tt, generateClassName: xt },
                 l.a.createElement(
                   V.MuiThemeProvider,
-                  { theme: Nt },
-                  l.a.createElement(pt.a, null),
-                  l.a.createElement(xt, e)
+                  { theme: St },
+                  l.a.createElement(ht.a, null),
+                  l.a.createElement(Ut, e)
                 )
               );
         }),
-        Vt = (n(359),
+        Gt = (n(359),
         (function() {
           var e =
               arguments.length > 0 && void 0 !== arguments[0]
                 ? arguments[0]
                 : "/",
             t = P ? Object(h.c)({ initialEntries: [e] }) : Object(h.a)(),
-            n = P ? m.d : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__,
+            n = m.d,
             a = [p.a, Object(d.routerMiddleware)(t)],
             r = n.apply(void 0, [m.a.apply(void 0, a)].concat([])),
             l = P ? {} : Object(b.d)(window.__PRELOADED_STATE__);
@@ -2057,27 +2056,27 @@
             history: t
           };
         })()),
-        Gt = Vt.store,
-        Ht = Vt.history,
-        Ft = l.a.createElement(
+        Ht = Gt.store,
+        Ft = Gt.history,
+        Bt = l.a.createElement(
           i.Provider,
-          { store: Gt },
+          { store: Ht },
           l.a.createElement(
             d.ConnectedRouter,
-            { history: Ht },
+            { history: Ft },
             l.a.createElement(
               u.Frontload,
               { noServerRender: !0 },
-              l.a.createElement(It, null)
+              l.a.createElement(Vt, null)
             )
           )
         ),
-        Bt = document.querySelector("#root");
-      !0 === Bt.hasChildNodes()
+        qt = document.querySelector("#root");
+      !0 === qt.hasChildNodes()
         ? s.a.preloadReady().then(function() {
-            Object(o.hydrate)(Ft, Bt);
+            Object(o.hydrate)(Bt, qt);
           })
-        : Object(o.render)(Ft, Bt);
+        : Object(o.render)(Bt, qt);
     },
     43: function(e, t, n) {
       "use strict";
@@ -2125,8 +2124,8 @@
       var a = n(37),
         r = n.n(a),
         l = n(81);
-      console.log("process.env.REACT_APP_CUSTOM_ENV: ", "development");
-      var o = "development",
+      console.log("process.env.REACT_APP_CUSTOM_ENV: ", "production");
+      var o = "production",
         i = n(214)("./".concat(o));
       console.log(o);
       var c = Object.assign({}, r()(l.defaultConfig, i), { env: o });
@@ -2183,4 +2182,4 @@
   },
   [[177, 3, 4]]
 ]);
-//# sourceMappingURL=main.d9287a37.chunk.js.map
+//# sourceMappingURL=main.d7890253.chunk.js.map

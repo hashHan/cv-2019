@@ -21,6 +21,8 @@ import { MyTextLink } from "../my-typography/my-text-link";
 import { Aux } from "../../../auxiliary";
 import { setAutoFreeze } from "immer";
 
+import { loggerDev } from "../../../../../lib/logger";
+
 const styles = theme => ({
   list: {
     width: "100%",
@@ -73,23 +75,23 @@ class MyListBase extends Component {
   // });
 
   handleClick = name => {
-    console.log("name: ", name);
-    console.log("this.state.open[name]", this.state.open[name]);
-    console.log("!this.state.open[name]", !this.state.open[name]);
+    loggerDev("name: ", name);
+    loggerDev("this.state.open[name]", this.state.open[name]);
+    loggerDev("!this.state.open[name]", !this.state.open[name]);
 
     //update(key, defaultvalue if not exist, update fn if exsist)
     const newOpen = fromJS(this.state.open)
       .update(name, false, boolval => {
         //if not exist, set false 'then' also update.
-        console.log("boolval: ", boolval);
-        console.log("!boolval: ", !boolval);
+        loggerDev("boolval: ", boolval);
+        loggerDev("!boolval: ", !boolval);
         const newbool = !boolval;
         return newbool;
       })
       .toJS();
 
     this.setState({ open: newOpen }, () => {
-      console.log("this.state.open after setState: ", this.state.open);
+      loggerDev("this.state.open after setState: ", this.state.open);
     });
   };
 

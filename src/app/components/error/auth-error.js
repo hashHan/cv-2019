@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { DialogShowWrapped } from "../../components/ui/material-ui/my-modal/my-modal";
 
 import { errorMessage } from "./error-Message";
+import { loggerDev } from "../../../lib/logger";
 
 class ErrorModalBase extends Component {
   state = {
@@ -47,7 +48,7 @@ class ErrorModalBase extends Component {
     } else {
       //error = null;
     }
-    console.log("error:", error);
+    loggerDev("error:", error);
     return (
       <DialogShowWrapped
         onClose={this.handleClose}

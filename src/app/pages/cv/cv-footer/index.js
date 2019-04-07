@@ -13,6 +13,8 @@ import Icon from "@material-ui/core/Icon";
 
 import { MyTextLink } from "../../../components/ui/material-ui/my-typography/my-text-link";
 
+import { loggerDev } from "../../../../lib/logger";
+
 const styles = theme => ({
   root: {
     flexGrow: 1
@@ -59,7 +61,7 @@ class CvFooterBase extends Component {
     let gridNumber = 12;
     if (footerData.iconLinks) {
       gridNumber = parseInt(12 / footerData.iconLinks.length);
-      console.log("details gridNumber :", gridNumber);
+      loggerDev("details gridNumber :", gridNumber);
     }
 
     return (
