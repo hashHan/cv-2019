@@ -12,20 +12,22 @@ export default fromJS({
     //   description: 'After quit Kono',
     // },
     {
-      cvId: null,
-      owner: null,
-      timestamp: null,
-      latest: null,
-      version: null,
-      description: null
+      _id: null,
+      cvMeta: {
+        owner: null,
+        //timestamp: null,
+        latest: null,
+        version: null,
+        description: null
+      }
     }
   ], // multiple CVs
   cvLatest: {
     // example
+    _id: null,
     cvMeta: {
-      cvId: null,
       owner: null,
-      timestamp: null,
+      //timestamp: null,
       latest: null,
       version: null,
       description: null
@@ -790,10 +792,10 @@ export default fromJS({
   },
   cvSelected: {
     // example
+    _id: null,
     cvMeta: {
-      cvId: null,
       owner: null,
-      timestamp: null,
+      //timestamp: null,
       latest: null,
       version: null,
       description: null

@@ -35,11 +35,12 @@ class CvListBase extends Component {
   render() {
     const { classes, cvListData } = this.props;
     const datas = cvListData.map(each => ({
-      customKey: each.cvId,
-      selected: each.latest,
-      callbackParam: each.cvId,
-      text: `version ${each.version}, ${each.description} on ${each.timestamp}`
+      customKey: each._id,
+      selected: each.cvMeta.latest,
+      callbackParam: each._id,
+      text: `version ${each.cvMeta.version}, ${each.cvMeta.description}`
     }));
+    console.log("cvlist datas: ", datas);
     return (
       <MyMenu
         datas={datas}

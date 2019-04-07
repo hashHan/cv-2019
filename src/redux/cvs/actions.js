@@ -2,7 +2,7 @@ import { fromJS } from "immutable";
 import { push } from "connected-react-router";
 
 //import { myconfig } from '../../config';
-//import api from '../../lib/api';
+import api from "../../lib/api";
 //import { errorFormatter } from '../lib/error-formatter';
 
 import * as actionTypes from "./action-types";
@@ -54,77 +54,28 @@ export const cvsSuccess = () => dispatch =>
 
 export const getCvList = () => {
   loggerDev("getCvList");
-  const cvMeta = cvsTemp.map(each => each.cvMeta);
-  loggerDev("cvMeta: ", cvMeta);
-  const cvList = fromJS(cvMeta);
+  //const cvMeta = cvsTemp.map(each => each.cvMeta);
+  //loggerDev("cvMeta: ", cvMeta);
+  //const cvList = fromJS(cvMeta);
   return dispatch =>
     new Promise(function(resolve, reject) {
       dispatch(cvsStart());
-      //     const reqInfo = {
-      //         endpoint: 'cvs',
-      //         url: 'cvs',
-      //         method: 'get',
-      //     }
-      //     api.get(reqInfo.url)
-      //         .then(response => {
-      //             loggerDev(response);
-      //             const {
-      //                //cvs
-      //                //id,
-      //                //name, ...
-      //             } = response.data
-      //             const cvList = fromJS({
-      //                 // id,
-      //                 // name: name ? name:"cvs_default",
-      //             })
+      const reqInfo = {
+        endpoint: "cv",
+        url: "bapi/api/cv/list",
+        method: "get"
+      };
+      api.get(reqInfo.url).then(response => {
+        loggerDev("GET CV LIST", response.data.Cause);
+        const cvList = fromJS(response.data.Cause);
 
-      dispatch(cvsSuccess()); //return for promise;
-      dispatch({
-        type: actionTypes.GET_CV_LIST,
-        data: cvList
+        dispatch(cvsSuccess()); //return for promise;
+        dispatch({
+          type: actionTypes.GET_CV_LIST,
+          data: cvList
+        });
+        resolve(cvList);
       });
-      resolve(cvList);
-      // })
-      // .catch(error => {
-      //     const formattedError = errorFormatter(error, section, reqInfo.endpoint, reqInfo.method)
-      //     dispatch(cvsFail(formattedError));
-      // });
-    });
-};
-
-export const getCvLatest = () => {
-  loggerDev("getCvLatest");
-  const cvLatestjs = cvsTemp.filter(each => each.cvMeta.latest === true)[0];
-  loggerDev("cvLatest: ", cvLatestjs);
-  const cvLatest = fromJS(cvLatestjs);
-  return dispatch =>
-    new Promise(function(resolve, reject) {
-      dispatch(cvsStart());
-      //     const reqInfo = {
-      //         endpoint: 'cvs',
-      //         url: 'cvs',
-      //         method: 'get',
-      //     }
-      //     api.get(reqInfo.url)
-      //         .then(response => {
-      //             loggerDev(response);
-      //             const {
-      //                //cvs
-      //                //id,
-      //                //name, ...
-      //             } = response.data
-      //             const cvList = fromJS({
-      //                 // id,
-      //                 // name: name ? name:"cvs_default",
-      //             })
-
-      dispatch(cvsSuccess()); //return for promise;
-      dispatch({
-        type: actionTypes.GET_CV_LATEST,
-        data: cvLatest
-      });
-      resolve(cvLatest);
-      // })
       // .catch(error => {
       //     const formattedError = errorFormatter(error, section, reqInfo.endpoint, reqInfo.method)
       //     dispatch(cvsFail(formattedError));
@@ -134,37 +85,70 @@ export const getCvLatest = () => {
 
 export const getCvOne = cvId => {
   loggerDev("getCvOne");
-  const cvOnejs = cvsTemp.filter(each => each.cvMeta.cvId === cvId)[0];
-  loggerDev("cvOne: ", cvOnejs);
-  const cvOne = fromJS(cvOnejs);
+  // const cvOnejs = cvsTemp.filter(each => each.cvMeta.cvId === cvId)[0];
+  // loggerDev("cvOne: ", cvOnejs);
+  // const cvOne = fromJS(cvOnejs);
   return dispatch =>
     new Promise(function(resolve, reject) {
       dispatch(cvsStart());
-      //     const reqInfo = {
-      //         endpoint: 'cvs',
-      //         url: 'cvs',
-      //         method: 'get',
-      //     }
-      //     api.get(reqInfo.url)
-      //         .then(response => {
-      //             loggerDev(response);
-      //             const {
-      //                //cvs
-      //                //id,
-      //                //name, ...
-      //             } = response.data
-      //             const cvList = fromJS({
-      //                 // id,
-      //                 // name: name ? name:"cvs_default",
-      //             })
+      const reqInfo = {
+        endpoint: "cv",
+        url: `bapi/api/cv/${cvId}`,
+        method: "get"
+      };
+      api.get(reqInfo.url).then(response => {
+        loggerDev(response);
+        loggerDev("GET CV ONE", response.data.Cv);
+        // const {
+        //    //cvs
+        //    //id,
+        //    //name, ...
+        // } = response.data
+        const cvOne = fromJS(response.data.Cv);
 
-      dispatch(cvsSuccess()); //return for promise;
-      dispatch({
-        type: actionTypes.GET_CV_ONE,
-        data: cvOne
+        dispatch(cvsSuccess()); //return for promise;
+        dispatch({
+          type: actionTypes.GET_CV_ONE,
+          data: cvOne
+        });
+        resolve(cvOne);
       });
-      resolve(cvOne);
-      // })
+      // .catch(error => {
+      //     const formattedError = errorFormatter(error, section, reqInfo.endpoint, reqInfo.method)
+      //     dispatch(cvsFail(formattedError));
+      // });
+    });
+};
+
+export const getCvLatest = () => {
+  loggerDev("getCvLatest");
+  // const cvLatestjs = cvsTemp.filter(each => each.cvMeta.latest === true)[0];
+  // loggerDev("cvLatest: ", cvLatestjs);
+  //const cvLatest = fromJS(cvLatestjs);
+  return (dispatch, getState) =>
+    new Promise(function(resolve, reject) {
+      const latestId = getState()
+        .cvs.get("cvList")
+        .filter(each => each.getIn(["cvMeta", "latest"]) === true)
+        .getIn([0, "_id"]);
+      loggerDev("latestId: ", latestId);
+      dispatch(cvsStart());
+      const reqInfo = {
+        endpoint: "cv",
+        url: `bapi/api/cv/${latestId}`,
+        method: "get"
+      };
+      api.get(reqInfo.url).then(response => {
+        loggerDev(response);
+        loggerDev("GET CV LATEST", response.data.Cv);
+        const cvLatest = fromJS(response.data.Cv);
+        dispatch(cvsSuccess()); //return for promise;
+        dispatch({
+          type: actionTypes.GET_CV_LATEST,
+          data: cvLatest
+        });
+        resolve(cvLatest);
+      });
       // .catch(error => {
       //     const formattedError = errorFormatter(error, section, reqInfo.endpoint, reqInfo.method)
       //     dispatch(cvsFail(formattedError));

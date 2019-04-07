@@ -47,15 +47,16 @@ app.use(morgan("dev"));
 app.use(cookieParser());
 
 // proxy b-api(backend logic api)
-// app.use(
-//   '/bapi',
-//   proxy(config.bapi.baseURL, {
-//     proxyReqOptDecorator(opts) {
-//       opts.headers['x-forwarded-host'] = 'localhost:3000';
-//       return opts;
-//     }
-//   })
-// );
+app.use(
+  "/bapi",
+  proxy(config.bapi.baseURL, {
+    proxyReqOptDecorator(opts) {
+      opts.headers["x-forwarded-host"] = config.app.baseURL;
+      return opts;
+    }
+  })
+);
+
 // Set up homepage, static assets, and capture everything else
 //app.use(express.Router().get("/", loader));
 app.use(express.static(path.resolve(__dirname, "../build")));

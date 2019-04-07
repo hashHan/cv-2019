@@ -97,8 +97,8 @@ class CvFooterBase extends Component {
                             href={link.linkUrl}
                             className={classes.link}
                           >
-                            {link.iconName}
-                            {/* <Icon>{link.iconName}</Icon> */}
+                            {link.name}
+                            {/* <Icon>{link.name}</Icon> */}
                           </Link>
                         </Typography>
                       </Paper>

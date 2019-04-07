@@ -1,6 +1,10 @@
 module.exports = {
   app: {
-    baseURL: "http://localhost:3000"
+    baseURL: "http://localhost:3000",
+    timeout: 120000,
+    headers: {
+      "Content-Type": "application/json"
+    }
   },
   robots: [
     {
@@ -25,7 +29,7 @@ module.exports = {
     }
   },
   bapi: {
-    baseURL: "",
+    baseURL: "https://cv-2019-api.herokuapp.com",
     timeout: 120000,
     headers: {
       "Content-Type": "application/json"

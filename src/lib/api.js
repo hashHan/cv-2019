@@ -1,23 +1,23 @@
 import axios, { CancelToken } from "axios";
 import { myconfig } from "../config";
 import { loggerDev } from "./logger";
-const api = axios.create(myconfig.api);
+const api = axios.create(myconfig.app);
 
 // request interceptors
 api.interceptors.request.use(
   conf => {
     //loggerDev(conf);
-    loggerDev("localStroage cvToken: ", localStorage.getItem("cvToken"));
-    const token = localStorage.getItem("cvToken");
-    loggerDev("const token: ", token);
+    // loggerDev("localStroage cvToken: ", localStorage.getItem("cvToken"));
+    // const token = localStorage.getItem("cvToken");
+    // loggerDev("const token: ", token);
 
-    // loggerDev('axios request log: ', conf);
-    loggerDev("conf.url: ", conf.url);
+    // // loggerDev('axios request log: ', conf);
+    // loggerDev("conf.url: ", conf.url);
 
-    if (conf.url === "") {
-      //
-    }
-    conf.headers["x-ktoken"] = token;
+    // if (conf.url === "") {
+    //   //
+    // }
+    // conf.headers["x-ktoken"] = token;
 
     loggerDev("axios request log: ", conf);
     //loggerDev('axios interceptor log: cvtoken= ',conf.headers['cvtoken'])

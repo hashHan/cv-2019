@@ -119,13 +119,13 @@ class CV extends Component {
 
   render() {
     const { classes } = this.props;
-    const cvLatestToRender = this.props.cvLatest.getIn(["cvMeta", "cvId"])
+    const cvLatestToRender = this.props.cvLatest.get("_id")
       ? this.props.cvLatest.toJS()
       : null;
-    const cvToRender = this.props.cvSelected.getIn(["cvMeta", "cvId"])
+    const cvToRender = this.props.cvSelected.get("_id")
       ? this.props.cvSelected.toJS()
       : cvLatestToRender;
-    const cvListToRender = this.props.cvList.getIn([0, "cvId"])
+    const cvListToRender = this.props.cvList.getIn([0, "_id"])
       ? this.props.cvList.toJS()
       : null;
 

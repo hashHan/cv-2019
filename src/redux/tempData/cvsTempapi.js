@@ -1,15 +1,13 @@
-export const cvsTemp = [
+export const cvsTempApi = [
   {
-    _id: "haeseong20190201000000",
     cvMeta: {
       owner: "haeseong.han@gmail.com",
-      timestamp: 20190201000000,
       latest: true,
       version: "2.0",
       description: "After quit Kono"
     },
     headerData: {
-      meta: "header meta",
+      meta: { description: "header meta" },
       name: {
         name: "HASEONG HAN",
         text: "HAESEONG HAN",
@@ -26,7 +24,7 @@ export const cvsTemp = [
       ]
     },
     footerData: {
-      meta: "footer meta",
+      meta: { description: "footer meta" },
       copyRight: {
         name: "HAESEONG HAN",
         text: "HAESEONG HAN",
@@ -46,7 +44,7 @@ export const cvsTemp = [
       ]
     },
     bodyData: {
-      meta: "something",
+      meta: { description: "body meta" },
       sectionDatas: [
         {
           sectionTitle: {

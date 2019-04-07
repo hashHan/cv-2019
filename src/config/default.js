@@ -2,7 +2,9 @@ export const defaultConfig = {
   app: {
     baseURL: "http://localhost:3000/"
   },
-  api: {},
+  api: {
+    apiURL: "https://cv-2019-api.herokuapp.com"
+  },
   oauth: {
     google: {
       clientId: "",
