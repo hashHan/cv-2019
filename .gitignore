@@ -6,8 +6,16 @@
 # testing
 /coverage
 
-# production
-/build
+# production 
+# we need this build folder for heroku ssr
+# /build
+
+# source file -- server side rendering
+# https://medium.com/jeremy-gottfrieds-tech-blog/tutorial-how-to-deploy-a-production-react-app-to-heroku-c4831dfcfa08
+# src/*
+# public/*
+# build/static/css/*.map
+# build/static/js/*.map
 
 # misc
 .DS_Store

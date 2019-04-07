@@ -41,3 +41,7 @@ animation,
 1. NODE_ENV: production (Always)
 2. REACT_CUSTOM_ENV: Used in both server and client side for manage custom configuration
 3. DEPLOYMENT: Used only in the server to distinguish deployment vs local
+
+### HEROKU
+
+1. "start": "yarn local:production" FOR HEROKU

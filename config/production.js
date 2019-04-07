@@ -1,5 +1,5 @@
 module.exports = {
   app: {
-    baseURL: "http://localhost:3000"
+    baseURL: "https://han-cv-2019.herokuapp.com"
   }
 };
