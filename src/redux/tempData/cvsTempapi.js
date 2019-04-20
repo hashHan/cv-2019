@@ -8,11 +8,7 @@ export const cvsTempApi = [
     },
     headerData: {
       meta: { description: "header meta" },
-      name: {
-        name: "HASEONG HAN",
-        text: "HAESEONG HAN",
-        linkUrl: null
-      },
+      name: { name: "HASEONG HAN", text: "HAESEONG HAN", linkUrl: null },
       email: "haeseong.han@gmail.com",
       phone: null,
       links: [
@@ -51,11 +47,7 @@ export const cvsTempApi = [
             name: "PORTFOLIO",
             text: "PORTFOLIO",
             linkUrl: null,
-            sub: {
-              name: "",
-              text: "",
-              linkUrl: null
-            }
+            sub: { name: "", text: "", linkUrl: null }
           },
           sectionDetails: [
             {
@@ -73,628 +65,47 @@ export const cvsTempApi = [
                 name: "",
                 text: "",
                 linkUrl: null,
-                sub: {
-                  name: "",
-                  text: "",
-                  linkUrl: null
-                }
+                sub: { name: "", text: "", linkUrl: null }
               },
               period: {
                 name: "2019",
                 text: "2019",
                 linkUrl: null,
-                sub: {
-                  name: "",
-                  text: "",
-                  linkUrl: null
-                }
+                sub: { name: "", text: "", linkUrl: null }
               },
               location: {
                 name: "",
                 text: "",
                 linkUrl: null,
-                sub: {
-                  name: "",
-                  text: "",
-                  linkUrl: null
-                }
+                sub: { name: "", text: "", linkUrl: null }
               },
-              description: [],
-              catalog: [
+              description: [
                 {
                   title: {
-                    name: "FRONT-END",
-                    text: "FRONT-END",
-                    linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
+                    name:
+                      "I made this project to show my recent web skills and to made a scalable and resusable template.",
+                    text:
+                      "I made this project to show my recent web skills and to made a scalable and resusable template.",
+                    linkUrl: "",
+                    sub: { name: "", text: "", linkUrl: null }
                   },
-
                   list: [
                     {
                       callback: null,
                       iconName: null,
                       primary: {
-                        name: "Javascript",
-                        text: "Javascript",
-                        linkUrl: null
+                        name: "Please read README.md",
+                        text: "Please read README.md",
+                        linkUrl:
+                          "https://github.com/hashHan/cv-2019/blob/master/README.md"
                       },
-                      name: "Javascript",
-                      sub: [
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "REACT",
-                            text: "REACT",
-                            linkUrl: null
-                          },
-                          name: "REACT",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "REDUX",
-                            text: "REDUX",
-                            linkUrl: null
-                          },
-                          name: "REDUX",
-                          sub: null
-                        }
-                      ]
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        name: "CSS",
-                        text: "CSS",
-                        linkUrl: null
-                      },
-                      name: "CSS",
-                      sub: [
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "JSS",
-                            text: "JSS",
-                            linkUrl: null
-                          },
-                          name: "JSS",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "STYLED COMPONENT",
-                            text: "STYLED COMPONENT",
-                            linkUrl: null
-                          },
-                          name: "STYLED COMPONENT",
-                          sub: null
-                        }
-                      ]
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        name: "OPTIMIZATION",
-                        text: "OPTIMIZATION",
-                        linkUrl: null
-                      },
-                      name: "OPTIMIZATION",
-                      sub: [
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "Service Worker",
-                            text: "Service Worker",
-                            linkUrl: null
-                          },
-                          name: "Service Worker",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "WEBPACK",
-                            text: "WEBPACK",
-                            linkUrl: null
-                          },
-                          name: "WEBPACK",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "BABEL",
-                            text: "BABEL",
-                            linkUrl: null
-                          },
-                          name: "BABEL",
-                          sub: null
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  title: {
-                    name: "BACK-END",
-                    text: "BACK-END",
-                    linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
-                  },
-
-                  list: [
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        name: "SERVER",
-                        text: "SERVER",
-                        linkUrl: null
-                      },
-                      name: "SERVER",
-                      sub: [
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "NODE.JS",
-                            text: "NODE.JS",
-                            linkUrl: null
-                          },
-                          name: "NODE",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "SERVER SIDE RENDERING",
-                            text: "SERVER SIDE RENDERING",
-                            linkUrl: null
-                          },
-                          name: "SSR",
-                          sub: null
-                        }
-                      ]
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        name: "DATABASE",
-                        text: "DATABASE",
-                        linkUrl: null
-                      },
-                      name: "DB",
-                      sub: [
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "MONGO DB",
-                            text: "MONGO DB",
-                            linkUrl: null
-                          },
-                          name: "MONGO DB",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "SQL",
-                            text: "SQL",
-                            linkUrl: null
-                          },
-                          name: "SQL",
-                          sub: null
-                        }
-                      ]
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        name: "SECURITY",
-                        text: "SECURITY",
-                        linkUrl: null
-                      },
-                      name: "SECURITY",
-                      sub: [
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "OAUTH2.0",
-                            text: "OAUTH2.0",
-                            linkUrl: null
-                          },
-                          name: "OAUTH",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "JWT",
-                            text: "JWT",
-                            linkUrl: null
-                          },
-                          name: "JWT",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "HASHING",
-                            text: "HASHING",
-                            linkUrl: null
-                          },
-                          name: "HASHING",
-                          sub: null
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  title: {
-                    name: "DEV-OPS",
-                    text: "DEV-OPS",
-                    linkUrl: null,
-                    sub: {
-                      name: "AWS",
-                      text: "AWS",
-                      linkUrl: null
-                    }
-                  },
-
-                  list: [
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        name: "EC2",
-                        text: "EC2",
-                        linkUrl: null
-                      },
-                      name: "EC2",
-                      sub: [
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "Elastic Load Balancer",
-                            text: "Elastic Load Balancer",
-                            linkUrl: null
-                          },
-                          name: "ELB",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "Auto Scaling",
-                            text: "Auto Scaling",
-                            linkUrl: null
-                          },
-                          name: "Auto Scaling",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "nginx",
-                            text: "nginx",
-                            linkUrl: null
-                          },
-                          name: "nginx",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "pm2",
-                            text: "pm2",
-                            linkUrl: null
-                          },
-                          name: "pm2",
-                          sub: null
-                        }
-                      ]
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        name: "S3",
-                        text: "S3",
-                        linkUrl: null
-                      },
-                      name: "S3",
-                      sub: [
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "SINGLE PAGE APP",
-                            text: "SINGLE PAGE APP",
-                            linkUrl: null
-                          },
-                          name: "SERVERLESS",
-                          sub: null
-                        }
-                      ]
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        name: "etc",
-                        text: "etc",
-                        linkUrl: null
-                      },
-                      name: "etc",
-                      sub: [
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "ROUTE53",
-                            text: "ROUTE53",
-                            linkUrl: null
-                          },
-                          name: "ROUTE53",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "VPC",
-                            text: "VPC",
-                            linkUrl: null
-                          },
-                          name: "VPC",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "IAM",
-                            text: "IAM",
-                            linkUrl: null
-                          },
-                          name: "IAM",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "LAMBDA",
-                            text: "LAMBDA",
-                            linkUrl: null
-                          },
-                          name: "LAMBDA",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "GATEWAY",
-                            text: "GATEWAY",
-                            linkUrl: null
-                          },
-                          name: "GATEWAY",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "ElastiCache",
-                            text: "ElastiCache",
-                            linkUrl: null
-                          },
-                          name: "ElastiCache",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "RDB",
-                            text: "RDB",
-                            linkUrl: null
-                          },
-                          name: "RDB",
-                          sub: null
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  title: {
-                    name: "API",
-                    text: "API",
-                    linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
-                  },
-
-                  list: [
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        name: "GOOGLE",
-                        text: "GOOGLE",
-                        linkUrl: null
-                      },
-                      name: "GOOGLE",
-                      sub: [
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "OAUTH2.0",
-                            text: "OAUTH2.0",
-                            linkUrl: null
-                          },
-                          name: "OAUTH2.0",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "CALENDAR",
-                            text: "CALENDAR",
-                            linkUrl: null
-                          },
-                          name: "CALENDAR",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "GSUITE",
-                            text: "GSUITE",
-                            linkUrl: null
-                          },
-                          name: "GSUITE",
-                          sub: null
-                        }
-                      ]
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        name: "MS",
-                        text: "MS",
-                        linkUrl: null
-                      },
-                      name: "MS",
-                      sub: [
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "OAUTH2.0",
-                            text: "OAUTH2.0",
-                            linkUrl: null
-                          },
-                          name: "OAUTH2.0",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "GRAPH",
-                            text: "GRAPH",
-                            linkUrl: null
-                          },
-                          name: "GRAPH",
-                          sub: null
-                        },
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "CALENDAR",
-                            text: "CALENDAR",
-                            linkUrl: null
-                          },
-                          name: "CALENDAR",
-                          sub: null
-                        }
-                      ]
-                    },
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        name: "SLACK",
-                        text: "SLACK",
-                        linkUrl: null
-                      },
-                      name: "SLACK",
-                      sub: [
-                        {
-                          callback: null,
-                          iconName: null,
-                          primary: {
-                            name: "OAUTH2.0",
-                            text: "OAUTH2.0",
-                            linkUrl: null
-                          },
-                          name: "OAUTH2.0",
-                          sub: null
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  title: {
-                    name: "ANALYTICS",
-                    text: "ANALYTICS",
-                    linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
-                  },
-
-                  list: [
-                    {
-                      callback: null,
-                      iconName: null,
-                      primary: {
-                        name: "MIXPANEL",
-                        text: "MIXPANEL",
-                        linkUrl: null
-                      },
-                      name: "MIXPANEL",
+                      name: "README.md",
                       sub: null
                     }
                   ]
                 }
-              ]
+              ],
+              catalog: []
             }
           ]
         },
@@ -704,8 +115,8 @@ export const cvsTempApi = [
             text: "EXPERIENCE",
             linkUrl: null,
             sub: {
-              name: " section sub title 1",
-              text: " section sub title 1",
+              name: "",
+              text: "",
               linkUrl: null
             }
           },
@@ -715,41 +126,25 @@ export const cvsTempApi = [
                 name: "Full Stack Web Developer",
                 text: "Full Stack Web Developer",
                 linkUrl: null,
-                sub: {
-                  name: "",
-                  text: "",
-                  linkUrl: null
-                }
+                sub: { name: "", text: "", linkUrl: null }
               },
               subTitle: {
                 name: "KONO LABS",
                 text: "KONO LABS",
                 linkUrl: "https://kono.ai/",
-                sub: {
-                  name: "",
-                  text: "",
-                  linkUrl: null
-                }
+                sub: { name: "", text: "", linkUrl: null }
               },
               period: {
                 name: "MAY 2018 - JAN 2019",
                 text: "MAY 2018 - JAN 2019",
                 linkUrl: null,
-                sub: {
-                  name: "",
-                  text: "",
-                  linkUrl: null
-                }
+                sub: { name: "", text: "", linkUrl: null }
               },
               location: {
                 name: "DIGITAL NOMAD",
                 text: "DIGITAL NOMAD",
                 linkUrl: null,
-                sub: {
-                  name: "",
-                  text: "",
-                  linkUrl: null
-                }
+                sub: { name: "", text: "", linkUrl: null }
               },
               description: [],
               catalog: [
@@ -758,13 +153,8 @@ export const cvsTempApi = [
                     name: "FRONT-END",
                     text: "FRONT-END",
                     linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
+                    sub: { name: "", text: "", linkUrl: null }
                   },
-
                   list: [
                     {
                       callback: null,
@@ -803,21 +193,13 @@ export const cvsTempApi = [
                     {
                       callback: null,
                       iconName: null,
-                      primary: {
-                        name: "CSS",
-                        text: "CSS",
-                        linkUrl: null
-                      },
+                      primary: { name: "CSS", text: "CSS", linkUrl: null },
                       name: "CSS",
                       sub: [
                         {
                           callback: null,
                           iconName: null,
-                          primary: {
-                            name: "JSS",
-                            text: "JSS",
-                            linkUrl: null
-                          },
+                          primary: { name: "JSS", text: "JSS", linkUrl: null },
                           name: "JSS",
                           sub: null
                         },
@@ -886,13 +268,8 @@ export const cvsTempApi = [
                     name: "BACK-END",
                     text: "BACK-END",
                     linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
+                    sub: { name: "", text: "", linkUrl: null }
                   },
-
                   list: [
                     {
                       callback: null,
@@ -952,11 +329,7 @@ export const cvsTempApi = [
                         {
                           callback: null,
                           iconName: null,
-                          primary: {
-                            name: "SQL",
-                            text: "SQL",
-                            linkUrl: null
-                          },
+                          primary: { name: "SQL", text: "SQL", linkUrl: null },
                           name: "SQL",
                           sub: null
                         }
@@ -986,11 +359,7 @@ export const cvsTempApi = [
                         {
                           callback: null,
                           iconName: null,
-                          primary: {
-                            name: "JWT",
-                            text: "JWT",
-                            linkUrl: null
-                          },
+                          primary: { name: "JWT", text: "JWT", linkUrl: null },
                           name: "JWT",
                           sub: null
                         },
@@ -1014,22 +383,13 @@ export const cvsTempApi = [
                     name: "DEV-OPS",
                     text: "DEV-OPS",
                     linkUrl: null,
-                    sub: {
-                      name: "AWS",
-                      text: "AWS",
-                      linkUrl: null
-                    }
+                    sub: { name: "AWS", text: "AWS", linkUrl: null }
                   },
-
                   list: [
                     {
                       callback: null,
                       iconName: null,
-                      primary: {
-                        name: "EC2",
-                        text: "EC2",
-                        linkUrl: null
-                      },
+                      primary: { name: "EC2", text: "EC2", linkUrl: null },
                       name: "EC2",
                       sub: [
                         {
@@ -1068,11 +428,7 @@ export const cvsTempApi = [
                         {
                           callback: null,
                           iconName: null,
-                          primary: {
-                            name: "pm2",
-                            text: "pm2",
-                            linkUrl: null
-                          },
+                          primary: { name: "pm2", text: "pm2", linkUrl: null },
                           name: "pm2",
                           sub: null
                         }
@@ -1081,11 +437,7 @@ export const cvsTempApi = [
                     {
                       callback: null,
                       iconName: null,
-                      primary: {
-                        name: "S3",
-                        text: "S3",
-                        linkUrl: null
-                      },
+                      primary: { name: "S3", text: "S3", linkUrl: null },
                       name: "S3",
                       sub: [
                         {
@@ -1104,11 +456,7 @@ export const cvsTempApi = [
                     {
                       callback: null,
                       iconName: null,
-                      primary: {
-                        name: "etc",
-                        text: "etc",
-                        linkUrl: null
-                      },
+                      primary: { name: "etc", text: "etc", linkUrl: null },
                       name: "etc",
                       sub: [
                         {
@@ -1125,22 +473,14 @@ export const cvsTempApi = [
                         {
                           callback: null,
                           iconName: null,
-                          primary: {
-                            name: "VPC",
-                            text: "VPC",
-                            linkUrl: null
-                          },
+                          primary: { name: "VPC", text: "VPC", linkUrl: null },
                           name: "VPC",
                           sub: null
                         },
                         {
                           callback: null,
                           iconName: null,
-                          primary: {
-                            name: "IAM",
-                            text: "IAM",
-                            linkUrl: null
-                          },
+                          primary: { name: "IAM", text: "IAM", linkUrl: null },
                           name: "IAM",
                           sub: null
                         },
@@ -1180,11 +520,7 @@ export const cvsTempApi = [
                         {
                           callback: null,
                           iconName: null,
-                          primary: {
-                            name: "RDB",
-                            text: "RDB",
-                            linkUrl: null
-                          },
+                          primary: { name: "RDB", text: "RDB", linkUrl: null },
                           name: "RDB",
                           sub: null
                         }
@@ -1197,13 +533,8 @@ export const cvsTempApi = [
                     name: "API",
                     text: "API",
                     linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
+                    sub: { name: "", text: "", linkUrl: null }
                   },
-
                   list: [
                     {
                       callback: null,
@@ -1253,11 +584,7 @@ export const cvsTempApi = [
                     {
                       callback: null,
                       iconName: null,
-                      primary: {
-                        name: "MS",
-                        text: "MS",
-                        linkUrl: null
-                      },
+                      primary: { name: "MS", text: "MS", linkUrl: null },
                       name: "MS",
                       sub: [
                         {
@@ -1298,11 +625,7 @@ export const cvsTempApi = [
                     {
                       callback: null,
                       iconName: null,
-                      primary: {
-                        name: "SLACK",
-                        text: "SLACK",
-                        linkUrl: null
-                      },
+                      primary: { name: "SLACK", text: "SLACK", linkUrl: null },
                       name: "SLACK",
                       sub: [
                         {
@@ -1325,13 +648,8 @@ export const cvsTempApi = [
                     name: "ANALYTICS",
                     text: "ANALYTICS",
                     linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
+                    sub: { name: "", text: "", linkUrl: null }
                   },
-
                   list: [
                     {
                       callback: null,
@@ -1373,21 +691,13 @@ export const cvsTempApi = [
                 name: "APR 2014 - FEB 2016",
                 text: "APR 2014 - FEB 2016",
                 linkUrl: null,
-                sub: {
-                  name: "",
-                  text: "",
-                  linkUrl: null
-                }
+                sub: { name: "", text: "", linkUrl: null }
               },
               location: {
                 name: "SEOUL",
                 text: "SEOUL",
                 linkUrl: null,
-                sub: {
-                  name: "SOUTH KOREA",
-                  text: "SOUTH KOREA",
-                  linkUrl: null
-                }
+                sub: { name: "SOUTH KOREA", text: "SOUTH KOREA", linkUrl: null }
               },
               description: [
                 {
@@ -1397,13 +707,8 @@ export const cvsTempApi = [
                     text:
                       "Evaluated structured fixed-income and credit-linked derivative instruments for institutional investors.",
                     linkUrl: "https://eng.bond.co.kr/asset/asset05",
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
+                    sub: { name: "", text: "", linkUrl: null }
                   },
-
                   list: [
                     {
                       callback: null,
@@ -1469,13 +774,8 @@ export const cvsTempApi = [
                     text:
                       "Developed pricing models and programs for asset-backed commercial papers and short-term bonds.",
                     linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
+                    sub: { name: "", text: "", linkUrl: null }
                   },
-
                   list: [
                     {
                       callback: null,
@@ -1508,13 +808,8 @@ export const cvsTempApi = [
                     text:
                       "Designed converting logic to compare the yield curve of different bond markets using the bootstrapping.",
                     linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
+                    sub: { name: "", text: "", linkUrl: null }
                   },
-
                   list: [
                     {
                       callback: null,
@@ -1530,11 +825,7 @@ export const cvsTempApi = [
                     {
                       callback: null,
                       iconName: null,
-                      primary: {
-                        name: "YTM",
-                        text: "YTM",
-                        linkUrl: null
-                      },
+                      primary: { name: "YTM", text: "YTM", linkUrl: null },
                       name: "YTM",
                       sub: null
                     },
@@ -1590,21 +881,13 @@ export const cvsTempApi = [
                 name: "FEB 2014 - APR 2014",
                 text: "FEB 2014 - APR 2014",
                 linkUrl: null,
-                sub: {
-                  name: "",
-                  text: "",
-                  linkUrl: null
-                }
+                sub: { name: "", text: "", linkUrl: null }
               },
               location: {
                 name: "SEOUL",
                 text: "SEOUL",
                 linkUrl: null,
-                sub: {
-                  name: "SOUTH KOREA",
-                  text: "SOUTH KOREA",
-                  linkUrl: null
-                }
+                sub: { name: "SOUTH KOREA", text: "SOUTH KOREA", linkUrl: null }
               },
               description: [
                 {
@@ -1614,13 +897,8 @@ export const cvsTempApi = [
                     text:
                       "Managed FORUM about international regulations of OTC markets.",
                     linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
+                    sub: { name: "", text: "", linkUrl: null }
                   },
-
                   list: []
                 },
                 {
@@ -1628,13 +906,8 @@ export const cvsTempApi = [
                     name: "Passed FRM certification exam part1, 2",
                     text: "Passed FRM certification exam part1, 2",
                     linkUrl: "https://www.garp.org",
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
+                    sub: { name: "", text: "", linkUrl: null }
                   },
-
                   list: []
                 }
               ],
@@ -1645,11 +918,7 @@ export const cvsTempApi = [
                 name: "AVIATION CONTROL TECHNICIAN",
                 text: "AVIATION CONTROL TECHNICIAN",
                 linkUrl: null,
-                sub: {
-                  name: "SERGEANT",
-                  text: "SERGEANT",
-                  linkUrl: null
-                }
+                sub: { name: "SERGEANT", text: "SERGEANT", linkUrl: null }
               },
               subTitle: {
                 name: "REPUBLIC OF KOREA AIRFORCE MCRC",
@@ -1665,21 +934,13 @@ export const cvsTempApi = [
                 name: "NOV 2009 - DEC 2011",
                 text: "NOV 2009 - DEC 2011",
                 linkUrl: null,
-                sub: {
-                  name: "",
-                  text: "",
-                  linkUrl: null
-                }
+                sub: { name: "", text: "", linkUrl: null }
               },
               location: {
                 name: "OSAN BASE",
                 text: "OSAN BASE",
                 linkUrl: null,
-                sub: {
-                  name: "SOUTH KOREA",
-                  text: "SOUTH KOREA",
-                  linkUrl: null
-                }
+                sub: { name: "SOUTH KOREA", text: "SOUTH KOREA", linkUrl: null }
               },
               description: [
                 {
@@ -1689,13 +950,8 @@ export const cvsTempApi = [
                     text:
                       "Monitored aircraft within a specific airspace, using radar, computer equipment, or visual references.",
                     linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
+                    sub: { name: "", text: "", linkUrl: null }
                   },
-
                   list: []
                 },
                 {
@@ -1705,11 +961,7 @@ export const cvsTempApi = [
                     text:
                       "Compiled information about flights from flight plans, pilot reports, radar, or observations.",
                     linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
+                    sub: { name: "", text: "", linkUrl: null }
                   },
                   list: []
                 },
@@ -1720,13 +972,8 @@ export const cvsTempApi = [
                     text:
                       "Participated in developing a program to count and summarize flight plans.",
                     linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
+                    sub: { name: "", text: "", linkUrl: null }
                   },
-
                   list: []
                 },
                 {
@@ -1734,13 +981,8 @@ export const cvsTempApi = [
                     name: "Placed third during the recruit training.",
                     text: "Placed third during the recruit training.",
                     linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
+                    sub: { name: "", text: "", linkUrl: null }
                   },
-
                   list: []
                 }
               ],
@@ -1753,11 +995,7 @@ export const cvsTempApi = [
             name: "EDUCATION",
             text: "EDUCATION",
             linkUrl: null,
-            sub: {
-              name: "",
-              text: "",
-              linkUrl: null
-            }
+            sub: { name: "", text: "", linkUrl: null }
           },
           sectionDetails: [
             {
@@ -1785,21 +1023,13 @@ export const cvsTempApi = [
                 name: "MARCH 2016 - FEB 2021",
                 text: "MARCH 2016 - FEB 2021",
                 linkUrl: null,
-                sub: {
-                  name: "",
-                  text: "",
-                  linkUrl: null
-                }
+                sub: { name: "", text: "", linkUrl: null }
               },
               location: {
                 name: "DAEJEON",
                 text: "DAEJEON",
                 linkUrl: null,
-                sub: {
-                  name: "SOUTH KOREA",
-                  text: "SOUTH KOREA",
-                  linkUrl: null
-                }
+                sub: { name: "SOUTH KOREA", text: "SOUTH KOREA", linkUrl: null }
               },
               description: [],
               catalog: []
@@ -1809,41 +1039,25 @@ export const cvsTempApi = [
                 name: "COMPUTER ENGINEERING",
                 text: "COMPUTER ENGINEERING",
                 linkUrl: null,
-                sub: {
-                  name: "",
-                  text: "",
-                  linkUrl: null
-                }
+                sub: { name: "", text: "", linkUrl: null }
               },
               subTitle: {
                 name: "NATIONAL INSTITUTE FOR LIFELONG EDUCATION",
                 text: "NATIONAL INSTITUTE FOR LIFELONG EDUCATION",
                 linkUrl: null,
-                sub: {
-                  name: "NILE",
-                  text: "NILE",
-                  linkUrl: null
-                }
+                sub: { name: "NILE", text: "NILE", linkUrl: null }
               },
               period: {
                 name: "2016 - 2017",
                 text: "2016 - 2017",
                 linkUrl: null,
-                sub: {
-                  name: "",
-                  text: "",
-                  linkUrl: null
-                }
+                sub: { name: "", text: "", linkUrl: null }
               },
               location: {
                 name: "ONLINE",
                 text: "ONLINE",
                 linkUrl: null,
-                sub: {
-                  name: "",
-                  text: "",
-                  linkUrl: null
-                }
+                sub: { name: "", text: "", linkUrl: null }
               },
               description: [],
               catalog: [
@@ -2022,31 +1236,19 @@ export const cvsTempApi = [
                 name: "YONSEI UNIVERSITY",
                 text: "YONSEI UNIVERSITY",
                 linkUrl: null,
-                sub: {
-                  name: "",
-                  text: "",
-                  linkUrl: null
-                }
+                sub: { name: "", text: "", linkUrl: null }
               },
               period: {
                 name: "MARCH 2007 - AUG 2014",
                 text: "MARCH 2007 - AUG 2014",
                 linkUrl: null,
-                sub: {
-                  name: "",
-                  text: "",
-                  linkUrl: null
-                }
+                sub: { name: "", text: "", linkUrl: null }
               },
               location: {
                 name: "SEOUL",
                 text: "SEOUL",
                 linkUrl: null,
-                sub: {
-                  name: "SOUTH KOREA",
-                  text: "SOUTH KOREA",
-                  linkUrl: null
-                }
+                sub: { name: "SOUTH KOREA", text: "SOUTH KOREA", linkUrl: null }
               },
               description: [],
               catalog: [
@@ -2055,13 +1257,8 @@ export const cvsTempApi = [
                     name: "GPA",
                     text: "GPA",
                     linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
+                    sub: { name: "", text: "", linkUrl: null }
                   },
-
                   list: [
                     {
                       callback: null,
@@ -2114,13 +1311,8 @@ export const cvsTempApi = [
                     name: "Awards",
                     text: "Awards",
                     linkUrl: null,
-                    sub: {
-                      name: "",
-                      text: "",
-                      linkUrl: null
-                    }
+                    sub: { name: "", text: "", linkUrl: null }
                   },
-
                   list: [
                     {
                       callback: null,

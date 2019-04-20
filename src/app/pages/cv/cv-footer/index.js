@@ -114,7 +114,7 @@ class CvFooterBase extends Component {
             <Grid item xs={12}>
               <Paper className={classes.centeredPaper}>
                 <Typography variant="caption" gutterBottom>
-                  URL of this page: TO DO - get from config
+                  URL of this page: https://han-cv-2019.herokuapp.com/
                 </Typography>
               </Paper>
             </Grid>
@@ -122,7 +122,7 @@ class CvFooterBase extends Component {
               <Paper className={classes.centeredPaper}>
                 <Typography variant="caption" gutterBottom>
                   CV Onwer: {metaData.owner} <br />
-                  Version: {metaData.timestamp} <br />
+                  Version: {metaData.version} <br />
                 </Typography>
                 <Typography
                   style={{ color: "red" }}
