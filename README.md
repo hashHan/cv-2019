@@ -104,6 +104,7 @@ HEROKU uses default `start` and `build` command for deployment. So I switch reac
 4. Add Editor mode
 5. i18n
 6. animation
+7. Add industry tags to db schema and show contents only about specific industry.
 
 ### 2) Others(Optimization, testing, deployment, ...)
 
@@ -112,3 +113,4 @@ HEROKU uses default `start` and `build` command for deployment. So I switch reac
 3. Deployment: AWS(EC2, Cloudfront), pm2, nginx,
 4. Testing
 5. Service workers
+6. Merge deployment scripts in package.json

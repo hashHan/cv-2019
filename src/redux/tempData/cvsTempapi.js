@@ -3,7 +3,7 @@ export const cvsTempApi = [
     cvMeta: {
       owner: "haeseong.han@gmail.com",
       latest: true,
-      version: "2.0",
+      version: "2.1",
       description: "After quit Kono"
     },
     headerData: {
@@ -86,7 +86,8 @@ export const cvsTempApi = [
                       "I made this project to show my recent web skills and to made a scalable and resusable template.",
                     text:
                       "I made this project to show my recent web skills and to made a scalable and resusable template.",
-                    linkUrl: "",
+                    linkUrl:
+                      "https://github.com/hashHan/cv-2019/blob/master/README.md",
                     sub: { name: "", text: "", linkUrl: null }
                   },
                   list: [
@@ -96,8 +97,7 @@ export const cvsTempApi = [
                       primary: {
                         name: "Please read README.md",
                         text: "Please read README.md",
-                        linkUrl:
-                          "https://github.com/hashHan/cv-2019/blob/master/README.md"
+                        linkUrl: ""
                       },
                       name: "README.md",
                       sub: null
